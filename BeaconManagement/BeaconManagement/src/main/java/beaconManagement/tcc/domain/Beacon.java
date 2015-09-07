@@ -6,10 +6,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotBlank;
 
-@Entity(name = "beacon")
+@Entity
+@Table(name = "beacon", schema = "beaconMgm")
 public class Beacon implements Serializable {
 
 	/**
@@ -18,7 +20,7 @@ public class Beacon implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	@NotBlank
@@ -26,6 +28,10 @@ public class Beacon implements Serializable {
 
 	@NotBlank
 	private String mac;
+
+	public Beacon() {
+		super();
+	}
 
 	public Beacon(long id, String name, String mac) {
 		super();

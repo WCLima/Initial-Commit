@@ -4,8 +4,15 @@ import java.io.Serializable;
 import java.util.Calendar;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Entity(name = "checkin")
+import org.hibernate.validator.constraints.NotBlank;
+
+@Entity
+@Table(name = "checkin", schema = "beaconMgm")
 public class CheckIn implements Serializable {
 
 	/**
@@ -13,11 +20,18 @@ public class CheckIn implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
+	@NotBlank
 	private Calendar checkCalendar;
 
 	private boolean status;
+
+	public CheckIn() {
+		super();
+	}
 
 	public CheckIn(Long id, Calendar checkCalendar, boolean status) {
 		super();

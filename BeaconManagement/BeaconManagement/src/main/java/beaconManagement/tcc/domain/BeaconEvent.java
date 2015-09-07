@@ -7,10 +7,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotBlank;
 
-@Entity(name = "beaconEvent")
+@Entity
+@Table(name = "beaconEvent", schema = "beaconMgm")
 public class BeaconEvent implements Serializable {
 
 	/**
@@ -19,7 +21,7 @@ public class BeaconEvent implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	@NotBlank
@@ -30,6 +32,10 @@ public class BeaconEvent implements Serializable {
 
 	@NotBlank
 	private Calendar endCalendar;
+
+	public BeaconEvent() {
+		super();
+	}
 
 	public BeaconEvent(long id, Beacon beacon, Calendar startCalendar,
 			Calendar endCalendar) {

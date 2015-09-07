@@ -9,11 +9,13 @@ import java.util.List;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import beaconManagement.tcc.dao.CheckInDAO;
 import beaconManagement.tcc.domain.CheckIn;
 
 @Repository
+@Transactional
 public class CheckInHibernateDAO implements CheckInDAO {
 
 	@Autowired
@@ -21,7 +23,7 @@ public class CheckInHibernateDAO implements CheckInDAO {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * beaconManagement.tcc.dao.CheckInDAO#save(beaconManagement.tcc.domain.
 	 * CheckIn)
@@ -32,7 +34,7 @@ public class CheckInHibernateDAO implements CheckInDAO {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * beaconManagement.tcc.dao.CheckInDAO#edit(beaconManagement.tcc.domain.
 	 * CheckIn)
@@ -43,7 +45,7 @@ public class CheckInHibernateDAO implements CheckInDAO {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see beaconManagement.tcc.dao.CheckInDAO#list()
 	 */
 	@SuppressWarnings("unchecked")
@@ -55,7 +57,7 @@ public class CheckInHibernateDAO implements CheckInDAO {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see beaconManagement.tcc.dao.CheckInDAO#findById(java.lang.Long)
 	 */
 	public CheckIn findById(Long id) {
@@ -66,7 +68,7 @@ public class CheckInHibernateDAO implements CheckInDAO {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * beaconManagement.tcc.dao.CheckInDAO#findByCalendar(java.util.Calendar)
 	 */
@@ -82,7 +84,7 @@ public class CheckInHibernateDAO implements CheckInDAO {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see beaconManagement.tcc.dao.CheckInDAO#findByStatus(boolean)
 	 */
 	@SuppressWarnings("unchecked")
@@ -91,7 +93,7 @@ public class CheckInHibernateDAO implements CheckInDAO {
 				.getCurrentSession()
 				.createQuery(
 						"from beaconMgm.checkin c where c.status=" + status)
-				.list();
+						.list();
 		return list;
 	}
 
