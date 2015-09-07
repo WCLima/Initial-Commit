@@ -1,0 +1,73 @@
+/**
+ *
+ */
+package beaconManagement.tcc.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import beaconManagement.tcc.dao.BeaconDAO;
+import beaconManagement.tcc.domain.Beacon;
+import beaconManagement.tcc.service.BeaconService;
+
+@Service
+public class BeaconServiceImpl implements BeaconService {
+
+	@Autowired
+	private BeaconDAO beaconDAO;
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * beaconManagement.tcc.service.BeaconService#saveBeacon(beaconManagement
+	 * .tcc.domain.Beacon)
+	 */
+	public void saveBeacon(Beacon beacon) {
+		beaconDAO.save(beacon);
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * beaconManagement.tcc.service.BeaconService#editBeacon(beaconManagement
+	 * .tcc.domain.Beacon)
+	 */
+	public void editBeacon(Beacon beacon) {
+		beaconDAO.edit(beacon);
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see beaconManagement.tcc.service.BeaconService#getBeacons()
+	 */
+	public List<Beacon> getBeacons() {
+		return beaconDAO.list();
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * beaconManagement.tcc.service.BeaconService#getBeaconById(java.lang.Long)
+	 */
+	public Beacon getBeaconById(Long id) {
+		return beaconDAO.findById(id);
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * beaconManagement.tcc.service.BeaconService#getBeaconByMac(java.lang.String
+	 * )
+	 */
+	public Beacon getBeaconByMac(String mac) {
+		return beaconDAO.findByMac(mac);
+	}
+
+}
