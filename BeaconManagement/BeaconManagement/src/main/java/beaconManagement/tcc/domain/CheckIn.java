@@ -7,12 +7,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
-@Table(name = "checkin", schema = "beaconMgm")
+@Table(name = "checkin", schema = "management")
 public class CheckIn implements Serializable {
 
 	/**
@@ -20,8 +21,6 @@ public class CheckIn implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	@NotBlank
@@ -40,6 +39,9 @@ public class CheckIn implements Serializable {
 		this.status = status;
 	}
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_checkin_id")
+	@SequenceGenerator(name = "sq_checkin_id", sequenceName = "management.SQ_CHECKIN_ID", initialValue = 1, allocationSize = 1)
 	public Long getId() {
 		return id;
 	}

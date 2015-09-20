@@ -6,12 +6,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
-@Table(name = "beacon", schema = "beaconMgm")
+@Table(name = "beacon", schema = "management")
 public class Beacon implements Serializable {
 
 	/**
@@ -19,14 +21,13 @@ public class Beacon implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	@NotBlank
 	private String name;
 
 	@NotBlank
+	@Pattern(regexp = "^([0-9A-F]{2}[:-]){5}([0-9A-F]{2})$")
 	private String mac;
 
 	public Beacon() {
@@ -40,6 +41,9 @@ public class Beacon implements Serializable {
 		this.mac = mac;
 	}
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_beacon_id")
+	@SequenceGenerator(name = "sq_beacon_id", sequenceName = "management.SQ_BEACON_ID", initialValue = 1, allocationSize = 1)
 	public long getId() {
 		return id;
 	}
