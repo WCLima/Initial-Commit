@@ -34,7 +34,7 @@ public class Beacon implements Serializable {
 		super();
 	}
 
-	public Beacon(long id, String name, String mac) {
+	public Beacon(Long id, String name, String mac) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -44,11 +44,11 @@ public class Beacon implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_beacon_id")
 	@SequenceGenerator(name = "sq_beacon_id", sequenceName = "management.SQ_BEACON_ID", initialValue = 1, allocationSize = 1)
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 

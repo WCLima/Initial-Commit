@@ -36,7 +36,7 @@ public class BeaconEvent implements Serializable {
 		super();
 	}
 
-	public BeaconEvent(long id, Beacon beacon, Calendar startCalendar,
+	public BeaconEvent(Long id, Beacon beacon, Calendar startCalendar,
 			Calendar endCalendar) {
 		super();
 		this.id = id;
@@ -48,11 +48,11 @@ public class BeaconEvent implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_beaconevent_id")
 	@SequenceGenerator(name = "sq_beaconevent_id", sequenceName = "management.SQ_BEACONEVENT_ID", initialValue = 1, allocationSize = 1)
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
