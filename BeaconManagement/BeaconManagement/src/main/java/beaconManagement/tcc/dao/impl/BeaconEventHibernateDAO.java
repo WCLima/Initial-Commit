@@ -12,7 +12,6 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import beaconManagement.tcc.dao.BeaconEventDAO;
-import beaconManagement.tcc.domain.Beacon;
 import beaconManagement.tcc.domain.BeaconEvent;
 
 @Repository
@@ -40,14 +39,6 @@ public class BeaconEventHibernateDAO implements BeaconEventDAO {
 	public BeaconEvent findById(Long id) {
 		BeaconEvent event = (BeaconEvent) sessionFactory.getCurrentSession()
 				.createQuery("from beaconMgm.BeaconEvent be where be.id=" + id);
-		return event;
-	}
-
-	public BeaconEvent findByBeacon(Beacon beacon) {
-		BeaconEvent event = (BeaconEvent) sessionFactory.getCurrentSession()
-				.createQuery(
-						"from beaconMgm.BeaconEvent be where be.beacon_id="
-								+ beacon.getId());
 		return event;
 	}
 

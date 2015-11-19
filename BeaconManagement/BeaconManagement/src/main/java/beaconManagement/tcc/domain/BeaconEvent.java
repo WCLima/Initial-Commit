@@ -24,9 +24,6 @@ public class BeaconEvent implements Serializable {
 	private Long id;
 
 	@NotBlank
-	private Beacon beacon;
-
-	@NotBlank
 	private Calendar startCalendar;
 
 	@NotBlank
@@ -36,11 +33,9 @@ public class BeaconEvent implements Serializable {
 		super();
 	}
 
-	public BeaconEvent(Long id, Beacon beacon, Calendar startCalendar,
-			Calendar endCalendar) {
+	public BeaconEvent(Long id, Calendar startCalendar, Calendar endCalendar) {
 		super();
 		this.id = id;
-		this.beacon = beacon;
 		this.startCalendar = startCalendar;
 		this.endCalendar = endCalendar;
 	}
@@ -54,14 +49,6 @@ public class BeaconEvent implements Serializable {
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public Beacon getBeacon() {
-		return beacon;
-	}
-
-	public void setBeacon(Beacon beacon) {
-		this.beacon = beacon;
 	}
 
 	public Calendar getStartCalendar() {
@@ -84,10 +71,9 @@ public class BeaconEvent implements Serializable {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((beacon == null) ? 0 : beacon.hashCode());
 		result = prime * result
 				+ ((endCalendar == null) ? 0 : endCalendar.hashCode());
-		result = prime * result + (int) (id ^ (id >>> 32));
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result
 				+ ((startCalendar == null) ? 0 : startCalendar.hashCode());
 		return result;
@@ -102,17 +88,15 @@ public class BeaconEvent implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		BeaconEvent other = (BeaconEvent) obj;
-		if (beacon == null) {
-			if (other.beacon != null)
-				return false;
-		} else if (!beacon.equals(other.beacon))
-			return false;
 		if (endCalendar == null) {
 			if (other.endCalendar != null)
 				return false;
 		} else if (!endCalendar.equals(other.endCalendar))
 			return false;
-		if (id != other.id)
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
 			return false;
 		if (startCalendar == null) {
 			if (other.startCalendar != null)
@@ -124,9 +108,8 @@ public class BeaconEvent implements Serializable {
 
 	@Override
 	public String toString() {
-		return "BeaconEvent [id=" + id + ", beacon=" + beacon
-				+ ", startCalendar=" + startCalendar + ", endCalendar="
-				+ endCalendar + "]";
+		return "BeaconEvent [id=" + id + ", startCalendar=" + startCalendar
+				+ ", endCalendar=" + endCalendar + "]";
 	}
 
 }

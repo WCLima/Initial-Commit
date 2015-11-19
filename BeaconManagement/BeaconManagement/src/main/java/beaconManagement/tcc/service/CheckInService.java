@@ -3,6 +3,7 @@ package beaconManagement.tcc.service;
 import java.util.Calendar;
 import java.util.List;
 
+import beaconManagement.tcc.domain.BeaconEvent;
 import beaconManagement.tcc.domain.CheckIn;
 
 public interface CheckInService {
@@ -17,6 +18,6 @@ public interface CheckInService {
 
 	public List<CheckIn> getCheckInByCalendar(Calendar calendar);
 
-	public List<CheckIn> getCheckInByStatus(boolean status);
+	public List<CheckIn> getCheckInByBeaconEvent(BeaconEvent event);
 
 }

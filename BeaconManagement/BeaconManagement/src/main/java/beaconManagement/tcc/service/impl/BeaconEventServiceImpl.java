@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import beaconManagement.tcc.dao.BeaconEventDAO;
-import beaconManagement.tcc.domain.Beacon;
 import beaconManagement.tcc.domain.BeaconEvent;
 import beaconManagement.tcc.service.BeaconEventService;
 
@@ -22,7 +21,7 @@ public class BeaconEventServiceImpl implements BeaconEventService {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see beaconManagement.tcc.service.BeaconEventService#saveBeaconEvent(
 	 * beaconManagement.tcc.domain.BeaconEvent)
 	 */
@@ -32,7 +31,7 @@ public class BeaconEventServiceImpl implements BeaconEventService {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see beaconManagement.tcc.service.BeaconEventService#editBeaconEvent(
 	 * beaconManagement.tcc.domain.BeaconEvent)
 	 */
@@ -42,7 +41,7 @@ public class BeaconEventServiceImpl implements BeaconEventService {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see beaconManagement.tcc.service.BeaconEventService#getBeaconEvents()
 	 */
 	public List<BeaconEvent> getBeaconEvents() {
@@ -51,7 +50,7 @@ public class BeaconEventServiceImpl implements BeaconEventService {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.service.BeaconEventService#getBeaconEventById(java
 	 * .lang.Long)
@@ -62,18 +61,7 @@ public class BeaconEventServiceImpl implements BeaconEventService {
 
 	/*
 	 * (non-Javadoc)
-	 *
-	 * @see
-	 * beaconManagement.tcc.service.BeaconEventService#getBeaconEventByBeacon
-	 * (beaconManagement.tcc.domain.Beacon)
-	 */
-	public BeaconEvent getBeaconEventByBeacon(Beacon beacon) {
-		return beaconEventDAO.findByBeacon(beacon);
-	}
-
-	/*
-	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.service.BeaconEventService#getBeaconEventsByStartdate
 	 * (java.util.Calendar)
@@ -84,7 +72,7 @@ public class BeaconEventServiceImpl implements BeaconEventService {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.service.BeaconEventService#getBeaconEventsByEnddate
 	 * (java.util.Calendar)

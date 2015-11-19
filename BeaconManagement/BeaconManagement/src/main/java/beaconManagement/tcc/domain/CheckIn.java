@@ -26,17 +26,18 @@ public class CheckIn implements Serializable {
 	@NotBlank
 	private Calendar checkCalendar;
 
-	private boolean status;
+	@NotBlank
+	private BeaconEvent beaconEvent;
 
 	public CheckIn() {
 		super();
 	}
 
-	public CheckIn(Long id, Calendar checkCalendar, boolean status) {
+	public CheckIn(Long id, Calendar checkCalendar, BeaconEvent beaconEvent) {
 		super();
 		this.id = id;
 		this.checkCalendar = checkCalendar;
-		this.status = status;
+		this.beaconEvent = beaconEvent;
 	}
 
 	@Id
@@ -58,12 +59,12 @@ public class CheckIn implements Serializable {
 		this.checkCalendar = checkCalendar;
 	}
 
-	public boolean isStatus() {
-		return status;
+	public BeaconEvent getBeaconEvent() {
+		return beaconEvent;
 	}
 
-	public void setStatus(boolean status) {
-		this.status = status;
+	public void setBeaconEvent(BeaconEvent beaconEvent) {
+		this.beaconEvent = beaconEvent;
 	}
 
 	@Override
@@ -71,9 +72,10 @@ public class CheckIn implements Serializable {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result
+				+ ((beaconEvent == null) ? 0 : beaconEvent.hashCode());
+		result = prime * result
 				+ ((checkCalendar == null) ? 0 : checkCalendar.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + (status ? 1231 : 1237);
 		return result;
 	}
 
@@ -86,6 +88,11 @@ public class CheckIn implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		CheckIn other = (CheckIn) obj;
+		if (beaconEvent == null) {
+			if (other.beaconEvent != null)
+				return false;
+		} else if (!beaconEvent.equals(other.beaconEvent))
+			return false;
 		if (checkCalendar == null) {
 			if (other.checkCalendar != null)
 				return false;
@@ -96,15 +103,13 @@ public class CheckIn implements Serializable {
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
-		if (status != other.status)
-			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "Check [id=" + id + ", checkCalendar=" + checkCalendar
-				+ ", status=" + status + "]";
+		return "CheckIn [id=" + id + ", checkCalendar=" + checkCalendar
+				+ ", beaconEvent=" + beaconEvent + "]";
 	}
 
 }

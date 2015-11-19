@@ -3,6 +3,7 @@ package beaconManagement.tcc.dao;
 import java.util.Calendar;
 import java.util.List;
 
+import beaconManagement.tcc.domain.BeaconEvent;
 import beaconManagement.tcc.domain.CheckIn;
 
 public interface CheckInDAO {
@@ -17,6 +18,6 @@ public interface CheckInDAO {
 
 	public List<CheckIn> findByCalendar(Calendar calendar);
 
-	public List<CheckIn> findByStatus(boolean status);
+	public List<CheckIn> findByBeaconEvent(BeaconEvent status);
 
 }

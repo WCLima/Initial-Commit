@@ -8,7 +8,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -27,7 +26,6 @@ public class Beacon implements Serializable {
 	private String name;
 
 	@NotBlank
-	@Pattern(regexp = "^([0-9A-F]{2}[:-]){5}([0-9A-F]{2})$")
 	private String mac;
 
 	public Beacon() {

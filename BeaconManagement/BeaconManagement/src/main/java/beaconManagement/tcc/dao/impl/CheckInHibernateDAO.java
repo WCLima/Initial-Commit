@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import beaconManagement.tcc.dao.CheckInDAO;
+import beaconManagement.tcc.domain.BeaconEvent;
 import beaconManagement.tcc.domain.CheckIn;
 
 @Repository
@@ -88,11 +89,11 @@ public class CheckInHibernateDAO implements CheckInDAO {
 	 * @see beaconManagement.tcc.dao.CheckInDAO#findByStatus(boolean)
 	 */
 	@SuppressWarnings("unchecked")
-	public List<CheckIn> findByStatus(boolean status) {
+	public List<CheckIn> findByBeaconEvent(BeaconEvent event) {
 		List<CheckIn> list = sessionFactory
 				.getCurrentSession()
 				.createQuery(
-						"from beaconMgm.checkin c where c.status=" + status)
+						"from beaconMgm.checkin c where c.beaconevent=" + event)
 						.list();
 		return list;
 	}
