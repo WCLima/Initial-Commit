@@ -18,6 +18,6 @@ public interface CheckInDAO {
 
 	public List<CheckIn> findByCalendar(Calendar calendar);
 
-	public List<CheckIn> findByBeaconEvent(BeaconEvent status);
+	public List<CheckIn> findByBeaconEvent(BeaconEvent beaconEvent);
 
 }

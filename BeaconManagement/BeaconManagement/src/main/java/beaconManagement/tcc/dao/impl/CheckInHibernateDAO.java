@@ -24,7 +24,7 @@ public class CheckInHibernateDAO implements CheckInDAO {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.dao.CheckInDAO#save(beaconManagement.tcc.domain.
 	 * CheckIn)
@@ -35,7 +35,7 @@ public class CheckInHibernateDAO implements CheckInDAO {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.dao.CheckInDAO#edit(beaconManagement.tcc.domain.
 	 * CheckIn)
@@ -46,7 +46,7 @@ public class CheckInHibernateDAO implements CheckInDAO {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see beaconManagement.tcc.dao.CheckInDAO#list()
 	 */
 	@SuppressWarnings("unchecked")
@@ -58,7 +58,7 @@ public class CheckInHibernateDAO implements CheckInDAO {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see beaconManagement.tcc.dao.CheckInDAO#findById(java.lang.Long)
 	 */
 	public CheckIn findById(Long id) {
@@ -69,7 +69,7 @@ public class CheckInHibernateDAO implements CheckInDAO {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.dao.CheckInDAO#findByCalendar(java.util.Calendar)
 	 */
@@ -85,7 +85,7 @@ public class CheckInHibernateDAO implements CheckInDAO {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see beaconManagement.tcc.dao.CheckInDAO#findByStatus(boolean)
 	 */
 	@SuppressWarnings("unchecked")
@@ -93,8 +93,8 @@ public class CheckInHibernateDAO implements CheckInDAO {
 		List<CheckIn> list = sessionFactory
 				.getCurrentSession()
 				.createQuery(
-						"from beaconMgm.checkin c where c.beaconevent=" + event)
-						.list();
+						"from beaconMgm.checkin c where c.beaconevent_id="
+								+ event.getId()).list();
 		return list;
 	}
 

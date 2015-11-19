@@ -15,7 +15,7 @@ public interface BeaconEventService {
 
 	public BeaconEvent getBeaconEventById(Long id);
 
-	public List<BeaconEvent> getBeaconEventsByStartdate(Calendar calendar);
+	public List<BeaconEvent> getBeaconEventsByStartDate(Calendar calendar);
 
-	public List<BeaconEvent> getBeaconEventsByEnddate(Calendar calendar);
+	public List<BeaconEvent> getBeaconEventsByEndDate(Calendar calendar);
 }

@@ -27,17 +27,17 @@ public class CheckIn implements Serializable {
 	private Calendar checkCalendar;
 
 	@NotBlank
-	private BeaconEvent beaconEvent;
+	private Long beaconEvent_id;
 
 	public CheckIn() {
 		super();
 	}
 
-	public CheckIn(Long id, Calendar checkCalendar, BeaconEvent beaconEvent) {
+	public CheckIn(Long id, Calendar checkCalendar, Long beaconEvent_id) {
 		super();
 		this.id = id;
 		this.checkCalendar = checkCalendar;
-		this.beaconEvent = beaconEvent;
+		this.beaconEvent_id = beaconEvent_id;
 	}
 
 	@Id
@@ -59,12 +59,12 @@ public class CheckIn implements Serializable {
 		this.checkCalendar = checkCalendar;
 	}
 
-	public BeaconEvent getBeaconEvent() {
-		return beaconEvent;
+	public Long getBeaconEvent_id() {
+		return beaconEvent_id;
 	}
 
-	public void setBeaconEvent(BeaconEvent beaconEvent) {
-		this.beaconEvent = beaconEvent;
+	public void setBeaconEvent_id(Long beaconEvent_id) {
+		this.beaconEvent_id = beaconEvent_id;
 	}
 
 	@Override
@@ -72,7 +72,7 @@ public class CheckIn implements Serializable {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result
-				+ ((beaconEvent == null) ? 0 : beaconEvent.hashCode());
+				+ ((beaconEvent_id == null) ? 0 : beaconEvent_id.hashCode());
 		result = prime * result
 				+ ((checkCalendar == null) ? 0 : checkCalendar.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
@@ -88,10 +88,10 @@ public class CheckIn implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		CheckIn other = (CheckIn) obj;
-		if (beaconEvent == null) {
-			if (other.beaconEvent != null)
+		if (beaconEvent_id == null) {
+			if (other.beaconEvent_id != null)
 				return false;
-		} else if (!beaconEvent.equals(other.beaconEvent))
+		} else if (!beaconEvent_id.equals(other.beaconEvent_id))
 			return false;
 		if (checkCalendar == null) {
 			if (other.checkCalendar != null)
@@ -109,7 +109,7 @@ public class CheckIn implements Serializable {
 	@Override
 	public String toString() {
 		return "CheckIn [id=" + id + ", checkCalendar=" + checkCalendar
-				+ ", beaconEvent=" + beaconEvent + "]";
+				+ ", beaconEvent_id=" + beaconEvent_id + "]";
 	}
 
 }
