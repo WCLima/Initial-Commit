@@ -25,13 +25,13 @@ public class BeaconEventController {
 		return beaconEventService.getBeaconEvents();
 	}
 
-	@RequestMapping(value = "/list_start_date", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/list_start_date", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<BeaconEvent> getBeaconEventsStartDate(
 			@RequestBody Calendar calendar) {
 		return beaconEventService.getBeaconEventsByStartDate(calendar);
 	}
 
-	@RequestMapping(value = "/list_end_date", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/list_end_date", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<BeaconEvent> getBeaconEventsEndDate(
 			@RequestBody Calendar calendar) {
 		return beaconEventService.getBeaconEventsByEndDate(calendar);

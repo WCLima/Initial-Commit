@@ -93,8 +93,28 @@ public class CheckInHibernateDAO implements CheckInDAO {
 		List<CheckIn> list = sessionFactory
 				.getCurrentSession()
 				.createQuery(
-						"from beaconMgm.checkin c where c.beaconevent_id="
+						"from beaconMgm.checkin c where c.beaconevent_id = "
 								+ event.getId()).list();
+		return list;
+	}
+
+	@SuppressWarnings("unchecked")
+	public List<CheckIn> findFromCalendar(Calendar calendar) {
+		List<CheckIn> list = sessionFactory
+				.getCurrentSession()
+				.createQuery(
+						"from beaconMgm.checkin c where c.checkCalendar > "
+								+ calendar).list();
+		return list;
+	}
+
+	@SuppressWarnings("unchecked")
+	public List<CheckIn> findBeforeCalendar(Calendar calendar) {
+		List<CheckIn> list = sessionFactory
+				.getCurrentSession()
+				.createQuery(
+						"from beaconMgm.checkin c where c.checkCalendar < "
+								+ calendar).list();
 		return list;
 	}
 

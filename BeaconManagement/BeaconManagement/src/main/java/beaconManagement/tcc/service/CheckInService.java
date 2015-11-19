@@ -18,6 +18,10 @@ public interface CheckInService {
 
 	public List<CheckIn> getCheckInByCalendar(Calendar calendar);
 
+	public List<CheckIn> getCheckInBeforeCalendar(Calendar calendar);
+
+	public List<CheckIn> getCheckInFromCalendar(Calendar calendar);
+
 	public List<CheckIn> getCheckInByBeaconEvent(BeaconEvent event);
 
 }

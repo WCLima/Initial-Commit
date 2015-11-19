@@ -22,7 +22,7 @@ public class CheckInServiceImpl implements CheckInService {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#saveCheckIn(beaconManagement
 	 * .tcc.domain.CheckIn)
@@ -33,7 +33,7 @@ public class CheckInServiceImpl implements CheckInService {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#editCheckIn(beaconManagement
 	 * .tcc.domain.CheckIn)
@@ -44,7 +44,7 @@ public class CheckInServiceImpl implements CheckInService {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see beaconManagement.tcc.service.CheckInService#getCheckIn()
 	 */
 	public List<CheckIn> getCheckIn() {
@@ -53,7 +53,7 @@ public class CheckInServiceImpl implements CheckInService {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#getCheckInById(java.lang.
 	 * Long)
@@ -64,7 +64,7 @@ public class CheckInServiceImpl implements CheckInService {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#getCheckInByCalendar(java
 	 * .util.Calendar)
@@ -75,12 +75,34 @@ public class CheckInServiceImpl implements CheckInService {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#getCheckInByStatus(boolean)
 	 */
 	public List<CheckIn> getCheckInByBeaconEvent(BeaconEvent event) {
 		return checkInDAO.findByBeaconEvent(event);
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * beaconManagement.tcc.service.CheckInService#getCheckInBeforeCalendar(
+	 * java.util.Calendar)
+	 */
+	public List<CheckIn> getCheckInBeforeCalendar(Calendar calendar) {
+		return checkInDAO.findBeforeCalendar(calendar);
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * beaconManagement.tcc.service.CheckInService#getCheckInFromCalendar(java
+	 * .util.Calendar)
+	 */
+	public List<CheckIn> getCheckInFromCalendar(Calendar calendar) {
+		return checkInDAO.findFromCalendar(calendar);
 	}
 
 }
