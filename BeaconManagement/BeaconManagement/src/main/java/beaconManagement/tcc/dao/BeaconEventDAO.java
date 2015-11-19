@@ -7,16 +7,18 @@ import beaconManagement.tcc.domain.BeaconEvent;
 
 public interface BeaconEventDAO {
 
-	public void save(BeaconEvent beaconEvent);
+	void insert(BeaconEvent beaconEvent);
 
-	public void edit(BeaconEvent beaconEvent);
+	void edit(BeaconEvent beaconEvent);
 
-	public List<BeaconEvent> list();
+	void delete(BeaconEvent beaconEvent);
 
-	public BeaconEvent findById(Long id);
+	List<BeaconEvent> list();
 
-	public List<BeaconEvent> findByStartCalendar(Calendar startCalendar);
+	BeaconEvent findById(Long id);
 
-	public List<BeaconEvent> findByEndCalendar(Calendar endCalendar);
+	List<BeaconEvent> findByStartCalendar(Calendar startCalendar);
+
+	List<BeaconEvent> findByEndCalendar(Calendar endCalendar);
 
 }

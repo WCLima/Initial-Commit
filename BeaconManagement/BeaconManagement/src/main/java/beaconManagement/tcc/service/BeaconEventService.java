@@ -7,15 +7,17 @@ import beaconManagement.tcc.domain.BeaconEvent;
 
 public interface BeaconEventService {
 
-	public void saveBeaconEvent(BeaconEvent event);
+	void insertBeaconEvent(BeaconEvent beaconEvent);
 
-	public void editBeaconEvent(BeaconEvent event);
+	void deleteBeaconEvent(BeaconEvent event);
 
-	public List<BeaconEvent> getBeaconEvents();
+	void editBeaconEvent(BeaconEvent event);
 
-	public BeaconEvent getBeaconEventById(Long id);
+	List<BeaconEvent> getBeaconEvents();
 
-	public List<BeaconEvent> getBeaconEventsByStartDate(Calendar calendar);
+	BeaconEvent getBeaconEventById(Long id);
 
-	public List<BeaconEvent> getBeaconEventsByEndDate(Calendar calendar);
+	List<BeaconEvent> getBeaconEventsByStartDate(Calendar calendar);
+
+	List<BeaconEvent> getBeaconEventsByEndDate(Calendar calendar);
 }

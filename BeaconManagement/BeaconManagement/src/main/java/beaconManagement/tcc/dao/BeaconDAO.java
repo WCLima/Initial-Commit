@@ -6,14 +6,16 @@ import beaconManagement.tcc.domain.Beacon;
 
 public interface BeaconDAO {
 
-	public void save(Beacon beacon);
+	void insert(Beacon beacon);
 
-	public void edit(Beacon beacon);
+	void edit(Beacon beacon);
 
-	public List<Beacon> list();
+	void delete(Beacon beacon);
 
-	public Beacon findById(Long id);
+	List<Beacon> list();
 
-	public Beacon findByMac(String mac);
+	Beacon findById(Long id);
+
+	Beacon findByMac(String mac);
 
 }

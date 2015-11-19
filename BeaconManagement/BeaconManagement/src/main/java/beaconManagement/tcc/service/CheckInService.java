@@ -8,20 +8,18 @@ import beaconManagement.tcc.domain.CheckIn;
 
 public interface CheckInService {
 
-	public void saveCheckIn(CheckIn checkIn);
+	void insertCheckIn(CheckIn checkIn);
 
-	public void editCheckIn(CheckIn checkIn);
+	List<CheckIn> getCheckIn();
 
-	public List<CheckIn> getCheckIn();
+	CheckIn getCheckInById(Long id);
 
-	public CheckIn getCheckInById(Long id);
+	List<CheckIn> getCheckInByCalendar(Calendar calendar);
 
-	public List<CheckIn> getCheckInByCalendar(Calendar calendar);
+	List<CheckIn> getCheckInBeforeCalendar(Calendar calendar);
 
-	public List<CheckIn> getCheckInBeforeCalendar(Calendar calendar);
+	List<CheckIn> getCheckInFromCalendar(Calendar calendar);
 
-	public List<CheckIn> getCheckInFromCalendar(Calendar calendar);
-
-	public List<CheckIn> getCheckInByBeaconEvent(BeaconEvent event);
+	List<CheckIn> getCheckInByBeaconEvent(BeaconEvent event);
 
 }

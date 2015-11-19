@@ -37,4 +37,18 @@ public class BeaconEventController {
 		return beaconEventService.getBeaconEventsByEndDate(calendar);
 	}
 
+	@RequestMapping(value = "/insert", method = RequestMethod.PUT)
+	public void insertBeaconEvent(@RequestBody BeaconEvent beaconEvent) {
+		beaconEventService.insertBeaconEvent(beaconEvent);
+	}
+
+	@RequestMapping(value = "/delete", method = RequestMethod.DELETE)
+	public void deleteBeaconEvent(@RequestBody BeaconEvent beaconEvent) {
+		beaconEventService.deleteBeaconEvent(beaconEvent);
+	}
+
+	@RequestMapping(value = "/edit", method = RequestMethod.POST)
+	public void editBeaconEvent(@RequestBody BeaconEvent beaconEvent) {
+		beaconEventService.editBeaconEvent(beaconEvent);
+	}
 }

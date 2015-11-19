@@ -21,14 +21,44 @@ public class BeaconEventHibernateDAO implements BeaconEventDAO {
 	@Autowired
 	public SessionFactory sessionFactory;
 
-	public void save(BeaconEvent beaconEvent) {
-		sessionFactory.getCurrentSession().save(beaconEvent);
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * beaconManagement.tcc.dao.BeaconEventDAO#insert(beaconManagement.tcc.domain
+	 * .BeaconEvent)
+	 */
+	public void insert(BeaconEvent beaconEvent) {
+		sessionFactory.getCurrentSession().persist(beaconEvent);
 	}
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * beaconManagement.tcc.dao.BeaconEventDAO#save(beaconManagement.tcc.domain
+	 * .BeaconEvent)
+	 */
+	public void delete(BeaconEvent beaconEvent) {
+		sessionFactory.getCurrentSession().delete(beaconEvent);
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * beaconManagement.tcc.dao.BeaconEventDAO#edit(beaconManagement.tcc.domain
+	 * .BeaconEvent)
+	 */
 	public void edit(BeaconEvent beaconEvent) {
 		sessionFactory.getCurrentSession().merge(beaconEvent);
 	}
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see beaconManagement.tcc.dao.BeaconEventDAO#list()
+	 */
 	@SuppressWarnings("unchecked")
 	public List<BeaconEvent> list() {
 		List<BeaconEvent> list = sessionFactory.getCurrentSession()
@@ -36,12 +66,24 @@ public class BeaconEventHibernateDAO implements BeaconEventDAO {
 		return list;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see beaconManagement.tcc.dao.BeaconEventDAO#findById(java.lang.Long)
+	 */
 	public BeaconEvent findById(Long id) {
 		BeaconEvent event = (BeaconEvent) sessionFactory.getCurrentSession()
 				.createQuery("from beaconMgm.BeaconEvent be where be.id=" + id);
 		return event;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * beaconManagement.tcc.dao.BeaconEventDAO#findByStartCalendar(java.util
+	 * .Calendar)
+	 */
 	@SuppressWarnings("unchecked")
 	public List<BeaconEvent> findByStartCalendar(Calendar startCalendar) {
 		List<BeaconEvent> list = sessionFactory
@@ -52,6 +94,13 @@ public class BeaconEventHibernateDAO implements BeaconEventDAO {
 		return list;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * beaconManagement.tcc.dao.BeaconEventDAO#findByEndCalendar(java.util.Calendar
+	 * )
+	 */
 	@SuppressWarnings("unchecked")
 	public List<BeaconEvent> findByEndCalendar(Calendar endCalendar) {
 		List<BeaconEvent> list = sessionFactory

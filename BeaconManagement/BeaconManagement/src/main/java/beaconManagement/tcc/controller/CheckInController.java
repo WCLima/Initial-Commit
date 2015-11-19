@@ -39,4 +39,9 @@ public class CheckInController {
 	public List<CheckIn> getCheckInBeforeCalendar(@RequestBody Calendar calendar) {
 		return checkInService.getCheckInBeforeCalendar(calendar);
 	}
+
+	@RequestMapping(value = "/put_checkIn", method = RequestMethod.PUT)
+	public void insestCheckIn(@RequestBody CheckIn checkIn) {
+		checkInService.insertCheckIn(checkIn);
+	}
 }

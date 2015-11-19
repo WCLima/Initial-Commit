@@ -22,26 +22,8 @@ public class CheckInHibernateDAO implements CheckInDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * beaconManagement.tcc.dao.CheckInDAO#save(beaconManagement.tcc.domain.
-	 * CheckIn)
-	 */
-	public void save(CheckIn check) {
-		sessionFactory.getCurrentSession().save(check);
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * beaconManagement.tcc.dao.CheckInDAO#edit(beaconManagement.tcc.domain.
-	 * CheckIn)
-	 */
-	public void edit(CheckIn check) {
-		sessionFactory.getCurrentSession().merge(check);
+	public void insert(CheckIn check) {
+		sessionFactory.getCurrentSession().persist(check);
 	}
 
 	/*

@@ -6,14 +6,16 @@ import beaconManagement.tcc.domain.Beacon;
 
 public interface BeaconService {
 
-	public void saveBeacon(Beacon beacon);
+	void insertBeacon(Beacon beacon);
 
-	public void editBeacon(Beacon beacon);
+	void deleteBeacon(Beacon beacon);
 
-	public List<Beacon> getBeacons();
+	void editBeacon(Beacon beacon);
 
-	public Beacon getBeaconById(Long id);
+	List<Beacon> getBeacons();
 
-	public Beacon getBeaconByMac(String mac);
+	Beacon getBeaconById(Long id);
+
+	Beacon getBeaconByMac(String mac);
 
 }
