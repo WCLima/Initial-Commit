@@ -23,7 +23,7 @@ public class BeaconEventHibernateDAO implements BeaconEventDAO {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.dao.BeaconEventDAO#insert(beaconManagement.tcc.domain
 	 * .BeaconEvent)
@@ -34,29 +34,33 @@ public class BeaconEventHibernateDAO implements BeaconEventDAO {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.dao.BeaconEventDAO#save(beaconManagement.tcc.domain
 	 * .BeaconEvent)
 	 */
 	public void delete(BeaconEvent beaconEvent) {
-		sessionFactory.getCurrentSession().delete(beaconEvent);
+		if (findById(beaconEvent.getId()) != null) {
+			sessionFactory.getCurrentSession().delete(beaconEvent);
+		}
 	}
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.dao.BeaconEventDAO#edit(beaconManagement.tcc.domain
 	 * .BeaconEvent)
 	 */
 	public void edit(BeaconEvent beaconEvent) {
-		sessionFactory.getCurrentSession().merge(beaconEvent);
+		if (findById(beaconEvent.getId()) != null) {
+			sessionFactory.getCurrentSession().merge(beaconEvent);
+		}
 	}
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see beaconManagement.tcc.dao.BeaconEventDAO#list()
 	 */
 	@SuppressWarnings("unchecked")
@@ -68,18 +72,20 @@ public class BeaconEventHibernateDAO implements BeaconEventDAO {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see beaconManagement.tcc.dao.BeaconEventDAO#findById(java.lang.Long)
 	 */
 	public BeaconEvent findById(Long id) {
 		BeaconEvent event = (BeaconEvent) sessionFactory.getCurrentSession()
-				.createQuery("from beaconMgm.BeaconEvent be where be.id=" + id);
+				.createQuery(
+						"from beaconMgm.BeaconEvent be where be.beaconevent_id="
+								+ id);
 		return event;
 	}
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.dao.BeaconEventDAO#findByStartCalendar(java.util
 	 * .Calendar)
@@ -96,7 +102,7 @@ public class BeaconEventHibernateDAO implements BeaconEventDAO {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.dao.BeaconEventDAO#findByEndCalendar(java.util.Calendar
 	 * )

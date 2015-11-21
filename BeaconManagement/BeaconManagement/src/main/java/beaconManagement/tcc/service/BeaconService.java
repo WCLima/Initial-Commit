@@ -14,8 +14,6 @@ public interface BeaconService {
 
 	List<Beacon> getBeacons();
 
-	Beacon getBeaconById(Long id);
-
 	Beacon getBeaconByMac(String mac);
 
 }

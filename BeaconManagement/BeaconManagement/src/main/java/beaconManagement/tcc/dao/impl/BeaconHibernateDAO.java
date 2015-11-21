@@ -39,7 +39,9 @@ public class BeaconHibernateDAO implements BeaconDAO {
 	 * .Beacon)
 	 */
 	public void delete(Beacon beacon) {
-		sessionFactory.getCurrentSession().delete(beacon);
+		if (findById(beacon.getId()) != null) {
+			sessionFactory.getCurrentSession().delete(beacon);
+		}
 	}
 
 	/*
@@ -50,7 +52,9 @@ public class BeaconHibernateDAO implements BeaconDAO {
 	 * )
 	 */
 	public void edit(Beacon beacon) {
-		sessionFactory.getCurrentSession().merge(beacon);
+		if (findById(beacon.getId()) != null) {
+			sessionFactory.getCurrentSession().merge(beacon);
+		}
 	}
 
 	/*
@@ -72,7 +76,7 @@ public class BeaconHibernateDAO implements BeaconDAO {
 	 */
 	public Beacon findById(Long id) {
 		Beacon item = (Beacon) sessionFactory.getCurrentSession()
-				.createQuery("from beaconMgm.Beacon b where b.id=" + id)
+				.createQuery("from beaconMgm.Beacon b where b.beacon_id=" + id)
 				.uniqueResult();
 		return item;
 	}

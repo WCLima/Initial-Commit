@@ -3,10 +3,13 @@ package beaconManagement.tcc.domain;
 import java.io.Serializable;
 import java.util.Calendar;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -26,21 +29,25 @@ public class CheckIn implements Serializable {
 	@NotBlank
 	private Calendar checkCalendar;
 
-	@NotBlank
-	private Long beaconEvent_id;
+	private BeaconEvent beaconEvent;
+
+	private BeaconDetector beaconDetector;
 
 	public CheckIn() {
 		super();
 	}
 
-	public CheckIn(Long id, Calendar checkCalendar, Long beaconEvent_id) {
+	public CheckIn(Long id, Calendar checkCalendar, BeaconEvent beaconEvent,
+			BeaconDetector beaconDetector) {
 		super();
 		this.id = id;
 		this.checkCalendar = checkCalendar;
-		this.beaconEvent_id = beaconEvent_id;
+		this.beaconEvent = beaconEvent;
+		this.beaconDetector = beaconDetector;
 	}
 
 	@Id
+	@Column(name = "checkin_id")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_checkin_id")
 	@SequenceGenerator(name = "sq_checkin_id", sequenceName = "management.SQ_CHECKIN_ID", initialValue = 1, allocationSize = 1)
 	public Long getId() {
@@ -59,12 +66,24 @@ public class CheckIn implements Serializable {
 		this.checkCalendar = checkCalendar;
 	}
 
-	public Long getBeaconEvent_id() {
-		return beaconEvent_id;
+	@ManyToOne
+	@JoinColumn(name = "beaconevent_id")
+	public BeaconEvent getBeaconEvent() {
+		return beaconEvent;
 	}
 
-	public void setBeaconEvent_id(Long beaconEvent_id) {
-		this.beaconEvent_id = beaconEvent_id;
+	public void setBeaconEvent(BeaconEvent beaconEvent) {
+		this.beaconEvent = beaconEvent;
+	}
+
+	@ManyToOne
+	@JoinColumn(name = "beacondetector_id")
+	public BeaconDetector getBeaconDetector() {
+		return beaconDetector;
+	}
+
+	public void setBeaconDetector(BeaconDetector beaconDetector) {
+		this.beaconDetector = beaconDetector;
 	}
 
 	@Override
@@ -72,7 +91,9 @@ public class CheckIn implements Serializable {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result
-				+ ((beaconEvent_id == null) ? 0 : beaconEvent_id.hashCode());
+				+ ((beaconDetector == null) ? 0 : beaconDetector.hashCode());
+		result = prime * result
+				+ ((beaconEvent == null) ? 0 : beaconEvent.hashCode());
 		result = prime * result
 				+ ((checkCalendar == null) ? 0 : checkCalendar.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
@@ -88,10 +109,15 @@ public class CheckIn implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		CheckIn other = (CheckIn) obj;
-		if (beaconEvent_id == null) {
-			if (other.beaconEvent_id != null)
+		if (beaconDetector == null) {
+			if (other.beaconDetector != null)
 				return false;
-		} else if (!beaconEvent_id.equals(other.beaconEvent_id))
+		} else if (!beaconDetector.equals(other.beaconDetector))
+			return false;
+		if (beaconEvent == null) {
+			if (other.beaconEvent != null)
+				return false;
+		} else if (!beaconEvent.equals(other.beaconEvent))
 			return false;
 		if (checkCalendar == null) {
 			if (other.checkCalendar != null)
@@ -109,7 +135,8 @@ public class CheckIn implements Serializable {
 	@Override
 	public String toString() {
 		return "CheckIn [id=" + id + ", checkCalendar=" + checkCalendar
-				+ ", beaconEvent_id=" + beaconEvent_id + "]";
+				+ ", beaconEvent=" + beaconEvent + ", beaconDetector="
+				+ beaconDetector + "]";
 	}
 
 }

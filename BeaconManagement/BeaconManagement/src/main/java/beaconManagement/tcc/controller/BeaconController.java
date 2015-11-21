@@ -24,6 +24,11 @@ public class BeaconController {
 		return beaconService.getBeacons();
 	}
 
+	@RequestMapping(value = "/find_mac", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+	public Beacon findBeaconByMAC(@RequestBody String mac) {
+		return beaconService.getBeaconByMac(mac);
+	}
+
 	@RequestMapping(value = "/insert", method = RequestMethod.PUT)
 	public void insertBeaconEvent(@RequestBody Beacon beacon) {
 		beaconService.insertBeacon(beacon);

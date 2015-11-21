@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import beaconManagement.tcc.dao.CheckInDAO;
+import beaconManagement.tcc.domain.BeaconDetector;
 import beaconManagement.tcc.domain.BeaconEvent;
 import beaconManagement.tcc.domain.CheckIn;
 
@@ -80,6 +81,29 @@ public class CheckInHibernateDAO implements CheckInDAO {
 		return list;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * beaconManagement.tcc.dao.CheckInDAO#findByBeaconDetector(beaconManagement
+	 * .tcc.domain.BeaconDetector)
+	 */
+	@SuppressWarnings("unchecked")
+	public List<CheckIn> findByBeaconDetector(BeaconDetector detector) {
+		List<CheckIn> list = sessionFactory
+				.getCurrentSession()
+				.createQuery(
+						"from beaconMgm.checkin c where c.beacondetector_id = "
+								+ detector.getId()).list();
+		return list;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * beaconManagement.tcc.dao.CheckInDAO#findFromCalendar(java.util.Calendar)
+	 */
 	@SuppressWarnings("unchecked")
 	public List<CheckIn> findFromCalendar(Calendar calendar) {
 		List<CheckIn> list = sessionFactory
@@ -90,6 +114,13 @@ public class CheckInHibernateDAO implements CheckInDAO {
 		return list;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * beaconManagement.tcc.dao.CheckInDAO#findBeforeCalendar(java.util.Calendar
+	 * )
+	 */
 	@SuppressWarnings("unchecked")
 	public List<CheckIn> findBeforeCalendar(Calendar calendar) {
 		List<CheckIn> list = sessionFactory

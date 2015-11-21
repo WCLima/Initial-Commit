@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import beaconManagement.tcc.dao.CheckInDAO;
+import beaconManagement.tcc.domain.BeaconDetector;
 import beaconManagement.tcc.domain.BeaconEvent;
 import beaconManagement.tcc.domain.CheckIn;
 import beaconManagement.tcc.service.CheckInService;
@@ -26,7 +27,7 @@ public class CheckInServiceImpl implements CheckInService {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see beaconManagement.tcc.service.CheckInService#getCheckIn()
 	 */
 	public List<CheckIn> getCheckIn() {
@@ -35,18 +36,7 @@ public class CheckInServiceImpl implements CheckInService {
 
 	/*
 	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * beaconManagement.tcc.service.CheckInService#getCheckInById(java.lang.
-	 * Long)
-	 */
-	public CheckIn getCheckInById(Long id) {
-		return checkInDAO.findById(id);
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#getCheckInByCalendar(java
 	 * .util.Calendar)
@@ -57,7 +47,7 @@ public class CheckInServiceImpl implements CheckInService {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#getCheckInByStatus(boolean)
 	 */
@@ -67,7 +57,7 @@ public class CheckInServiceImpl implements CheckInService {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#getCheckInBeforeCalendar(
 	 * java.util.Calendar)
@@ -78,7 +68,7 @@ public class CheckInServiceImpl implements CheckInService {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#getCheckInFromCalendar(java
 	 * .util.Calendar)
@@ -87,4 +77,14 @@ public class CheckInServiceImpl implements CheckInService {
 		return checkInDAO.findFromCalendar(calendar);
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * beaconManagement.tcc.service.CheckInService#getCheckInByBeaconDetector
+	 * (beaconManagement.tcc.domain.BeaconDetector)
+	 */
+	public List<CheckIn> getCheckInByBeaconDetector(BeaconDetector detector) {
+		return checkInDAO.findByBeaconDetector(detector);
+	}
 }

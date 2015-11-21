@@ -3,6 +3,7 @@ package beaconManagement.tcc.domain;
 import java.io.Serializable;
 import java.util.Calendar;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,7 +14,7 @@ import javax.persistence.Table;
 import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
-@Table(name = "beaconEvent", schema = "management")
+@Table(name = "beaconevent", schema = "management")
 public class BeaconEvent implements Serializable {
 
 	/**
@@ -41,6 +42,7 @@ public class BeaconEvent implements Serializable {
 	}
 
 	@Id
+	@Column(name = "beaconevent_id")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_beaconevent_id")
 	@SequenceGenerator(name = "sq_beaconevent_id", sequenceName = "management.SQ_BEACONEVENT_ID", initialValue = 1, allocationSize = 1)
 	public Long getId() {

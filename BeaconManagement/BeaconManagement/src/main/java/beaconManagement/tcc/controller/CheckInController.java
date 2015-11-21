@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import beaconManagement.tcc.domain.BeaconDetector;
 import beaconManagement.tcc.domain.CheckIn;
 import beaconManagement.tcc.service.CheckInService;
 
@@ -23,6 +24,12 @@ public class CheckInController {
 	@RequestMapping(value = "/list_checkIns", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<CheckIn> getCheckIn() {
 		return checkInService.getCheckIn();
+	}
+
+	@RequestMapping(value = "/list_by_detector", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+	public List<CheckIn> getCheckInByBeaconDetector(
+			@RequestBody BeaconDetector detector) {
+		return checkInService.getCheckInByBeaconDetector(detector);
 	}
 
 	@RequestMapping(value = "/list_checkInsByDate", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)

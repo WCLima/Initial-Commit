@@ -13,8 +13,8 @@ import javax.persistence.Table;
 import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
-@Table(name = "beacon", schema = "management")
-public class Beacon implements Serializable {
+@Table(name = "beacondetector", schema = "management")
+public class BeaconDetector implements Serializable {
 
 	/**
 	 *
@@ -24,40 +24,27 @@ public class Beacon implements Serializable {
 	private Long id;
 
 	@NotBlank
-	private String name;
-
-	@NotBlank
 	private String mac;
 
-	public Beacon() {
-		super();
-	}
+	private String location;
 
-	public Beacon(Long id, String name, String mac) {
+	public BeaconDetector(Long id, String mac, String location) {
 		super();
 		this.id = id;
-		this.name = name;
 		this.mac = mac;
+		this.location = location;
 	}
 
 	@Id
-	@Column(name = "beacon_id")
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_beacon_id")
-	@SequenceGenerator(name = "sq_beacon_id", sequenceName = "management.SQ_BEACON_ID", initialValue = 1, allocationSize = 1)
+	@Column(name = "beacondetector_id")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_beacondetector_id")
+	@SequenceGenerator(name = "sq_beacondetector_id", sequenceName = "management.SQ_BEACONDETECTOR_ID", initialValue = 1, allocationSize = 1)
 	public Long getId() {
 		return id;
 	}
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	public String getMac() {
@@ -68,18 +55,22 @@ public class Beacon implements Serializable {
 		this.mac = mac;
 	}
 
-	@Override
-	public String toString() {
-		return "Beacon [id=" + id + ", name=" + name + ", mac=" + mac + "]";
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + (int) (id ^ (id >>> 32));
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result
+				+ ((location == null) ? 0 : location.hashCode());
 		result = prime * result + ((mac == null) ? 0 : mac.hashCode());
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		return result;
 	}
 
@@ -91,19 +82,29 @@ public class Beacon implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Beacon other = (Beacon) obj;
-		if (id != other.id)
+		BeaconDetector other = (BeaconDetector) obj;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (location == null) {
+			if (other.location != null)
+				return false;
+		} else if (!location.equals(other.location))
 			return false;
 		if (mac == null) {
 			if (other.mac != null)
 				return false;
 		} else if (!mac.equals(other.mac))
 			return false;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
 		return true;
 	}
+
+	@Override
+	public String toString() {
+		return "BeaconDetector [id=" + id + ", mac=" + mac + ", location="
+				+ location + "]";
+	}
+
 }
