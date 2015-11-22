@@ -48,7 +48,7 @@ public class CheckInController {
 	}
 
 	@RequestMapping(value = "/put_checkIn", method = RequestMethod.PUT)
-	public void insestCheckIn(@RequestBody CheckIn checkIn) {
-		checkInService.insertCheckIn(checkIn);
+	public boolean insertCheckIn(@RequestBody CheckIn checkIn) {
+		return checkInService.insertCheckIn(checkIn);
 	}
 }

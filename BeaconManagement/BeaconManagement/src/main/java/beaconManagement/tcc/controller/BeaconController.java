@@ -30,17 +30,17 @@ public class BeaconController {
 	}
 
 	@RequestMapping(value = "/insert", method = RequestMethod.PUT)
-	public void insertBeaconEvent(@RequestBody Beacon beacon) {
-		beaconService.insertBeacon(beacon);
+	public boolean insertBeaconEvent(@RequestBody Beacon beacon) {
+		return beaconService.insertBeacon(beacon);
 	}
 
 	@RequestMapping(value = "/delete", method = RequestMethod.DELETE)
-	public void deleteBeaconEvent(@RequestBody Beacon beacon) {
-		beaconService.deleteBeacon(beacon);
+	public boolean deleteBeaconEvent(@RequestBody Beacon beacon) {
+		return beaconService.deleteBeacon(beacon);
 	}
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST)
-	public void editBeaconEvent(@RequestBody Beacon beacon) {
-		beaconService.editBeacon(beacon);
+	public boolean editBeaconEvent(@RequestBody Beacon beacon) {
+		return beaconService.editBeacon(beacon);
 	}
 }

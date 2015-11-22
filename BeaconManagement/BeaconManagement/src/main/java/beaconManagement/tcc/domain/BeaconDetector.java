@@ -28,9 +28,8 @@ public class BeaconDetector implements Serializable {
 
 	private String location;
 
-	public BeaconDetector(Long id, String mac, String location) {
+	public BeaconDetector(String mac, String location) {
 		super();
-		this.id = id;
 		this.mac = mac;
 		this.location = location;
 	}

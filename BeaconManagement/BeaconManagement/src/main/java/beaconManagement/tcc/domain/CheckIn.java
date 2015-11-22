@@ -37,10 +37,9 @@ public class CheckIn implements Serializable {
 		super();
 	}
 
-	public CheckIn(Long id, Calendar checkCalendar, BeaconEvent beaconEvent,
+	public CheckIn(Calendar checkCalendar, BeaconEvent beaconEvent,
 			BeaconDetector beaconDetector) {
 		super();
-		this.id = id;
 		this.checkCalendar = checkCalendar;
 		this.beaconEvent = beaconEvent;
 		this.beaconDetector = beaconDetector;

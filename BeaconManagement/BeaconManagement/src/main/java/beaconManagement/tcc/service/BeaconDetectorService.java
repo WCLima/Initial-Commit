@@ -6,11 +6,11 @@ import beaconManagement.tcc.domain.BeaconDetector;
 
 public interface BeaconDetectorService {
 
-	void insertBeaconDetector(BeaconDetector beacon);
+	boolean insertBeaconDetector(BeaconDetector beacon);
 
-	void deleteBeaconDetector(BeaconDetector beacon);
+	boolean deleteBeaconDetector(BeaconDetector beacon);
 
-	void editBeaconDetector(BeaconDetector beacon);
+	boolean editBeaconDetector(BeaconDetector beacon);
 
 	List<BeaconDetector> getAllBeaconDetector();
 

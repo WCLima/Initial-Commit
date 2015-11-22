@@ -30,17 +30,17 @@ public class BeaconDetectorController {
 	}
 
 	@RequestMapping(value = "/insert", method = RequestMethod.PUT)
-	public void insertBeaconEvent(@RequestBody BeaconDetector detector) {
-		beaconDetectorService.insertBeaconDetector(detector);
+	public boolean insertBeaconEvent(@RequestBody BeaconDetector detector) {
+		return beaconDetectorService.insertBeaconDetector(detector);
 	}
 
 	@RequestMapping(value = "/delete", method = RequestMethod.DELETE)
-	public void deleteBeaconEvent(@RequestBody BeaconDetector detector) {
-		beaconDetectorService.deleteBeaconDetector(detector);
+	public boolean deleteBeaconEvent(@RequestBody BeaconDetector detector) {
+		return beaconDetectorService.deleteBeaconDetector(detector);
 	}
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST)
-	public void editBeaconEvent(@RequestBody BeaconDetector detector) {
-		beaconDetectorService.editBeaconDetector(detector);
+	public boolean editBeaconEvent(@RequestBody BeaconDetector detector) {
+		return beaconDetectorService.editBeaconDetector(detector);
 	}
 }

@@ -7,11 +7,11 @@ import beaconManagement.tcc.domain.BeaconEvent;
 
 public interface BeaconEventDAO {
 
-	void insert(BeaconEvent beaconEvent);
+	boolean insert(BeaconEvent beaconEvent);
 
-	void edit(BeaconEvent beaconEvent);
+	boolean edit(BeaconEvent beaconEvent);
 
-	void delete(BeaconEvent beaconEvent);
+	boolean delete(BeaconEvent beaconEvent);
 
 	List<BeaconEvent> list();
 

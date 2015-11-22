@@ -38,17 +38,17 @@ public class BeaconEventController {
 	}
 
 	@RequestMapping(value = "/insert", method = RequestMethod.PUT)
-	public void insertBeaconEvent(@RequestBody BeaconEvent beaconEvent) {
-		beaconEventService.insertBeaconEvent(beaconEvent);
+	public boolean insertBeaconEvent(@RequestBody BeaconEvent beaconEvent) {
+		return beaconEventService.insertBeaconEvent(beaconEvent);
 	}
 
 	@RequestMapping(value = "/delete", method = RequestMethod.DELETE)
-	public void deleteBeaconEvent(@RequestBody BeaconEvent beaconEvent) {
-		beaconEventService.deleteBeaconEvent(beaconEvent);
+	public boolean deleteBeaconEvent(@RequestBody BeaconEvent beaconEvent) {
+		return beaconEventService.deleteBeaconEvent(beaconEvent);
 	}
 
 	@RequestMapping(value = "/edit", method = RequestMethod.POST)
-	public void editBeaconEvent(@RequestBody BeaconEvent beaconEvent) {
-		beaconEventService.editBeaconEvent(beaconEvent);
+	public boolean editBeaconEvent(@RequestBody BeaconEvent beaconEvent) {
+		return beaconEventService.editBeaconEvent(beaconEvent);
 	}
 }

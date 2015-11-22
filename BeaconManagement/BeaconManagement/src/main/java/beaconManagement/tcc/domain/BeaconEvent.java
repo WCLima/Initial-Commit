@@ -34,9 +34,8 @@ public class BeaconEvent implements Serializable {
 		super();
 	}
 
-	public BeaconEvent(Long id, Calendar startCalendar, Calendar endCalendar) {
+	public BeaconEvent(Calendar startCalendar, Calendar endCalendar) {
 		super();
-		this.id = id;
 		this.startCalendar = startCalendar;
 		this.endCalendar = endCalendar;
 	}

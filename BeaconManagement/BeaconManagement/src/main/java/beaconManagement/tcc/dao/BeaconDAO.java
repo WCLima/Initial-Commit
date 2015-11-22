@@ -6,11 +6,11 @@ import beaconManagement.tcc.domain.Beacon;
 
 public interface BeaconDAO {
 
-	void insert(Beacon beacon);
+	boolean insert(Beacon beacon);
 
-	void edit(Beacon beacon);
+	boolean edit(Beacon beacon);
 
-	void delete(Beacon beacon);
+	boolean delete(Beacon beacon);
 
 	List<Beacon> list();
 

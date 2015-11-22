@@ -33,9 +33,8 @@ public class Beacon implements Serializable {
 		super();
 	}
 
-	public Beacon(Long id, String name, String mac) {
+	public Beacon(String name, String mac) {
 		super();
-		this.id = id;
 		this.name = name;
 		this.mac = mac;
 	}

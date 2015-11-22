@@ -16,59 +16,59 @@ import beaconManagement.tcc.service.BeaconService;
 public class BeaconServiceImpl implements BeaconService {
 
 	@Autowired
-	private BeaconDAO beaconDAO;
+	private BeaconDAO beaconDao;
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * beaconManagement.tcc.service.BeaconService#insertBeacon(beaconManagement
+	 * .tcc.domain.Beacon)
+	 */
+	public boolean insertBeacon(Beacon beacon) {
+		return beaconDao.insert(beacon);
+	}
 
 	/*
 	 * (non-Javadoc)
 	 * 
 	 * @see
-	 * beaconManagement.tcc.service.BeaconService#insertBeacon(beaconManagement
-	 * .tcc.domain.Beacon)
-	 */
-	public void insertBeacon(Beacon beacon) {
-		beaconDAO.insert(beacon);
-	}
-
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see
 	 * beaconManagement.tcc.service.BeaconService#saveBeacon(beaconManagement
 	 * .tcc.domain.Beacon)
 	 */
-	public void deleteBeacon(Beacon beacon) {
-		beaconDAO.delete(beacon);
+	public boolean deleteBeacon(Beacon beacon) {
+		return beaconDao.delete(beacon);
 	}
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.service.BeaconService#editBeacon(beaconManagement
 	 * .tcc.domain.Beacon)
 	 */
-	public void editBeacon(Beacon beacon) {
-		beaconDAO.edit(beacon);
+	public boolean editBeacon(Beacon beacon) {
+		return beaconDao.edit(beacon);
 	}
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see beaconManagement.tcc.service.BeaconService#getBeacons()
 	 */
 	public List<Beacon> getBeacons() {
-		return beaconDAO.list();
+		return beaconDao.list();
 	}
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.service.BeaconService#getBeaconByMac(java.lang.String
 	 * )
 	 */
 	public Beacon getBeaconByMac(String mac) {
-		return beaconDAO.findByMac(mac);
+		return beaconDao.findByMac(mac);
 	}
 
 }

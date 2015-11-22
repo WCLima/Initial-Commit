@@ -9,7 +9,7 @@ import beaconManagement.tcc.domain.CheckIn;
 
 public interface CheckInService {
 
-	void insertCheckIn(CheckIn checkIn);
+	boolean insertCheckIn(CheckIn checkIn);
 
 	List<CheckIn> getCheckIn();
 

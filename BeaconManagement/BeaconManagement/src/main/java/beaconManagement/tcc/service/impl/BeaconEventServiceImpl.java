@@ -17,7 +17,7 @@ import beaconManagement.tcc.service.BeaconEventService;
 public class BeaconEventServiceImpl implements BeaconEventService {
 
 	@Autowired
-	private BeaconEventDAO beaconEventDAO;
+	private BeaconEventDAO beaconEventDao;
 
 	/*
 	 * (non-Javadoc)
@@ -25,8 +25,8 @@ public class BeaconEventServiceImpl implements BeaconEventService {
 	 * @see beaconManagement.tcc.service.BeaconEventService#insertBeaconEvent(
 	 * beaconManagement.tcc.domain.BeaconEvent)
 	 */
-	public void insertBeaconEvent(BeaconEvent beaconEvent) {
-		beaconEventDAO.insert(beaconEvent);
+	public boolean insertBeaconEvent(BeaconEvent beaconEvent) {
+		return beaconEventDao.insert(beaconEvent);
 	}
 
 	/*
@@ -35,8 +35,8 @@ public class BeaconEventServiceImpl implements BeaconEventService {
 	 * @see beaconManagement.tcc.service.BeaconEventService#saveBeaconEvent(
 	 * beaconManagement.tcc.domain.BeaconEvent)
 	 */
-	public void deleteBeaconEvent(BeaconEvent event) {
-		beaconEventDAO.delete(event);
+	public boolean deleteBeaconEvent(BeaconEvent event) {
+		return beaconEventDao.delete(event);
 	}
 
 	/*
@@ -45,8 +45,8 @@ public class BeaconEventServiceImpl implements BeaconEventService {
 	 * @see beaconManagement.tcc.service.BeaconEventService#editBeaconEvent(
 	 * beaconManagement.tcc.domain.BeaconEvent)
 	 */
-	public void editBeaconEvent(BeaconEvent event) {
-		beaconEventDAO.edit(event);
+	public boolean editBeaconEvent(BeaconEvent event) {
+		return beaconEventDao.edit(event);
 	}
 
 	/*
@@ -55,7 +55,7 @@ public class BeaconEventServiceImpl implements BeaconEventService {
 	 * @see beaconManagement.tcc.service.BeaconEventService#getBeaconEvents()
 	 */
 	public List<BeaconEvent> getBeaconEvents() {
-		return beaconEventDAO.list();
+		return beaconEventDao.list();
 	}
 
 	/*
@@ -66,7 +66,7 @@ public class BeaconEventServiceImpl implements BeaconEventService {
 	 * (java.util.Calendar)
 	 */
 	public List<BeaconEvent> getBeaconEventsByStartDate(Calendar calendar) {
-		return beaconEventDAO.findByStartCalendar(calendar);
+		return beaconEventDao.findByStartCalendar(calendar);
 	}
 
 	/*
@@ -77,7 +77,7 @@ public class BeaconEventServiceImpl implements BeaconEventService {
 	 * (java.util.Calendar)
 	 */
 	public List<BeaconEvent> getBeaconEventsByEndDate(Calendar calendar) {
-		return beaconEventDAO.findByEndCalendar(calendar);
+		return beaconEventDao.findByEndCalendar(calendar);
 	}
 
 }

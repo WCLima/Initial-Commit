@@ -9,7 +9,7 @@ import beaconManagement.tcc.domain.CheckIn;
 
 public interface CheckInDAO {
 
-	void insert(CheckIn check);
+	boolean insert(CheckIn check);
 
 	List<CheckIn> list();
 

@@ -16,7 +16,7 @@ import beaconManagement.tcc.service.BeaconDetectorService;
 public class BeaconDetectorServiceImpl implements BeaconDetectorService {
 
 	@Autowired
-	private BeaconDetectorDAO beaconDetectorDAO;
+	private BeaconDetectorDAO beaconDetectorDao;
 
 	/*
 	 * (non-Javadoc)
@@ -25,8 +25,8 @@ public class BeaconDetectorServiceImpl implements BeaconDetectorService {
 	 * beaconManagement.tcc.service.BeaconDetectorService#insertBeaconDetector
 	 * (beaconManagement.tcc.domain.BeaconDetector)
 	 */
-	public void insertBeaconDetector(BeaconDetector detector) {
-		beaconDetectorDAO.insert(detector);
+	public boolean insertBeaconDetector(BeaconDetector detector) {
+		return beaconDetectorDao.insert(detector);
 	}
 
 	/*
@@ -36,8 +36,8 @@ public class BeaconDetectorServiceImpl implements BeaconDetectorService {
 	 * beaconManagement.tcc.service.BeaconDetectorService#deleteBeaconDetector
 	 * (beaconManagement.tcc.domain.BeaconDetector)
 	 */
-	public void deleteBeaconDetector(BeaconDetector detector) {
-		beaconDetectorDAO.delete(detector);
+	public boolean deleteBeaconDetector(BeaconDetector detector) {
+		return beaconDetectorDao.delete(detector);
 	}
 
 	/*
@@ -47,8 +47,8 @@ public class BeaconDetectorServiceImpl implements BeaconDetectorService {
 	 * beaconManagement.tcc.service.BeaconDetectorService#editBeaconDetector
 	 * (beaconManagement.tcc.domain.BeaconDetector)
 	 */
-	public void editBeaconDetector(BeaconDetector detector) {
-		beaconDetectorDAO.edit(detector);
+	public boolean editBeaconDetector(BeaconDetector detector) {
+		return beaconDetectorDao.edit(detector);
 	}
 
 	/*
@@ -58,7 +58,7 @@ public class BeaconDetectorServiceImpl implements BeaconDetectorService {
 	 * beaconManagement.tcc.service.BeaconDetectorService#getAllBeaconDetector()
 	 */
 	public List<BeaconDetector> getAllBeaconDetector() {
-		return beaconDetectorDAO.list();
+		return beaconDetectorDao.list();
 	}
 
 	/*
@@ -69,7 +69,7 @@ public class BeaconDetectorServiceImpl implements BeaconDetectorService {
 	 * (java.lang.String)
 	 */
 	public BeaconDetector getBeaconDetectorByMac(String mac) {
-		return beaconDetectorDAO.findByMac(mac);
+		return beaconDetectorDao.findByMac(mac);
 	}
 
 }

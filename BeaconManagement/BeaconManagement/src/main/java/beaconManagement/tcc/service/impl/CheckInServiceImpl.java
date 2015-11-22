@@ -19,72 +19,72 @@ import beaconManagement.tcc.service.CheckInService;
 public class CheckInServiceImpl implements CheckInService {
 
 	@Autowired
-	private CheckInDAO checkInDAO;
+	private CheckInDAO checkInDao;
 
-	public void insertCheckIn(CheckIn checkIn) {
-		checkInDAO.insert(checkIn);
+	public boolean insertCheckIn(CheckIn checkIn) {
+		return checkInDao.insert(checkIn);
 	}
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see beaconManagement.tcc.service.CheckInService#getCheckIn()
 	 */
 	public List<CheckIn> getCheckIn() {
-		return checkInDAO.list();
+		return checkInDao.list();
 	}
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#getCheckInByCalendar(java
 	 * .util.Calendar)
 	 */
 	public List<CheckIn> getCheckInByCalendar(Calendar calendar) {
-		return checkInDAO.findByCalendar(calendar);
+		return checkInDao.findByCalendar(calendar);
 	}
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#getCheckInByStatus(boolean)
 	 */
 	public List<CheckIn> getCheckInByBeaconEvent(BeaconEvent event) {
-		return checkInDAO.findByBeaconEvent(event);
+		return checkInDao.findByBeaconEvent(event);
 	}
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#getCheckInBeforeCalendar(
 	 * java.util.Calendar)
 	 */
 	public List<CheckIn> getCheckInBeforeCalendar(Calendar calendar) {
-		return checkInDAO.findBeforeCalendar(calendar);
+		return checkInDao.findBeforeCalendar(calendar);
 	}
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#getCheckInFromCalendar(java
 	 * .util.Calendar)
 	 */
 	public List<CheckIn> getCheckInFromCalendar(Calendar calendar) {
-		return checkInDAO.findFromCalendar(calendar);
+		return checkInDao.findFromCalendar(calendar);
 	}
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#getCheckInByBeaconDetector
 	 * (beaconManagement.tcc.domain.BeaconDetector)
 	 */
 	public List<CheckIn> getCheckInByBeaconDetector(BeaconDetector detector) {
-		return checkInDAO.findByBeaconDetector(detector);
+		return checkInDao.findByBeaconDetector(detector);
 	}
 }

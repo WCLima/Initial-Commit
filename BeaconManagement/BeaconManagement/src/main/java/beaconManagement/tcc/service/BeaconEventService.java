@@ -7,11 +7,11 @@ import beaconManagement.tcc.domain.BeaconEvent;
 
 public interface BeaconEventService {
 
-	void insertBeaconEvent(BeaconEvent beaconEvent);
+	boolean insertBeaconEvent(BeaconEvent beaconEvent);
 
-	void deleteBeaconEvent(BeaconEvent event);
+	boolean deleteBeaconEvent(BeaconEvent event);
 
-	void editBeaconEvent(BeaconEvent event);
+	boolean editBeaconEvent(BeaconEvent event);
 
 	List<BeaconEvent> getBeaconEvents();
 
