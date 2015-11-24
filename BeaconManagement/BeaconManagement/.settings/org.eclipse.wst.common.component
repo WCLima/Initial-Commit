@@ -5,6 +5,6 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <property name="java-output-path" value="/BeaconManagement/target/classes"/>
-        <property name="context-root" value="tcc"/>
+        <property name="context-root" value="BeaconManagement"/>
     </wb-module>
 </project-modules>

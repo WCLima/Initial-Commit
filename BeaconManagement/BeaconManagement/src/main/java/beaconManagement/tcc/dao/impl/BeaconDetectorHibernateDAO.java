@@ -7,9 +7,6 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,84 +14,24 @@ import beaconManagement.tcc.dao.BeaconDetectorDAO;
 import beaconManagement.tcc.domain.BeaconDetector;
 
 @Repository
-public class BeaconDetectorHibernateDAO implements BeaconDetectorDAO {
-
-	@Autowired
-	public SessionFactory sessionFactory;
+public class BeaconDetectorHibernateDAO extends CommonDAOImpl implements
+BeaconDetectorDAO {
 
 	private static final Logger LOGGER = Logger
 			.getLogger(BeaconDetectorHibernateDAO.class);
 
 	/*
 	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * beaconManagement.tcc.dao.BeaconDetectorDAO#insert(beaconManagement.tcc
-	 * .domain.BeaconDetector)
-	 */
-	@Transactional
-	public boolean insert(BeaconDetector detector) {
-		try {
-			sessionFactory.getCurrentSession().persist(detector);
-		} catch (HibernateException e) {
-			LOGGER.error("Cannot insert: " + e);
-			return false;
-		}
-		return true;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * beaconManagement.tcc.dao.BeaconDetectorDAO#delete(beaconManagement.tcc
-	 * .domain.BeaconDetector)
-	 */
-	@Transactional
-	public boolean delete(BeaconDetector detector) {
-		if (findById(detector.getId()) != null) {
-			try {
-				sessionFactory.getCurrentSession().delete(detector);
-			} catch (HibernateException e) {
-				LOGGER.error("Cannot delete: " + e);
-				return false;
-			}
-		}
-		return true;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see
-	 * beaconManagement.tcc.dao.BeaconDetectorDAO#edit(beaconManagement.tcc.
-	 * domain.BeaconDetector)
-	 */
-	@Transactional
-	public boolean edit(BeaconDetector detector) {
-		if (findById(detector.getId()) != null) {
-			try {
-				sessionFactory.getCurrentSession().merge(detector);
-			} catch (HibernateException e) {
-				LOGGER.error("Cannot edit: " + e);
-				return false;
-			}
-		}
-		return true;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see beaconManagement.tcc.dao.BeaconDetectorDAO#list()
 	 */
-	@Transactional
 	@SuppressWarnings("unchecked")
+	@Transactional(readOnly = true)
 	public List<BeaconDetector> list() {
 		List<BeaconDetector> list = null;
 		try {
-			list = sessionFactory.getCurrentSession()
-					.createQuery("from beaconMgm.BeaconDetector").list();
+			list = getCurrentSession().createQuery("from BeaconDetector")
+					.list();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot list: " + e);
 		}
@@ -103,18 +40,16 @@ public class BeaconDetectorHibernateDAO implements BeaconDetectorDAO {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see beaconManagement.tcc.dao.BeaconDetectorDAO#findById(java.lang.Long)
 	 */
-	@Transactional
+	@Transactional(readOnly = true)
 	public BeaconDetector findById(Long id) {
 		BeaconDetector item = null;
 		try {
-			item = (BeaconDetector) sessionFactory
-					.getCurrentSession()
-					.createQuery(
-							"from beaconMgm.BeaconDetector b where b.beacondetector_id="
-									+ id).uniqueResult();
+			item = (BeaconDetector) getCurrentSession().createQuery(
+					"from BeaconDetector b where b.beacondetector_id=" + id)
+					.uniqueResult();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find the id: " + e);
 		}
@@ -123,26 +58,73 @@ public class BeaconDetectorHibernateDAO implements BeaconDetectorDAO {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * beaconManagement.tcc.dao.BeaconDetectorDAO#findByMac(java.lang.String)
 	 */
-	@Transactional
+	@Transactional(readOnly = true)
 	public BeaconDetector findByMac(String mac) {
 		BeaconDetector item = null;
 		try {
-			item = (BeaconDetector) sessionFactory
-					.getCurrentSession()
-					.createQuery(
-							"from beaconMgm.BeaconDetector b where b.mac="
-									+ mac).uniqueResult();
+			item = (BeaconDetector) getCurrentSession().createQuery(
+					"from BeaconDetector b where b.mac=" + mac).uniqueResult();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find the MAC: " + e);
 		}
 		return item;
 	}
 
-	protected Session getCurrentSession() {
-		return sessionFactory.getCurrentSession();
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * beaconManagement.tcc.dao.BeaconDetectorDAO#insert(beaconManagement.tcc
+	 * .domain.BeaconDetector)
+	 */
+	@Transactional(readOnly = true)
+	public boolean insert(BeaconDetector item) {
+		try {
+			getCurrentSession().persist(item);
+		} catch (HibernateException e) {
+			LOGGER.error("Cannot insert:" + e);
+			return false;
+		}
+		return true;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * beaconManagement.tcc.dao.BeaconDetectorDAO#edit(beaconManagement.tcc.
+	 * domain.BeaconDetector)
+	 */
+	@Transactional(readOnly = true)
+	public boolean edit(BeaconDetector item) {
+		try {
+			getCurrentSession().merge(item);
+		} catch (HibernateException e) {
+			LOGGER.error("Cannot edit:" + e);
+			return false;
+		}
+		return true;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
+	 * @see
+	 * beaconManagement.tcc.dao.BeaconDetectorDAO#delete(beaconManagement.tcc
+	 * .domain.BeaconDetector)
+	 */
+	@Transactional(readOnly = true)
+	public boolean delete(BeaconDetector item) {
+		try {
+			getCurrentSession().delete(item);
+		} catch (HibernateException e) {
+			LOGGER.error("Cannot delete:" + e);
+			return false;
+		}
+		return true;
 	}
 }
