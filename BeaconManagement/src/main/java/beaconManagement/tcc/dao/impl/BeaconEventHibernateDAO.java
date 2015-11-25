@@ -8,26 +8,28 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import beaconManagement.tcc.dao.BeaconEventDAO;
 import beaconManagement.tcc.domain.BeaconEvent;
 
 @Repository
+@Transactional(propagation = Propagation.REQUIRED)
 public class BeaconEventHibernateDAO extends CommonDAOImpl implements
-BeaconEventDAO {
+		BeaconEventDAO {
 
 	private static Logger LOGGER = Logger
 			.getLogger(BeaconEventHibernateDAO.class);
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see beaconManagement.tcc.dao.BeaconEventDAO#list()
 	 */
 	@SuppressWarnings("unchecked")
-	@Transactional(readOnly = true)
 	public List<BeaconEvent> list() {
 		List<BeaconEvent> list = null;
 		try {
@@ -40,15 +42,16 @@ BeaconEventDAO {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see beaconManagement.tcc.dao.BeaconEventDAO#findById(java.lang.Long)
 	 */
-	@Transactional(readOnly = true)
 	public BeaconEvent findById(Long id) {
 		BeaconEvent event = null;
 		try {
-			event = (BeaconEvent) getCurrentSession().createQuery(
-					"from BeaconEvent be where be.beaconevent_id=" + id);
+			Query query = getCurrentSession().createQuery(
+					"from BeaconEvent be where be.beaconevent_id= :idEvent");
+			query.setParameter("idEvent", id);
+			event = (BeaconEvent) query.uniqueResult();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find id: " + e);
 		}
@@ -57,19 +60,19 @@ BeaconEventDAO {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * beaconManagement.tcc.dao.BeaconEventDAO#findByStartCalendar(java.util
 	 * .Calendar)
 	 */
 	@SuppressWarnings("unchecked")
-	@Transactional(readOnly = true)
 	public List<BeaconEvent> findByStartCalendar(Calendar startCalendar) {
 		List<BeaconEvent> list = null;
 		try {
-			list = getCurrentSession().createQuery(
-					"from BeaconEvent be where be.startCalendar="
-							+ startCalendar.getTime()).list();
+			Query query = getCurrentSession().createQuery(
+					"from BeaconEvent be where be.startCalendar= :calendar");
+			query.setParameter("calendar", startCalendar.getTime());
+			list = query.list();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find Start Calendar: " + e);
 		}
@@ -78,19 +81,19 @@ BeaconEventDAO {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * beaconManagement.tcc.dao.BeaconEventDAO#findByEndCalendar(java.util.Calendar
 	 * )
 	 */
 	@SuppressWarnings("unchecked")
-	@Transactional(readOnly = true)
 	public List<BeaconEvent> findByEndCalendar(Calendar endCalendar) {
 		List<BeaconEvent> list = null;
 		try {
-			list = getCurrentSession().createQuery(
-					"from BeaconEvent be where be.endCalendar="
-							+ endCalendar.getTime()).list();
+			Query query = getCurrentSession().createQuery(
+					"from BeaconEvent be where be.endCalendar= :calendar");
+			query.setParameter("calendar", endCalendar.getTime());
+			list = query.list();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find End Calendar:" + e);
 		}
@@ -99,10 +102,9 @@ BeaconEventDAO {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see beaconManagement.tcc.dao.CommonDAO#insert(java.lang.Object)
 	 */
-	@Transactional(readOnly = true)
 	public boolean insert(BeaconEvent item) {
 		try {
 			getCurrentSession().persist(item);
@@ -115,10 +117,9 @@ BeaconEventDAO {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see beaconManagement.tcc.dao.CommonDAO#edit(java.lang.Object)
 	 */
-	@Transactional(readOnly = true)
 	public boolean edit(BeaconEvent item) {
 		try {
 			getCurrentSession().merge(item);
@@ -131,10 +132,9 @@ BeaconEventDAO {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see beaconManagement.tcc.dao.CommonDAO#delete(java.lang.Object)
 	 */
-	@Transactional(readOnly = true)
 	public boolean delete(BeaconEvent item) {
 		try {
 			getCurrentSession().delete(item);

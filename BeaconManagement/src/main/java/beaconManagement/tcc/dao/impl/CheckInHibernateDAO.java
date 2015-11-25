@@ -8,7 +8,9 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import beaconManagement.tcc.dao.CheckInDAO;
@@ -17,6 +19,7 @@ import beaconManagement.tcc.domain.BeaconEvent;
 import beaconManagement.tcc.domain.CheckIn;
 
 @Repository
+@Transactional(propagation = Propagation.REQUIRED)
 public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 
 	private static final Logger LOGGER = Logger
@@ -28,7 +31,6 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 	 * @see beaconManagement.tcc.dao.CheckInDAO#list()
 	 */
 	@SuppressWarnings("unchecked")
-	@Transactional(readOnly = true)
 	public List<CheckIn> list() {
 		List<CheckIn> list = null;
 		try {
@@ -44,12 +46,13 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 	 *
 	 * @see beaconManagement.tcc.dao.CheckInDAO#findById(java.lang.Long)
 	 */
-	@Transactional(readOnly = true)
 	public CheckIn findById(Long id) {
 		CheckIn checkIn = null;
 		try {
-			checkIn = (CheckIn) getCurrentSession().createQuery(
-					"from CheckIn c where c.id=" + id);
+			Query query = getCurrentSession().createQuery(
+					"from CheckIn c where c.id= :idCheckIn");
+			query.setParameter("idCheckIn", id);
+			checkIn = (CheckIn) query.uniqueResult();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find id: " + e);
 		}
@@ -63,12 +66,13 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 	 * beaconManagement.tcc.dao.CheckInDAO#findByCalendar(java.util.Calendar)
 	 */
 	@SuppressWarnings("unchecked")
-	@Transactional(readOnly = true)
 	public List<CheckIn> findByCalendar(Calendar calendar) {
 		List<CheckIn> list = null;
 		try {
-			list = getCurrentSession().createQuery(
-					"from CheckIn c where c.checkCalendar=" + calendar).list();
+			Query query = getCurrentSession().createQuery(
+					"from CheckIn c where c.checkCalendar= :checkCalendar");
+			query.setParameter("checkCalendar", calendar);
+			list = query.list();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find calendar: " + e);
 		}
@@ -81,13 +85,13 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 	 * @see beaconManagement.tcc.dao.CheckInDAO#findByStatus(boolean)
 	 */
 	@SuppressWarnings("unchecked")
-	@Transactional(readOnly = true)
 	public List<CheckIn> findByBeaconEvent(BeaconEvent event) {
 		List<CheckIn> list = null;
 		try {
-			list = getCurrentSession().createQuery(
-					"from CheckIn c where c.beaconevent_id = " + event.getId())
-					.list();
+			Query query = getCurrentSession().createQuery(
+					"from CheckIn c where c.beaconevent_id = :idEvent");
+			query.setParameter("idEvent", event);
+			list = query.list();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find event: " + e);
 		}
@@ -102,13 +106,14 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 	 * .tcc.domain.BeaconDetector)
 	 */
 	@SuppressWarnings("unchecked")
-	@Transactional(readOnly = true)
 	public List<CheckIn> findByBeaconDetector(BeaconDetector detector) {
 		List<CheckIn> list = null;
 		try {
-			list = getCurrentSession().createQuery(
-					"from CheckIn c where c.beacondetector_id = "
-							+ detector.getId()).list();
+			Query query = getCurrentSession()
+					.createQuery(
+							"from CheckIn c where c.beacondetector_id= :beaconDetector");
+			query.setParameter("beaconDetector", detector);
+			list = query.list();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find detector: " + e);
 		}
@@ -122,13 +127,13 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 	 * beaconManagement.tcc.dao.CheckInDAO#findFromCalendar(java.util.Calendar)
 	 */
 	@SuppressWarnings("unchecked")
-	@Transactional(readOnly = true)
 	public List<CheckIn> findFromCalendar(Calendar calendar) {
 		List<CheckIn> list = null;
 		try {
-			list = getCurrentSession().createQuery(
-					"from CheckIn c where c.checkCalendar > " + calendar)
-					.list();
+			Query query = getCurrentSession().createQuery(
+					"from CheckIn c where c.checkCalendar > :checkInCalendar");
+			query.setParameter("checkInCalendar", calendar);
+			list = query.list();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find checkin: " + e);
 		}
@@ -143,13 +148,13 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 	 * )
 	 */
 	@SuppressWarnings("unchecked")
-	@Transactional(readOnly = true)
 	public List<CheckIn> findBeforeCalendar(Calendar calendar) {
 		List<CheckIn> list = null;
 		try {
-			list = getCurrentSession().createQuery(
-					"from CheckIn c where c.checkCalendar < " + calendar)
-					.list();
+			Query query = getCurrentSession().createQuery(
+					"from CheckIn c where c.checkCalendar < :checkInCalendar");
+			query.setParameter("checkInCalendar", calendar);
+			list = query.list();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find checkin: " + e);
 		}
@@ -161,7 +166,6 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 	 *
 	 * @see beaconManagement.tcc.dao.CommonDAO#insert(java.lang.Object)
 	 */
-	@Transactional(readOnly = true)
 	public boolean insert(CheckIn item) {
 		try {
 			getCurrentSession().persist(item);

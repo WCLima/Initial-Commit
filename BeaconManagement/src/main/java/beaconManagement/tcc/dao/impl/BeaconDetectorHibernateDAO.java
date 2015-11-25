@@ -3,32 +3,35 @@
  */
 package beaconManagement.tcc.dao.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import beaconManagement.tcc.dao.BeaconDetectorDAO;
 import beaconManagement.tcc.domain.BeaconDetector;
 
 @Repository
+@Transactional(propagation = Propagation.REQUIRED)
 public class BeaconDetectorHibernateDAO extends CommonDAOImpl implements
-BeaconDetectorDAO {
+		BeaconDetectorDAO {
 
 	private static final Logger LOGGER = Logger
 			.getLogger(BeaconDetectorHibernateDAO.class);
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see beaconManagement.tcc.dao.BeaconDetectorDAO#list()
 	 */
 	@SuppressWarnings("unchecked")
-	@Transactional(readOnly = true)
 	public List<BeaconDetector> list() {
-		List<BeaconDetector> list = null;
+		List<BeaconDetector> list = new ArrayList<BeaconDetector>();
 		try {
 			list = getCurrentSession().createQuery("from BeaconDetector")
 					.list();
@@ -40,16 +43,17 @@ BeaconDetectorDAO {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see beaconManagement.tcc.dao.BeaconDetectorDAO#findById(java.lang.Long)
 	 */
-	@Transactional(readOnly = true)
 	public BeaconDetector findById(Long id) {
 		BeaconDetector item = null;
 		try {
-			item = (BeaconDetector) getCurrentSession().createQuery(
-					"from BeaconDetector b where b.beacondetector_id=" + id)
-					.uniqueResult();
+			Query query = getCurrentSession()
+					.createQuery(
+							"from BeaconDetector b where b.beacondetector_id= :idDetector");
+			query.setParameter("idDetector", id);
+			item = (BeaconDetector) query.uniqueResult();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find the id: " + e);
 		}
@@ -58,16 +62,17 @@ BeaconDetectorDAO {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.dao.BeaconDetectorDAO#findByMac(java.lang.String)
 	 */
-	@Transactional(readOnly = true)
 	public BeaconDetector findByMac(String mac) {
-		BeaconDetector item = null;
+		BeaconDetector item = new BeaconDetector("", "");
 		try {
-			item = (BeaconDetector) getCurrentSession().createQuery(
-					"from BeaconDetector b where b.mac=" + mac).uniqueResult();
+			Query query = getCurrentSession().createQuery(
+					"from BeaconDetector b where b.mac= :macDetector");
+			query.setParameter("macDetector", mac);
+			item = (BeaconDetector) query.uniqueResult();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find the MAC: " + e);
 		}
@@ -76,12 +81,11 @@ BeaconDetectorDAO {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.dao.BeaconDetectorDAO#insert(beaconManagement.tcc
 	 * .domain.BeaconDetector)
 	 */
-	@Transactional(readOnly = true)
 	public boolean insert(BeaconDetector item) {
 		try {
 			getCurrentSession().persist(item);
@@ -94,12 +98,11 @@ BeaconDetectorDAO {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.dao.BeaconDetectorDAO#edit(beaconManagement.tcc.
 	 * domain.BeaconDetector)
 	 */
-	@Transactional(readOnly = true)
 	public boolean edit(BeaconDetector item) {
 		try {
 			getCurrentSession().merge(item);
@@ -112,12 +115,11 @@ BeaconDetectorDAO {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.dao.BeaconDetectorDAO#delete(beaconManagement.tcc
 	 * .domain.BeaconDetector)
 	 */
-	@Transactional(readOnly = true)
 	public boolean delete(BeaconDetector item) {
 		try {
 			getCurrentSession().delete(item);

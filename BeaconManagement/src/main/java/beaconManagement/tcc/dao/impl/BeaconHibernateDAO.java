@@ -7,13 +7,16 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import beaconManagement.tcc.dao.BeaconDAO;
 import beaconManagement.tcc.domain.Beacon;
 
 @Repository
+@Transactional(propagation = Propagation.REQUIRED)
 public class BeaconHibernateDAO extends CommonDAOImpl implements BeaconDAO {
 
 	private static final Logger LOGGER = Logger
@@ -25,7 +28,6 @@ public class BeaconHibernateDAO extends CommonDAOImpl implements BeaconDAO {
 	 * @see beaconManagement.tcc.dao.BeaconDAO#list()
 	 */
 	@SuppressWarnings("unchecked")
-	@Transactional(readOnly = true)
 	public List<Beacon> list() {
 		List<Beacon> list = null;
 		try {
@@ -41,12 +43,13 @@ public class BeaconHibernateDAO extends CommonDAOImpl implements BeaconDAO {
 	 *
 	 * @see beaconManagement.tcc.dao.BeaconDAO#findById(java.lang.Long)
 	 */
-	@Transactional(readOnly = true)
 	public Beacon findById(Long id) {
 		Beacon item = null;
 		try {
-			item = (Beacon) getCurrentSession().createQuery(
-					"from Beacon b where b.beacon_id=" + id).uniqueResult();
+			Query query = getCurrentSession().createQuery(
+					"from Beacon b where b.beacon_id= :idBeacon");
+			query.setParameter("idBeacon", id);
+			item = (Beacon) query.uniqueResult();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find id: " + e);
 		}
@@ -58,12 +61,13 @@ public class BeaconHibernateDAO extends CommonDAOImpl implements BeaconDAO {
 	 *
 	 * @see beaconManagement.tcc.dao.BeaconDAO#findByMac(java.lang.String)
 	 */
-	@Transactional(readOnly = true)
 	public Beacon findByMac(String mac) {
 		Beacon item = null;
 		try {
-			item = (Beacon) getCurrentSession().createQuery(
-					"from Beacon b where b.mac=" + mac).uniqueResult();
+			Query query = getCurrentSession().createQuery(
+					"from Beacon b where b.mac = :macAddress");
+			query.setParameter("macAddress", mac);
+			item = (Beacon) query.uniqueResult();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find MAC: " + e);
 		}
@@ -75,7 +79,6 @@ public class BeaconHibernateDAO extends CommonDAOImpl implements BeaconDAO {
 	 * 
 	 * @see beaconManagement.tcc.dao.CommonDAO#insert(java.lang.Object)
 	 */
-	@Transactional(readOnly = true)
 	public boolean insert(Beacon item) {
 		try {
 			getCurrentSession().persist(item);
@@ -91,7 +94,6 @@ public class BeaconHibernateDAO extends CommonDAOImpl implements BeaconDAO {
 	 * 
 	 * @see beaconManagement.tcc.dao.CommonDAO#edit(java.lang.Object)
 	 */
-	@Transactional(readOnly = true)
 	public boolean edit(Beacon item) {
 		try {
 			getCurrentSession().merge(item);
@@ -107,7 +109,6 @@ public class BeaconHibernateDAO extends CommonDAOImpl implements BeaconDAO {
 	 * 
 	 * @see beaconManagement.tcc.dao.CommonDAO#delete(java.lang.Object)
 	 */
-	@Transactional(readOnly = true)
 	public boolean delete(Beacon item) {
 		try {
 			getCurrentSession().delete(item);
