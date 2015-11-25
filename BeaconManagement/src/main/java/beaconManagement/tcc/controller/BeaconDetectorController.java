@@ -13,7 +13,7 @@ import beaconManagement.tcc.domain.BeaconDetector;
 import beaconManagement.tcc.service.BeaconDetectorService;
 
 @Controller
-@RequestMapping(value = "/detectors")
+@RequestMapping(value = "/detector")
 public class BeaconDetectorController {
 
 	@Autowired
@@ -24,22 +24,22 @@ public class BeaconDetectorController {
 		return beaconDetectorService.getAllBeaconDetector();
 	}
 
-	@RequestMapping(value = "/detector_by_mac", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/find_detector_by_mac", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public BeaconDetector getBeaconDetectorByMAC(@RequestBody String mac) {
 		return beaconDetectorService.getBeaconDetectorByMac(mac);
 	}
 
-	@RequestMapping(value = "/insert", method = RequestMethod.PUT)
+	@RequestMapping(value = "/insert_detector", method = RequestMethod.PUT)
 	public boolean insertBeaconEvent(@RequestBody BeaconDetector detector) {
 		return beaconDetectorService.insertBeaconDetector(detector);
 	}
 
-	@RequestMapping(value = "/delete", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/delete_detector", method = RequestMethod.DELETE)
 	public boolean deleteBeaconEvent(@RequestBody BeaconDetector detector) {
 		return beaconDetectorService.deleteBeaconDetector(detector);
 	}
 
-	@RequestMapping(value = "/edit", method = RequestMethod.POST)
+	@RequestMapping(value = "/edit_detector", method = RequestMethod.POST)
 	public boolean editBeaconEvent(@RequestBody BeaconDetector detector) {
 		return beaconDetectorService.editBeaconDetector(detector);
 	}

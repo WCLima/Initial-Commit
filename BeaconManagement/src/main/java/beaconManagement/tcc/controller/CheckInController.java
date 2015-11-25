@@ -15,39 +15,39 @@ import beaconManagement.tcc.domain.CheckIn;
 import beaconManagement.tcc.service.CheckInService;
 
 @Controller
-@RequestMapping(value = "/checkIns")
+@RequestMapping(value = "/checkin")
 public class CheckInController {
 
 	@Autowired
 	private CheckInService checkInService;
 
-	@RequestMapping(value = "/list_checkIns", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/list_checkins", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<CheckIn> getCheckIn() {
 		return checkInService.getCheckIn();
 	}
 
-	@RequestMapping(value = "/list_by_detector", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/list_checkins_by_detector", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<CheckIn> getCheckInByBeaconDetector(
 			@RequestBody BeaconDetector detector) {
 		return checkInService.getCheckInByBeaconDetector(detector);
 	}
 
-	@RequestMapping(value = "/list_checkInsByDate", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/list_checkins_by_date", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<CheckIn> getCheckInByCalendar(@RequestBody Calendar calendar) {
 		return checkInService.getCheckInByCalendar(calendar);
 	}
 
-	@RequestMapping(value = "/list_checkInsFromDate", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/list_checkins_from_date", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<CheckIn> getCheckInFromCalendar(@RequestBody Calendar calendar) {
 		return checkInService.getCheckInFromCalendar(calendar);
 	}
 
-	@RequestMapping(value = "/list_checkInsBeforeDate", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/list_checkins_before_date", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<CheckIn> getCheckInBeforeCalendar(@RequestBody Calendar calendar) {
 		return checkInService.getCheckInBeforeCalendar(calendar);
 	}
 
-	@RequestMapping(value = "/put_checkIn", method = RequestMethod.PUT)
+	@RequestMapping(value = "/insert_checkin", method = RequestMethod.PUT)
 	public boolean insertCheckIn(@RequestBody CheckIn checkIn) {
 		return checkInService.insertCheckIn(checkIn);
 	}

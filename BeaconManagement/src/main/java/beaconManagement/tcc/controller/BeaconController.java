@@ -13,7 +13,7 @@ import beaconManagement.tcc.domain.Beacon;
 import beaconManagement.tcc.service.BeaconService;
 
 @Controller
-@RequestMapping(value = "/beacons")
+@RequestMapping(value = "/beacon")
 public class BeaconController {
 
 	@Autowired
@@ -24,22 +24,22 @@ public class BeaconController {
 		return beaconService.getBeacons();
 	}
 
-	@RequestMapping(value = "/find_mac", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/find_beacon_by_mac", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	public Beacon findBeaconByMAC(@RequestBody String mac) {
 		return beaconService.getBeaconByMac(mac);
 	}
 
-	@RequestMapping(value = "/insert", method = RequestMethod.PUT)
+	@RequestMapping(value = "/insert_beacon", method = RequestMethod.PUT)
 	public boolean insertBeaconEvent(@RequestBody Beacon beacon) {
 		return beaconService.insertBeacon(beacon);
 	}
 
-	@RequestMapping(value = "/delete", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/delete_beacon", method = RequestMethod.DELETE)
 	public boolean deleteBeaconEvent(@RequestBody Beacon beacon) {
 		return beaconService.deleteBeacon(beacon);
 	}
 
-	@RequestMapping(value = "/edit", method = RequestMethod.POST)
+	@RequestMapping(value = "/edit_beacon", method = RequestMethod.POST)
 	public boolean editBeaconEvent(@RequestBody Beacon beacon) {
 		return beaconService.editBeacon(beacon);
 	}
