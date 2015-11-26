@@ -1,6 +1,5 @@
 package beaconManagement.tcc.service;
 
-import java.util.Calendar;
 import java.util.List;
 
 import beaconManagement.tcc.domain.BeaconEvent;
@@ -15,7 +14,7 @@ public interface BeaconEventService {
 
 	List<BeaconEvent> getBeaconEvents();
 
-	List<BeaconEvent> getBeaconEventsByStartDate(Calendar calendar);
+	List<BeaconEvent> getBeaconEventsByStartDate(Long calendar);
 
-	List<BeaconEvent> getBeaconEventsByEndDate(Calendar calendar);
+	List<BeaconEvent> getBeaconEventsByEndDate(Long calendar);
 }

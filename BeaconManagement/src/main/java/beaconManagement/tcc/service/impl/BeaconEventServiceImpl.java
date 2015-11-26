@@ -3,7 +3,6 @@
  */
 package beaconManagement.tcc.service.impl;
 
-import java.util.Calendar;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +20,7 @@ public class BeaconEventServiceImpl implements BeaconEventService {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see beaconManagement.tcc.service.BeaconEventService#insertBeaconEvent(
 	 * beaconManagement.tcc.domain.BeaconEvent)
 	 */
@@ -31,7 +30,7 @@ public class BeaconEventServiceImpl implements BeaconEventService {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see beaconManagement.tcc.service.BeaconEventService#saveBeaconEvent(
 	 * beaconManagement.tcc.domain.BeaconEvent)
 	 */
@@ -41,7 +40,7 @@ public class BeaconEventServiceImpl implements BeaconEventService {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see beaconManagement.tcc.service.BeaconEventService#editBeaconEvent(
 	 * beaconManagement.tcc.domain.BeaconEvent)
 	 */
@@ -51,7 +50,7 @@ public class BeaconEventServiceImpl implements BeaconEventService {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see beaconManagement.tcc.service.BeaconEventService#getBeaconEvents()
 	 */
 	public List<BeaconEvent> getBeaconEvents() {
@@ -60,23 +59,23 @@ public class BeaconEventServiceImpl implements BeaconEventService {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.service.BeaconEventService#getBeaconEventsByStartdate
 	 * (java.util.Calendar)
 	 */
-	public List<BeaconEvent> getBeaconEventsByStartDate(Calendar calendar) {
+	public List<BeaconEvent> getBeaconEventsByStartDate(Long calendar) {
 		return beaconEventDao.findByStartCalendar(calendar);
 	}
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.service.BeaconEventService#getBeaconEventsByEnddate
 	 * (java.util.Calendar)
 	 */
-	public List<BeaconEvent> getBeaconEventsByEndDate(Calendar calendar) {
+	public List<BeaconEvent> getBeaconEventsByEndDate(Long calendar) {
 		return beaconEventDao.findByEndCalendar(calendar);
 	}
 

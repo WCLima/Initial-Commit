@@ -1,6 +1,5 @@
 package beaconManagement.tcc.dao;
 
-import java.util.Calendar;
 import java.util.List;
 
 import beaconManagement.tcc.domain.BeaconDetector;
@@ -15,11 +14,11 @@ public interface CheckInDAO {
 
 	CheckIn findById(Long id);
 
-	List<CheckIn> findByCalendar(Calendar calendar);
+	List<CheckIn> findByCalendar(Long calendar);
 
-	List<CheckIn> findFromCalendar(Calendar calendar);
+	List<CheckIn> findFromCalendar(Long calendar);
 
-	List<CheckIn> findBeforeCalendar(Calendar calendar);
+	List<CheckIn> findBeforeCalendar(Long calendar);
 
 	List<CheckIn> findByBeaconEvent(BeaconEvent beaconEvent);
 

@@ -3,7 +3,6 @@
  */
 package beaconManagement.tcc.service.impl;
 
-import java.util.Calendar;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +26,7 @@ public class CheckInServiceImpl implements CheckInService {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see beaconManagement.tcc.service.CheckInService#getCheckIn()
 	 */
 	public List<CheckIn> getCheckIn() {
@@ -36,18 +35,18 @@ public class CheckInServiceImpl implements CheckInService {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#getCheckInByCalendar(java
 	 * .util.Calendar)
 	 */
-	public List<CheckIn> getCheckInByCalendar(Calendar calendar) {
+	public List<CheckIn> getCheckInByCalendar(Long calendar) {
 		return checkInDao.findByCalendar(calendar);
 	}
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#getCheckInByStatus(boolean)
 	 */
@@ -57,29 +56,29 @@ public class CheckInServiceImpl implements CheckInService {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#getCheckInBeforeCalendar(
 	 * java.util.Calendar)
 	 */
-	public List<CheckIn> getCheckInBeforeCalendar(Calendar calendar) {
+	public List<CheckIn> getCheckInBeforeCalendar(Long calendar) {
 		return checkInDao.findBeforeCalendar(calendar);
 	}
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#getCheckInFromCalendar(java
 	 * .util.Calendar)
 	 */
-	public List<CheckIn> getCheckInFromCalendar(Calendar calendar) {
+	public List<CheckIn> getCheckInFromCalendar(Long calendar) {
 		return checkInDao.findFromCalendar(calendar);
 	}
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#getCheckInByBeaconDetector
 	 * (beaconManagement.tcc.domain.BeaconDetector)

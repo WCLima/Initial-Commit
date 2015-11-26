@@ -3,7 +3,6 @@
  */
 package beaconManagement.tcc.dao.impl;
 
-import java.util.Calendar;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -66,12 +65,12 @@ public class BeaconEventHibernateDAO extends CommonDAOImpl implements
 	 * .Calendar)
 	 */
 	@SuppressWarnings("unchecked")
-	public List<BeaconEvent> findByStartCalendar(Calendar startCalendar) {
+	public List<BeaconEvent> findByStartCalendar(Long startCalendar) {
 		List<BeaconEvent> list = null;
 		try {
 			Query query = getCurrentSession().createQuery(
-					"from BeaconEvent be where be.startCalendar= :calendar");
-			query.setParameter("calendar", startCalendar.getTime());
+					"from BeaconEvent be where be.startdatemilis= :calendar");
+			query.setParameter("calendar", startCalendar);
 			list = query.list();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find Start Calendar: " + e);
@@ -87,12 +86,12 @@ public class BeaconEventHibernateDAO extends CommonDAOImpl implements
 	 * )
 	 */
 	@SuppressWarnings("unchecked")
-	public List<BeaconEvent> findByEndCalendar(Calendar endCalendar) {
+	public List<BeaconEvent> findByEndCalendar(Long endCalendar) {
 		List<BeaconEvent> list = null;
 		try {
 			Query query = getCurrentSession().createQuery(
-					"from BeaconEvent be where be.endCalendar= :calendar");
-			query.setParameter("calendar", endCalendar.getTime());
+					"from BeaconEvent be where be.enddatemilis= :calendar");
+			query.setParameter("calendar", endCalendar);
 			list = query.list();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find End Calendar:" + e);

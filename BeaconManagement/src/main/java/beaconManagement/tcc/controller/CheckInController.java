@@ -1,6 +1,5 @@
 package beaconManagement.tcc.controller;
 
-import java.util.Calendar;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,19 +36,19 @@ public class CheckInController {
 
 	@RequestMapping(value = "/list_checkins_by_date", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	public List<CheckIn> getCheckInByCalendar(@RequestBody Calendar calendar) {
+	public List<CheckIn> getCheckInByCalendar(@RequestBody Long calendar) {
 		return checkInService.getCheckInByCalendar(calendar);
 	}
 
 	@RequestMapping(value = "/list_checkins_from_date", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	public List<CheckIn> getCheckInFromCalendar(@RequestBody Calendar calendar) {
+	public List<CheckIn> getCheckInFromCalendar(@RequestBody Long calendar) {
 		return checkInService.getCheckInFromCalendar(calendar);
 	}
 
 	@RequestMapping(value = "/list_checkins_before_date", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	public List<CheckIn> getCheckInBeforeCalendar(@RequestBody Calendar calendar) {
+	public List<CheckIn> getCheckInBeforeCalendar(@RequestBody Long calendar) {
 		return checkInService.getCheckInBeforeCalendar(calendar);
 	}
 

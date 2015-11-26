@@ -1,6 +1,5 @@
 package beaconManagement.tcc.controller;
 
-import java.util.Calendar;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,15 +28,13 @@ public class BeaconEventController {
 
 	@RequestMapping(value = "/list_event_start_date", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	public List<BeaconEvent> getBeaconEventsStartDate(
-			@RequestBody Calendar calendar) {
+	public List<BeaconEvent> getBeaconEventsStartDate(@RequestBody Long calendar) {
 		return beaconEventService.getBeaconEventsByStartDate(calendar);
 	}
 
 	@RequestMapping(value = "/list_event_end_date", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	public List<BeaconEvent> getBeaconEventsEndDate(
-			@RequestBody Calendar calendar) {
+	public List<BeaconEvent> getBeaconEventsEndDate(@RequestBody Long calendar) {
 		return beaconEventService.getBeaconEventsByEndDate(calendar);
 	}
 

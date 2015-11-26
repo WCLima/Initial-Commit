@@ -3,7 +3,6 @@
  */
 package beaconManagement.tcc.dao.impl;
 
-import java.util.Calendar;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -66,11 +65,11 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 	 * beaconManagement.tcc.dao.CheckInDAO#findByCalendar(java.util.Calendar)
 	 */
 	@SuppressWarnings("unchecked")
-	public List<CheckIn> findByCalendar(Calendar calendar) {
+	public List<CheckIn> findByCalendar(Long calendar) {
 		List<CheckIn> list = null;
 		try {
 			Query query = getCurrentSession().createQuery(
-					"from CheckIn c where c.checkCalendar= :checkCalendar");
+					"from CheckIn c where c.checkdatemilis= :checkCalendar");
 			query.setParameter("checkCalendar", calendar);
 			list = query.list();
 		} catch (HibernateException e) {
@@ -127,11 +126,11 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 	 * beaconManagement.tcc.dao.CheckInDAO#findFromCalendar(java.util.Calendar)
 	 */
 	@SuppressWarnings("unchecked")
-	public List<CheckIn> findFromCalendar(Calendar calendar) {
+	public List<CheckIn> findFromCalendar(Long calendar) {
 		List<CheckIn> list = null;
 		try {
 			Query query = getCurrentSession().createQuery(
-					"from CheckIn c where c.checkCalendar > :checkInCalendar");
+					"from CheckIn c where c.checkdatemilis > :checkInCalendar");
 			query.setParameter("checkInCalendar", calendar);
 			list = query.list();
 		} catch (HibernateException e) {
@@ -148,11 +147,11 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 	 * )
 	 */
 	@SuppressWarnings("unchecked")
-	public List<CheckIn> findBeforeCalendar(Calendar calendar) {
+	public List<CheckIn> findBeforeCalendar(Long calendar) {
 		List<CheckIn> list = null;
 		try {
 			Query query = getCurrentSession().createQuery(
-					"from CheckIn c where c.checkCalendar < :checkInCalendar");
+					"from CheckIn c where c.checkdatemilis < :checkInCalendar");
 			query.setParameter("checkInCalendar", calendar);
 			list = query.list();
 		} catch (HibernateException e) {

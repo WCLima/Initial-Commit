@@ -1,6 +1,5 @@
 package beaconManagement.tcc.dao;
 
-import java.util.Calendar;
 import java.util.List;
 
 import beaconManagement.tcc.domain.BeaconEvent;
@@ -17,8 +16,8 @@ public interface BeaconEventDAO {
 
 	BeaconEvent findById(Long id);
 
-	List<BeaconEvent> findByStartCalendar(Calendar startCalendar);
+	List<BeaconEvent> findByStartCalendar(Long startCalendar);
 
-	List<BeaconEvent> findByEndCalendar(Calendar endCalendar);
+	List<BeaconEvent> findByEndCalendar(Long endCalendar);
 
 }

@@ -1,7 +1,6 @@
 package beaconManagement.tcc.domain;
 
 import java.io.Serializable;
-import java.util.Calendar;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -27,20 +26,17 @@ public class CheckIn implements Serializable {
 	private Long id;
 
 	@NotBlank
-	private Calendar checkCalendar;
+	private Long checkDateMilis;
 
 	private BeaconEvent beaconEvent;
 
 	private BeaconDetector beaconDetector;
 
-	public CheckIn() {
-		super();
-	}
-
-	public CheckIn(Calendar checkCalendar, BeaconEvent beaconEvent,
+	public CheckIn(Long id, Long checkDateMilis, BeaconEvent beaconEvent,
 			BeaconDetector beaconDetector) {
 		super();
-		this.checkCalendar = checkCalendar;
+		this.id = id;
+		this.checkDateMilis = checkDateMilis;
 		this.beaconEvent = beaconEvent;
 		this.beaconDetector = beaconDetector;
 	}
@@ -57,12 +53,12 @@ public class CheckIn implements Serializable {
 		this.id = id;
 	}
 
-	public Calendar getCheckCalendar() {
-		return checkCalendar;
+	public Long getCheckDateMilis() {
+		return checkDateMilis;
 	}
 
-	public void setCheckCalendar(Calendar checkCalendar) {
-		this.checkCalendar = checkCalendar;
+	public void setCheckDateMilis(Long checkDateMilis) {
+		this.checkDateMilis = checkDateMilis;
 	}
 
 	@ManyToOne
@@ -94,7 +90,7 @@ public class CheckIn implements Serializable {
 		result = prime * result
 				+ ((beaconEvent == null) ? 0 : beaconEvent.hashCode());
 		result = prime * result
-				+ ((checkCalendar == null) ? 0 : checkCalendar.hashCode());
+				+ ((checkDateMilis == null) ? 0 : checkDateMilis.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
@@ -118,10 +114,10 @@ public class CheckIn implements Serializable {
 				return false;
 		} else if (!beaconEvent.equals(other.beaconEvent))
 			return false;
-		if (checkCalendar == null) {
-			if (other.checkCalendar != null)
+		if (checkDateMilis == null) {
+			if (other.checkDateMilis != null)
 				return false;
-		} else if (!checkCalendar.equals(other.checkCalendar))
+		} else if (!checkDateMilis.equals(other.checkDateMilis))
 			return false;
 		if (id == null) {
 			if (other.id != null)
@@ -133,7 +129,7 @@ public class CheckIn implements Serializable {
 
 	@Override
 	public String toString() {
-		return "CheckIn [id=" + id + ", checkCalendar=" + checkCalendar
+		return "CheckIn [id=" + id + ", checkDateMilis=" + checkDateMilis
 				+ ", beaconEvent=" + beaconEvent + ", beaconDetector="
 				+ beaconDetector + "]";
 	}

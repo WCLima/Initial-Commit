@@ -1,7 +1,6 @@
 package beaconManagement.tcc.domain;
 
 import java.io.Serializable;
-import java.util.Calendar;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -25,19 +24,16 @@ public class BeaconEvent implements Serializable {
 	private Long id;
 
 	@NotBlank
-	private Calendar startCalendar;
+	private Long startDateMilis;
 
 	@NotBlank
-	private Calendar endCalendar;
+	private Long endDateMilis;
 
-	public BeaconEvent() {
+	public BeaconEvent(Long id, Long startDateMilis, Long endDateMilis) {
 		super();
-	}
-
-	public BeaconEvent(Calendar startCalendar, Calendar endCalendar) {
-		super();
-		this.startCalendar = startCalendar;
-		this.endCalendar = endCalendar;
+		this.id = id;
+		this.startDateMilis = startDateMilis;
+		this.endDateMilis = endDateMilis;
 	}
 
 	@Id
@@ -52,20 +48,20 @@ public class BeaconEvent implements Serializable {
 		this.id = id;
 	}
 
-	public Calendar getStartCalendar() {
-		return startCalendar;
+	public Long getStartDateMilis() {
+		return startDateMilis;
 	}
 
-	public void setStartCalendar(Calendar startCalendar) {
-		this.startCalendar = startCalendar;
+	public void setStartDateMilis(Long startDateMilis) {
+		this.startDateMilis = startDateMilis;
 	}
 
-	public Calendar getEndCalendar() {
-		return endCalendar;
+	public Long getEndDateMilis() {
+		return endDateMilis;
 	}
 
-	public void setEndCalendar(Calendar endCalendar) {
-		this.endCalendar = endCalendar;
+	public void setEndDateMilis(Long endDateMilis) {
+		this.endDateMilis = endDateMilis;
 	}
 
 	@Override
@@ -73,10 +69,10 @@ public class BeaconEvent implements Serializable {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result
-				+ ((endCalendar == null) ? 0 : endCalendar.hashCode());
+				+ ((endDateMilis == null) ? 0 : endDateMilis.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result
-				+ ((startCalendar == null) ? 0 : startCalendar.hashCode());
+				+ ((startDateMilis == null) ? 0 : startDateMilis.hashCode());
 		return result;
 	}
 
@@ -89,28 +85,28 @@ public class BeaconEvent implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		BeaconEvent other = (BeaconEvent) obj;
-		if (endCalendar == null) {
-			if (other.endCalendar != null)
+		if (endDateMilis == null) {
+			if (other.endDateMilis != null)
 				return false;
-		} else if (!endCalendar.equals(other.endCalendar))
+		} else if (!endDateMilis.equals(other.endDateMilis))
 			return false;
 		if (id == null) {
 			if (other.id != null)
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
-		if (startCalendar == null) {
-			if (other.startCalendar != null)
+		if (startDateMilis == null) {
+			if (other.startDateMilis != null)
 				return false;
-		} else if (!startCalendar.equals(other.startCalendar))
+		} else if (!startDateMilis.equals(other.startDateMilis))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "BeaconEvent [id=" + id + ", startCalendar=" + startCalendar
-				+ ", endCalendar=" + endCalendar + "]";
+		return "BeaconEvent [id=" + id + ", startDateMilis=" + startDateMilis
+				+ ", endDateMilis=" + endDateMilis + "]";
 	}
 
 }
