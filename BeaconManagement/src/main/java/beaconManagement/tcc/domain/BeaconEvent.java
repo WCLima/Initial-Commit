@@ -13,7 +13,7 @@ import javax.persistence.Table;
 import org.hibernate.validator.constraints.NotBlank;
 
 /**
- * @author  Wagner
+ * @author Wagner
  */
 @Entity
 @Table(name = "beaconevent", schema = "management")
@@ -25,18 +25,18 @@ public class BeaconEvent implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * @uml.property  name="id"
+	 * @uml.property name="id"
 	 */
 	private Long id;
 
 	/**
-	 * @uml.property  name="startDateMillis"
+	 * @uml.property name="startDateMillis"
 	 */
 	@NotBlank
 	private Long startDateMillis;
 
 	/**
-	 * @uml.property  name="endDateMillis"
+	 * @uml.property name="endDateMillis"
 	 */
 	@NotBlank
 	private Long endDateMillis;
@@ -50,7 +50,7 @@ public class BeaconEvent implements Serializable {
 
 	/**
 	 * @return
-	 * @uml.property  name="id"
+	 * @uml.property name="id"
 	 */
 	@Id
 	@Column(name = "beaconevent_id")
@@ -61,8 +61,8 @@ public class BeaconEvent implements Serializable {
 	}
 
 	/**
-	 * @param  id
-	 * @uml.property  name="id"
+	 * @param id
+	 * @uml.property name="id"
 	 */
 	public void setId(Long id) {
 		this.id = id;
@@ -70,25 +70,25 @@ public class BeaconEvent implements Serializable {
 
 	/**
 	 * @return
-	 * @uml.property  name="startDateMillis"
+	 * @uml.property name="startDateMillis"
 	 */
 	public Long getStartDateMillis() {
 		return startDateMillis;
 	}
 
-	public void setStartDateMilis(Long startDateMillis) {
+	public void setStartDateMillis(Long startDateMillis) {
 		this.startDateMillis = startDateMillis;
 	}
 
 	/**
 	 * @return
-	 * @uml.property  name="endDateMillis"
+	 * @uml.property name="endDateMillis"
 	 */
 	public Long getEndDateMillis() {
 		return endDateMillis;
 	}
 
-	public void setEndDateMilis(Long endDateMillis) {
+	public void setEndDateMillis(Long endDateMillis) {
 		this.endDateMillis = endDateMillis;
 	}
 

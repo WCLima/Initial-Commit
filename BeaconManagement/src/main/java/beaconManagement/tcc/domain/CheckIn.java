@@ -15,7 +15,7 @@ import javax.persistence.Table;
 import org.hibernate.validator.constraints.NotBlank;
 
 /**
- * @author  Wagner
+ * @author Wagner
  */
 @Entity
 @Table(name = "checkin", schema = "management")
@@ -27,25 +27,25 @@ public class CheckIn implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * @uml.property  name="id"
+	 * @uml.property name="id"
 	 */
 	private Long id;
 
 	/**
-	 * @uml.property  name="checkDateMillis"
+	 * @uml.property name="checkDateMillis"
 	 */
 	@NotBlank
 	private Long checkDateMillis;
 
 	/**
-	 * @uml.property  name="beaconEvent"
-	 * @uml.associationEnd  multiplicity="(1 1)"
+	 * @uml.property name="beaconEvent"
+	 * @uml.associationEnd multiplicity="(1 1)"
 	 */
 	private BeaconEvent beaconEvent;
 
 	/**
-	 * @uml.property  name="beaconDetector"
-	 * @uml.associationEnd  multiplicity="(1 1)"
+	 * @uml.property name="beaconDetector"
+	 * @uml.associationEnd multiplicity="(1 1)"
 	 */
 	private BeaconDetector beaconDetector;
 
@@ -60,7 +60,7 @@ public class CheckIn implements Serializable {
 
 	/**
 	 * @return
-	 * @uml.property  name="id"
+	 * @uml.property name="id"
 	 */
 	@Id
 	@Column(name = "checkin_id")
@@ -71,8 +71,8 @@ public class CheckIn implements Serializable {
 	}
 
 	/**
-	 * @param  id
-	 * @uml.property  name="id"
+	 * @param id
+	 * @uml.property name="id"
 	 */
 	public void setId(Long id) {
 		this.id = id;
@@ -80,19 +80,19 @@ public class CheckIn implements Serializable {
 
 	/**
 	 * @return
-	 * @uml.property  name="checkDateMillis"
+	 * @uml.property name="checkDateMillis"
 	 */
 	public Long getCheckDateMillis() {
 		return checkDateMillis;
 	}
 
-	public void setCheckDateMilis(Long checkDateMillis) {
+	public void setCheckDateMillis(Long checkDateMillis) {
 		this.checkDateMillis = checkDateMillis;
 	}
 
 	/**
 	 * @return
-	 * @uml.property  name="beaconEvent"
+	 * @uml.property name="beaconEvent"
 	 */
 	@ManyToOne
 	@JoinColumn(name = "beaconevent_id")
@@ -101,8 +101,8 @@ public class CheckIn implements Serializable {
 	}
 
 	/**
-	 * @param  beaconEvent
-	 * @uml.property  name="beaconEvent"
+	 * @param beaconEvent
+	 * @uml.property name="beaconEvent"
 	 */
 	public void setBeaconEvent(BeaconEvent beaconEvent) {
 		this.beaconEvent = beaconEvent;
@@ -110,7 +110,7 @@ public class CheckIn implements Serializable {
 
 	/**
 	 * @return
-	 * @uml.property  name="beaconDetector"
+	 * @uml.property name="beaconDetector"
 	 */
 	@ManyToOne
 	@JoinColumn(name = "beacondetector_id")
@@ -119,8 +119,8 @@ public class CheckIn implements Serializable {
 	}
 
 	/**
-	 * @param  beaconDetector
-	 * @uml.property  name="beaconDetector"
+	 * @param beaconDetector
+	 * @uml.property name="beaconDetector"
 	 */
 	public void setBeaconDetector(BeaconDetector beaconDetector) {
 		this.beaconDetector = beaconDetector;
