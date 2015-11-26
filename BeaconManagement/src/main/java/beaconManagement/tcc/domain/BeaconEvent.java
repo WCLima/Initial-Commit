@@ -24,16 +24,16 @@ public class BeaconEvent implements Serializable {
 	private Long id;
 
 	@NotBlank
-	private Long startDateMilis;
+	private Long startDateMillis;
 
 	@NotBlank
-	private Long endDateMilis;
+	private Long endDateMillis;
 
-	public BeaconEvent(Long id, Long startDateMilis, Long endDateMilis) {
+	public BeaconEvent(Long id, Long startDateMillis, Long endDateMillis) {
 		super();
 		this.id = id;
-		this.startDateMilis = startDateMilis;
-		this.endDateMilis = endDateMilis;
+		this.startDateMillis = startDateMillis;
+		this.endDateMillis = endDateMillis;
 	}
 
 	@Id
@@ -48,20 +48,20 @@ public class BeaconEvent implements Serializable {
 		this.id = id;
 	}
 
-	public Long getStartDateMilis() {
-		return startDateMilis;
+	public Long getStartDateMillis() {
+		return startDateMillis;
 	}
 
-	public void setStartDateMilis(Long startDateMilis) {
-		this.startDateMilis = startDateMilis;
+	public void setStartDateMilis(Long startDateMillis) {
+		this.startDateMillis = startDateMillis;
 	}
 
-	public Long getEndDateMilis() {
-		return endDateMilis;
+	public Long getEndDateMillis() {
+		return endDateMillis;
 	}
 
-	public void setEndDateMilis(Long endDateMilis) {
-		this.endDateMilis = endDateMilis;
+	public void setEndDateMilis(Long endDateMillis) {
+		this.endDateMillis = endDateMillis;
 	}
 
 	@Override
@@ -69,10 +69,10 @@ public class BeaconEvent implements Serializable {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result
-				+ ((endDateMilis == null) ? 0 : endDateMilis.hashCode());
+				+ ((endDateMillis == null) ? 0 : endDateMillis.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result
-				+ ((startDateMilis == null) ? 0 : startDateMilis.hashCode());
+				+ ((startDateMillis == null) ? 0 : startDateMillis.hashCode());
 		return result;
 	}
 
@@ -85,28 +85,28 @@ public class BeaconEvent implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		BeaconEvent other = (BeaconEvent) obj;
-		if (endDateMilis == null) {
-			if (other.endDateMilis != null)
+		if (endDateMillis == null) {
+			if (other.endDateMillis != null)
 				return false;
-		} else if (!endDateMilis.equals(other.endDateMilis))
+		} else if (!endDateMillis.equals(other.endDateMillis))
 			return false;
 		if (id == null) {
 			if (other.id != null)
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
-		if (startDateMilis == null) {
-			if (other.startDateMilis != null)
+		if (startDateMillis == null) {
+			if (other.startDateMillis != null)
 				return false;
-		} else if (!startDateMilis.equals(other.startDateMilis))
+		} else if (!startDateMillis.equals(other.startDateMillis))
 			return false;
 		return true;
 	}
 
 	@Override
 	public String toString() {
-		return "BeaconEvent [id=" + id + ", startDateMilis=" + startDateMilis
-				+ ", endDateMilis=" + endDateMilis + "]";
+		return "BeaconEvent [id=" + id + ", startDateMillis=" + startDateMillis
+				+ ", endDateMillis=" + endDateMillis + "]";
 	}
 
 }

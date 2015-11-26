@@ -16,8 +16,8 @@ public interface BeaconEventDAO {
 
 	BeaconEvent findById(Long id);
 
-	List<BeaconEvent> findByStartCalendar(Long startCalendar);
+	List<BeaconEvent> findByStartDateMillis(Long startDateMillis);
 
-	List<BeaconEvent> findByEndCalendar(Long endCalendar);
+	List<BeaconEvent> findByEndDateMillis(Long endDateMillis);
 
 }

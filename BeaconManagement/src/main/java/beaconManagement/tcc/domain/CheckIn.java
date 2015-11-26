@@ -26,17 +26,17 @@ public class CheckIn implements Serializable {
 	private Long id;
 
 	@NotBlank
-	private Long checkDateMilis;
+	private Long checkDateMillis;
 
 	private BeaconEvent beaconEvent;
 
 	private BeaconDetector beaconDetector;
 
-	public CheckIn(Long id, Long checkDateMilis, BeaconEvent beaconEvent,
+	public CheckIn(Long id, Long checkDateMillis, BeaconEvent beaconEvent,
 			BeaconDetector beaconDetector) {
 		super();
 		this.id = id;
-		this.checkDateMilis = checkDateMilis;
+		this.checkDateMillis = checkDateMillis;
 		this.beaconEvent = beaconEvent;
 		this.beaconDetector = beaconDetector;
 	}
@@ -53,12 +53,12 @@ public class CheckIn implements Serializable {
 		this.id = id;
 	}
 
-	public Long getCheckDateMilis() {
-		return checkDateMilis;
+	public Long getCheckDateMillis() {
+		return checkDateMillis;
 	}
 
-	public void setCheckDateMilis(Long checkDateMilis) {
-		this.checkDateMilis = checkDateMilis;
+	public void setCheckDateMilis(Long checkDateMillis) {
+		this.checkDateMillis = checkDateMillis;
 	}
 
 	@ManyToOne
@@ -90,7 +90,7 @@ public class CheckIn implements Serializable {
 		result = prime * result
 				+ ((beaconEvent == null) ? 0 : beaconEvent.hashCode());
 		result = prime * result
-				+ ((checkDateMilis == null) ? 0 : checkDateMilis.hashCode());
+				+ ((checkDateMillis == null) ? 0 : checkDateMillis.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
@@ -114,10 +114,10 @@ public class CheckIn implements Serializable {
 				return false;
 		} else if (!beaconEvent.equals(other.beaconEvent))
 			return false;
-		if (checkDateMilis == null) {
-			if (other.checkDateMilis != null)
+		if (checkDateMillis == null) {
+			if (other.checkDateMillis != null)
 				return false;
-		} else if (!checkDateMilis.equals(other.checkDateMilis))
+		} else if (!checkDateMillis.equals(other.checkDateMillis))
 			return false;
 		if (id == null) {
 			if (other.id != null)
@@ -129,7 +129,7 @@ public class CheckIn implements Serializable {
 
 	@Override
 	public String toString() {
-		return "CheckIn [id=" + id + ", checkDateMilis=" + checkDateMilis
+		return "CheckIn [id=" + id + ", checkDateMillis=" + checkDateMillis
 				+ ", beaconEvent=" + beaconEvent + ", beaconDetector="
 				+ beaconDetector + "]";
 	}

@@ -40,8 +40,8 @@ public class CheckInServiceImpl implements CheckInService {
 	 * beaconManagement.tcc.service.CheckInService#getCheckInByCalendar(java
 	 * .util.Calendar)
 	 */
-	public List<CheckIn> getCheckInByCalendar(Long calendar) {
-		return checkInDao.findByCalendar(calendar);
+	public List<CheckIn> getCheckInByCalendar(Long dateMillis) {
+		return checkInDao.findByDateMillis(dateMillis);
 	}
 
 	/*
@@ -61,8 +61,8 @@ public class CheckInServiceImpl implements CheckInService {
 	 * beaconManagement.tcc.service.CheckInService#getCheckInBeforeCalendar(
 	 * java.util.Calendar)
 	 */
-	public List<CheckIn> getCheckInBeforeCalendar(Long calendar) {
-		return checkInDao.findBeforeCalendar(calendar);
+	public List<CheckIn> getCheckInBeforeCalendar(Long dateMillis) {
+		return checkInDao.findBeforeDateMillis(dateMillis);
 	}
 
 	/*
@@ -72,8 +72,8 @@ public class CheckInServiceImpl implements CheckInService {
 	 * beaconManagement.tcc.service.CheckInService#getCheckInFromCalendar(java
 	 * .util.Calendar)
 	 */
-	public List<CheckIn> getCheckInFromCalendar(Long calendar) {
-		return checkInDao.findFromCalendar(calendar);
+	public List<CheckIn> getCheckInFromCalendar(Long dateMillis) {
+		return checkInDao.findFromDateMillis(dateMillis);
 	}
 
 	/*

@@ -12,11 +12,11 @@ public interface CheckInService {
 
 	List<CheckIn> getCheckIn();
 
-	List<CheckIn> getCheckInByCalendar(Long calendar);
+	List<CheckIn> getCheckInByCalendar(Long dateMillis);
 
-	List<CheckIn> getCheckInBeforeCalendar(Long calendar);
+	List<CheckIn> getCheckInBeforeCalendar(Long dateMillis);
 
-	List<CheckIn> getCheckInFromCalendar(Long calendar);
+	List<CheckIn> getCheckInFromCalendar(Long dateMillis);
 
 	List<CheckIn> getCheckInByBeaconEvent(BeaconEvent event);
 

@@ -65,12 +65,12 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 	 * beaconManagement.tcc.dao.CheckInDAO#findByCalendar(java.util.Calendar)
 	 */
 	@SuppressWarnings("unchecked")
-	public List<CheckIn> findByCalendar(Long calendar) {
+	public List<CheckIn> findByDateMillis(Long dateMillis) {
 		List<CheckIn> list = null;
 		try {
 			Query query = getCurrentSession().createQuery(
 					"from CheckIn c where c.checkdatemilis= :checkCalendar");
-			query.setParameter("checkCalendar", calendar);
+			query.setParameter("checkCalendar", dateMillis);
 			list = query.list();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find calendar: " + e);
@@ -126,12 +126,12 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 	 * beaconManagement.tcc.dao.CheckInDAO#findFromCalendar(java.util.Calendar)
 	 */
 	@SuppressWarnings("unchecked")
-	public List<CheckIn> findFromCalendar(Long calendar) {
+	public List<CheckIn> findFromDateMillis(Long dateMillis) {
 		List<CheckIn> list = null;
 		try {
 			Query query = getCurrentSession().createQuery(
 					"from CheckIn c where c.checkdatemilis > :checkInCalendar");
-			query.setParameter("checkInCalendar", calendar);
+			query.setParameter("checkInCalendar", dateMillis);
 			list = query.list();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find checkin: " + e);
@@ -147,12 +147,12 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 	 * )
 	 */
 	@SuppressWarnings("unchecked")
-	public List<CheckIn> findBeforeCalendar(Long calendar) {
+	public List<CheckIn> findBeforeDateMillis(Long dateMillis) {
 		List<CheckIn> list = null;
 		try {
 			Query query = getCurrentSession().createQuery(
 					"from CheckIn c where c.checkdatemilis < :checkInCalendar");
-			query.setParameter("checkInCalendar", calendar);
+			query.setParameter("checkInCalendar", dateMillis);
 			list = query.list();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find checkin: " + e);

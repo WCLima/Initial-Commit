@@ -64,8 +64,8 @@ public class BeaconEventServiceImpl implements BeaconEventService {
 	 * beaconManagement.tcc.service.BeaconEventService#getBeaconEventsByStartdate
 	 * (java.util.Calendar)
 	 */
-	public List<BeaconEvent> getBeaconEventsByStartDate(Long calendar) {
-		return beaconEventDao.findByStartCalendar(calendar);
+	public List<BeaconEvent> getBeaconEventsByStartDate(Long dateMillis) {
+		return beaconEventDao.findByStartDateMillis(dateMillis);
 	}
 
 	/*
@@ -75,8 +75,8 @@ public class BeaconEventServiceImpl implements BeaconEventService {
 	 * beaconManagement.tcc.service.BeaconEventService#getBeaconEventsByEnddate
 	 * (java.util.Calendar)
 	 */
-	public List<BeaconEvent> getBeaconEventsByEndDate(Long calendar) {
-		return beaconEventDao.findByEndCalendar(calendar);
+	public List<BeaconEvent> getBeaconEventsByEndDate(Long dateMillis) {
+		return beaconEventDao.findByEndDateMillis(dateMillis);
 	}
 
 }

@@ -14,11 +14,11 @@ public interface CheckInDAO {
 
 	CheckIn findById(Long id);
 
-	List<CheckIn> findByCalendar(Long calendar);
+	List<CheckIn> findByDateMillis(Long dateMillis);
 
-	List<CheckIn> findFromCalendar(Long calendar);
+	List<CheckIn> findFromDateMillis(Long dateMillis);
 
-	List<CheckIn> findBeforeCalendar(Long calendar);
+	List<CheckIn> findBeforeDateMillis(Long dateMillis);
 
 	List<CheckIn> findByBeaconEvent(BeaconEvent beaconEvent);
 

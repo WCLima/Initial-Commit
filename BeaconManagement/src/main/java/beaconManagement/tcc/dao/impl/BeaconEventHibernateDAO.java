@@ -65,12 +65,12 @@ public class BeaconEventHibernateDAO extends CommonDAOImpl implements
 	 * .Calendar)
 	 */
 	@SuppressWarnings("unchecked")
-	public List<BeaconEvent> findByStartCalendar(Long startCalendar) {
+	public List<BeaconEvent> findByStartDateMillis(Long startDateMillis) {
 		List<BeaconEvent> list = null;
 		try {
 			Query query = getCurrentSession().createQuery(
 					"from BeaconEvent be where be.startdatemilis= :calendar");
-			query.setParameter("calendar", startCalendar);
+			query.setParameter("calendar", startDateMillis);
 			list = query.list();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find Start Calendar: " + e);
@@ -86,12 +86,12 @@ public class BeaconEventHibernateDAO extends CommonDAOImpl implements
 	 * )
 	 */
 	@SuppressWarnings("unchecked")
-	public List<BeaconEvent> findByEndCalendar(Long endCalendar) {
+	public List<BeaconEvent> findByEndDateMillis(Long endDateMillis) {
 		List<BeaconEvent> list = null;
 		try {
 			Query query = getCurrentSession().createQuery(
 					"from BeaconEvent be where be.enddatemilis= :calendar");
-			query.setParameter("calendar", endCalendar);
+			query.setParameter("calendar", endDateMillis);
 			list = query.list();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find End Calendar:" + e);
