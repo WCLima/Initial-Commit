@@ -1,4 +1,4 @@
-# Initial-Commit
+# TCC-BeaconManagement
 Project TCC_Beacon
 
 Projeto de conclusão de curso.
