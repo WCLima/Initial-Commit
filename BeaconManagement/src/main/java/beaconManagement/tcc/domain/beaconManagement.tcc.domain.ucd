@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="1008,511" id="beaconManagement.tcc.domain" metadata="uml2-1.0" initialized="true" scrolledY="40" tag="10" key="32303037303533312D313020426561636F6E4D616E6167656D656E74">
+  <children xsi:type="editmodel:ClassEditModel" name="Beacon" location="637,50" size="102,193" id="beaconManagement.tcc.domain/Beacon">
+    <children xsi:type="editmodel:CompartmentEditModel" size="79,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="id" id="beaconManagement.tcc.domain/Beacon#id"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mac" id="beaconManagement.tcc.domain/Beacon#mac"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="name" id="beaconManagement.tcc.domain/Beacon#name"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="79,90">
+      <children xsi:type="editmodel:MethodEditModel" name="Beacon" id="beaconManagement.tcc.domain/Beacon#Beacon(Ljava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Beacon" id="beaconManagement.tcc.domain/Beacon#Beacon()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="equals" id="beaconManagement.tcc.domain/Beacon#equals(Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="hashCode" id="beaconManagement.tcc.domain/Beacon#hashCode()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="beaconManagement.tcc.domain/Beacon#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@sourceConnections.1" name="BeaconEvent" location="449,280" size="138,211" id="beaconManagement.tcc.domain/BeaconEvent">
+    <children xsi:type="editmodel:CompartmentEditModel" size="115,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="endDateMillis" id="beaconManagement.tcc.domain/BeaconEvent#endDateMillis"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="id" id="beaconManagement.tcc.domain/BeaconEvent#id"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="startDateMillis" id="beaconManagement.tcc.domain/BeaconEvent#startDateMillis"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="110,108">
+      <children xsi:type="editmodel:MethodEditModel" name="BeaconEvent" id="beaconManagement.tcc.domain/BeaconEvent#BeaconEvent(Ljava.lang.Long;Ljava.lang.Long;Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="equals" id="beaconManagement.tcc.domain/BeaconEvent#equals(Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="hashCode" id="beaconManagement.tcc.domain/BeaconEvent#hashCode()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setEndDateMilis" id="beaconManagement.tcc.domain/BeaconEvent#setEndDateMilis(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setStartDateMilis" id="beaconManagement.tcc.domain/BeaconEvent#setStartDateMilis(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="beaconManagement.tcc.domain/BeaconEvent#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="CheckIn" location="250,166" size="145,175" id="beaconManagement.tcc.domain/CheckIn">
+    <children xsi:type="editmodel:CompartmentEditModel" size="122,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="checkDateMillis" id="beaconManagement.tcc.domain/CheckIn#checkDateMillis"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="id" id="beaconManagement.tcc.domain/CheckIn#id"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="117,90">
+      <children xsi:type="editmodel:MethodEditModel" name="CheckIn" id="beaconManagement.tcc.domain/CheckIn#CheckIn(Ljava.lang.Long;Ljava.lang.Long;LbeaconManagement.tcc.domain.BeaconEvent;LbeaconManagement.tcc.domain.BeaconDetector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="equals" id="beaconManagement.tcc.domain/CheckIn#equals(Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="hashCode" id="beaconManagement.tcc.domain/CheckIn#hashCode()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setCheckDateMilis" id="beaconManagement.tcc.domain/CheckIn#setCheckDateMilis(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="beaconManagement.tcc.domain/CheckIn#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.domain/CheckIn->beaconManagement.tcc.domain/BeaconDetector*beaconManagement.tcc.domain/CheckIn-Soyatec::Import->beaconManagement.tcc.domain/BeaconDetector" source="//@children.2" target="//@children.3" targetEnd="//@children.2/@sourceConnections.0/@children.2" label="//@children.2/@sourceConnections.0/@children.0" sourceEnd="//@children.2/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,29" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="143,145"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.domain/CheckIn->beaconManagement.tcc.domain/BeaconEvent*beaconManagement.tcc.domain/CheckIn-Soyatec::Import->beaconManagement.tcc.domain/BeaconEvent" source="//@children.2" target="//@children.1" targetEnd="//@children.2/@sourceConnections.1/@children.2" label="//@children.2/@sourceConnections.1/@children.0" sourceEnd="//@children.2/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="145,144" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,30"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.2/@sourceConnections.0" name="BeaconDetector" location="50,50" size="143,175" id="beaconManagement.tcc.domain/BeaconDetector">
+    <children xsi:type="editmodel:CompartmentEditModel" size="90,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="id" id="beaconManagement.tcc.domain/BeaconDetector#id"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="location" id="beaconManagement.tcc.domain/BeaconDetector#location"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mac" id="beaconManagement.tcc.domain/BeaconDetector#mac"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="108,72">
+      <children xsi:type="editmodel:MethodEditModel" name="BeaconDetector" id="beaconManagement.tcc.domain/BeaconDetector#BeaconDetector(Ljava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="equals" id="beaconManagement.tcc.domain/BeaconDetector#equals(Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="hashCode" id="beaconManagement.tcc.domain/BeaconDetector#hashCode()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="beaconManagement.tcc.domain/BeaconDetector#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=5;Product=eUML2" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

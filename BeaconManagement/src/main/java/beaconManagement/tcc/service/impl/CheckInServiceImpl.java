@@ -14,9 +14,16 @@ import beaconManagement.tcc.domain.BeaconEvent;
 import beaconManagement.tcc.domain.CheckIn;
 import beaconManagement.tcc.service.CheckInService;
 
+/**
+ * @author  Wagner
+ */
 @Service
 public class CheckInServiceImpl implements CheckInService {
 
+	/**
+	 * @uml.property  name="checkInDao"
+	 * @uml.associationEnd  readOnly="true"
+	 */
 	@Autowired
 	private CheckInDAO checkInDao;
 

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="991,976" id="beaconManagement.tcc.dao" metadata="uml2-1.0" initialized="true" scrolledY="2" tag="10" key="32303037303533312D313020426561636F6E4D616E6167656D656E74">
+  <children xsi:type="editmodel:ClassEditModel" name="CheckInHibernateDAO" location="598,307" size="183,207" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO" runTimeClassModel="findByDateMillis(Ljava.lang.Long;),findById(Ljava.lang.Long;),list(),findFromDateMillis(Ljava.lang.Long;),findByBeaconDetector(LbeaconManagement.tcc.domain.BeaconDetector;),findBeforeDateMillis(Ljava.lang.Long;),insert(LbeaconManagement.tcc.domain.CheckIn;),findByBeaconEvent(LbeaconManagement.tcc.domain.BeaconEvent;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="139,144">
+      <children xsi:type="editmodel:MethodEditModel" name="findBeforeDateMillis" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO#findBeforeDateMillis(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByBeaconDetector" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO#findByBeaconDetector(LbeaconManagement.tcc.domain.BeaconDetector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByBeaconEvent" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO#findByBeaconEvent(LbeaconManagement.tcc.domain.BeaconEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByDateMillis" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO#findByDateMillis(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findById" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO#findById(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findFromDateMillis" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO#findFromDateMillis(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="insert" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO#insert(LbeaconManagement.tcc.domain.CheckIn;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="list" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO#list()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO-Soyatec::Implement->beaconManagement.tcc.dao/CheckInDAO" source="//@children.0" target="//@children.1" targetEnd="//@children.0/@sourceConnections.0/@children.2" label="//@children.0/@sourceConnections.0/@children.0" sourceEnd="//@children.0/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Implement»" size="59,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="91,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="81,207"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="beaconManagement.tcc.dao/CheckInDAO&lt;-beaconManagement.tcc.dao.impl/CheckInHibernateDAO" source="//@children.0" target="//@children.1" targetEnd="//@children.0/@sourceConnections.1/@children.1" sourceEnd="//@children.0/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="71,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="61,207"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.0/@sourceConnections.0 //@children.0/@sourceConnections.1" name="CheckInDAO" location="608,50" size="162,207" id="beaconManagement.tcc.dao/CheckInDAO" runTimeClassModel="findByDateMillis(Ljava.lang.Long;),findById(Ljava.lang.Long;),findFromDateMillis(Ljava.lang.Long;),list(),findBeforeDateMillis(Ljava.lang.Long;),findByBeaconDetector(LbeaconManagement.tcc.domain.BeaconDetector;),insert(LbeaconManagement.tcc.domain.CheckIn;),findByBeaconEvent(LbeaconManagement.tcc.domain.BeaconEvent;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="139,144">
+      <children xsi:type="editmodel:MethodEditModel" name="findBeforeDateMillis" id="beaconManagement.tcc.dao/CheckInDAO#findBeforeDateMillis(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByBeaconDetector" id="beaconManagement.tcc.dao/CheckInDAO#findByBeaconDetector(LbeaconManagement.tcc.domain.BeaconDetector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByBeaconEvent" id="beaconManagement.tcc.dao/CheckInDAO#findByBeaconEvent(LbeaconManagement.tcc.domain.BeaconEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByDateMillis" id="beaconManagement.tcc.dao/CheckInDAO#findByDateMillis(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findById" id="beaconManagement.tcc.dao/CheckInDAO#findById(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findFromDateMillis" id="beaconManagement.tcc.dao/CheckInDAO#findFromDateMillis(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="insert" id="beaconManagement.tcc.dao/CheckInDAO#insert(LbeaconManagement.tcc.domain.CheckIn;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="list" id="beaconManagement.tcc.dao/CheckInDAO#list()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.3/@sourceConnections.0 //@children.3/@sourceConnections.1" name="BeaconEventDAO" location="81,50" size="153,189" id="beaconManagement.tcc.dao/BeaconEventDAO" runTimeClassModel="findById(Ljava.lang.Long;),list(),edit(LbeaconManagement.tcc.domain.BeaconEvent;),findByEndDateMillis(Ljava.lang.Long;),findByStartDateMillis(Ljava.lang.Long;),insert(LbeaconManagement.tcc.domain.BeaconEvent;),delete(LbeaconManagement.tcc.domain.BeaconEvent;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="128,126">
+      <children xsi:type="editmodel:MethodEditModel" name="delete" id="beaconManagement.tcc.dao/BeaconEventDAO#delete(LbeaconManagement.tcc.domain.BeaconEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="edit" id="beaconManagement.tcc.dao/BeaconEventDAO#edit(LbeaconManagement.tcc.domain.BeaconEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByEndDateMillis" id="beaconManagement.tcc.dao/BeaconEventDAO#findByEndDateMillis(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findById" id="beaconManagement.tcc.dao/BeaconEventDAO#findById(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByStartDateMillis" id="beaconManagement.tcc.dao/BeaconEventDAO#findByStartDateMillis(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="insert" id="beaconManagement.tcc.dao/BeaconEventDAO#insert(LbeaconManagement.tcc.domain.BeaconEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="list" id="beaconManagement.tcc.dao/BeaconEventDAO#list()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="BeaconEventHibernateDAO" location="50,307" size="215,189" id="beaconManagement.tcc.dao.impl/BeaconEventHibernateDAO" runTimeClassModel="findById(Ljava.lang.Long;),list(),edit(LbeaconManagement.tcc.domain.BeaconEvent;),findByEndDateMillis(Ljava.lang.Long;),findByStartDateMillis(Ljava.lang.Long;),insert(LbeaconManagement.tcc.domain.BeaconEvent;),delete(LbeaconManagement.tcc.domain.BeaconEvent;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="128,126">
+      <children xsi:type="editmodel:MethodEditModel" name="delete" id="beaconManagement.tcc.dao.impl/BeaconEventHibernateDAO#delete(LbeaconManagement.tcc.domain.BeaconEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="edit" id="beaconManagement.tcc.dao.impl/BeaconEventHibernateDAO#edit(LbeaconManagement.tcc.domain.BeaconEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByEndDateMillis" id="beaconManagement.tcc.dao.impl/BeaconEventHibernateDAO#findByEndDateMillis(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findById" id="beaconManagement.tcc.dao.impl/BeaconEventHibernateDAO#findById(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByStartDateMillis" id="beaconManagement.tcc.dao.impl/BeaconEventHibernateDAO#findByStartDateMillis(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="insert" id="beaconManagement.tcc.dao.impl/BeaconEventHibernateDAO#insert(LbeaconManagement.tcc.domain.BeaconEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="list" id="beaconManagement.tcc.dao.impl/BeaconEventHibernateDAO#list()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.dao.impl/BeaconEventHibernateDAO-Soyatec::Implement->beaconManagement.tcc.dao/BeaconEventDAO" source="//@children.3" target="//@children.2" targetEnd="//@children.3/@sourceConnections.0/@children.2" label="//@children.3/@sourceConnections.0/@children.0" sourceEnd="//@children.3/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Implement»" size="59,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="107,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="76,189"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="beaconManagement.tcc.dao/BeaconEventDAO&lt;-beaconManagement.tcc.dao.impl/BeaconEventHibernateDAO" source="//@children.3" target="//@children.2" targetEnd="//@children.3/@sourceConnections.1/@children.1" sourceEnd="//@children.3/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="87,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="56,189"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="BeaconDetectorHibernateDAO" location="315,307" size="233,171" id="beaconManagement.tcc.dao.impl/BeaconDetectorHibernateDAO" runTimeClassModel="delete(LbeaconManagement.tcc.domain.BeaconDetector;),findById(Ljava.lang.Long;),list(),findByMac(Ljava.lang.String;),edit(LbeaconManagement.tcc.domain.BeaconDetector;),insert(LbeaconManagement.tcc.domain.BeaconDetector;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="81,108">
+      <children xsi:type="editmodel:MethodEditModel" name="delete" id="beaconManagement.tcc.dao.impl/BeaconDetectorHibernateDAO#delete(LbeaconManagement.tcc.domain.BeaconDetector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="edit" id="beaconManagement.tcc.dao.impl/BeaconDetectorHibernateDAO#edit(LbeaconManagement.tcc.domain.BeaconDetector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findById" id="beaconManagement.tcc.dao.impl/BeaconDetectorHibernateDAO#findById(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByMac" id="beaconManagement.tcc.dao.impl/BeaconDetectorHibernateDAO#findByMac(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="insert" id="beaconManagement.tcc.dao.impl/BeaconDetectorHibernateDAO#insert(LbeaconManagement.tcc.domain.BeaconDetector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="list" id="beaconManagement.tcc.dao.impl/BeaconDetectorHibernateDAO#list()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.dao.impl/BeaconDetectorHibernateDAO-Soyatec::Implement->beaconManagement.tcc.dao/BeaconDetectorDAO" source="//@children.4" target="//@children.5" targetEnd="//@children.4/@sourceConnections.0/@children.2" label="//@children.4/@sourceConnections.0/@children.0" sourceEnd="//@children.4/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Implement»" size="59,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="116,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="85,171"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="beaconManagement.tcc.dao/BeaconDetectorDAO&lt;-beaconManagement.tcc.dao.impl/BeaconDetectorHibernateDAO" source="//@children.4" target="//@children.5" targetEnd="//@children.4/@sourceConnections.1/@children.1" sourceEnd="//@children.4/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="96,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="65,171"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.4/@sourceConnections.0 //@children.4/@sourceConnections.1" name="BeaconDetectorDAO" location="346,50" size="171,171" id="beaconManagement.tcc.dao/BeaconDetectorDAO" runTimeClassModel="delete(LbeaconManagement.tcc.domain.BeaconDetector;),findById(Ljava.lang.Long;),list(),findByMac(Ljava.lang.String;),edit(LbeaconManagement.tcc.domain.BeaconDetector;),insert(LbeaconManagement.tcc.domain.BeaconDetector;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="81,108">
+      <children xsi:type="editmodel:MethodEditModel" name="delete" id="beaconManagement.tcc.dao/BeaconDetectorDAO#delete(LbeaconManagement.tcc.domain.BeaconDetector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="edit" id="beaconManagement.tcc.dao/BeaconDetectorDAO#edit(LbeaconManagement.tcc.domain.BeaconDetector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findById" id="beaconManagement.tcc.dao/BeaconDetectorDAO#findById(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByMac" id="beaconManagement.tcc.dao/BeaconDetectorDAO#findByMac(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="insert" id="beaconManagement.tcc.dao/BeaconDetectorDAO#insert(LbeaconManagement.tcc.domain.BeaconDetector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="list" id="beaconManagement.tcc.dao/BeaconDetectorDAO#list()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.7/@sourceConnections.0 //@children.7/@sourceConnections.1" name="BeaconDAO" location="870,50" size="118,171" id="beaconManagement.tcc.dao/BeaconDAO" runTimeClassModel="edit(LbeaconManagement.tcc.domain.Beacon;),findById(Ljava.lang.Long;),list(),findByMac(Ljava.lang.String;),delete(LbeaconManagement.tcc.domain.Beacon;),insert(LbeaconManagement.tcc.domain.Beacon;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="81,108">
+      <children xsi:type="editmodel:MethodEditModel" name="delete" id="beaconManagement.tcc.dao/BeaconDAO#delete(LbeaconManagement.tcc.domain.Beacon;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="edit" id="beaconManagement.tcc.dao/BeaconDAO#edit(LbeaconManagement.tcc.domain.Beacon;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findById" id="beaconManagement.tcc.dao/BeaconDAO#findById(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByMac" id="beaconManagement.tcc.dao/BeaconDAO#findByMac(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="insert" id="beaconManagement.tcc.dao/BeaconDAO#insert(LbeaconManagement.tcc.domain.Beacon;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="list" id="beaconManagement.tcc.dao/BeaconDAO#list()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="BeaconHibernateDAO" location="825,307" size="180,171" id="beaconManagement.tcc.dao.impl/BeaconHibernateDAO" runTimeClassModel="edit(LbeaconManagement.tcc.domain.Beacon;),findById(Ljava.lang.Long;),list(),findByMac(Ljava.lang.String;),delete(LbeaconManagement.tcc.domain.Beacon;),insert(LbeaconManagement.tcc.domain.Beacon;)">
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="81,108">
+      <children xsi:type="editmodel:MethodEditModel" name="delete" id="beaconManagement.tcc.dao.impl/BeaconHibernateDAO#delete(LbeaconManagement.tcc.domain.Beacon;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="edit" id="beaconManagement.tcc.dao.impl/BeaconHibernateDAO#edit(LbeaconManagement.tcc.domain.Beacon;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findById" id="beaconManagement.tcc.dao.impl/BeaconHibernateDAO#findById(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByMac" id="beaconManagement.tcc.dao.impl/BeaconHibernateDAO#findByMac(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="insert" id="beaconManagement.tcc.dao.impl/BeaconHibernateDAO#insert(LbeaconManagement.tcc.domain.Beacon;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="list" id="beaconManagement.tcc.dao.impl/BeaconHibernateDAO#list()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.dao.impl/BeaconHibernateDAO-Soyatec::Implement->beaconManagement.tcc.dao/BeaconDAO" source="//@children.7" target="//@children.6" targetEnd="//@children.7/@sourceConnections.0/@children.2" label="//@children.7/@sourceConnections.0/@children.0" sourceEnd="//@children.7/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Implement»" size="59,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="103,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="58,171"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="beaconManagement.tcc.dao/BeaconDAO&lt;-beaconManagement.tcc.dao.impl/BeaconHibernateDAO" source="//@children.7" target="//@children.6" targetEnd="//@children.7/@sourceConnections.1/@children.1" sourceEnd="//@children.7/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="123,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="78,171"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=7;Product=eUML2" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

@@ -12,6 +12,9 @@ import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotBlank;
 
+/**
+ * @author  Wagner
+ */
 @Entity
 @Table(name = "beacon", schema = "management")
 public class Beacon implements Serializable {
@@ -21,11 +24,20 @@ public class Beacon implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	/**
+	 * @uml.property  name="id"
+	 */
 	private Long id;
 
+	/**
+	 * @uml.property  name="name"
+	 */
 	@NotBlank
 	private String name;
 
+	/**
+	 * @uml.property  name="mac"
+	 */
 	@NotBlank
 	private String mac;
 
@@ -39,6 +51,10 @@ public class Beacon implements Serializable {
 		this.mac = mac;
 	}
 
+	/**
+	 * @return
+	 * @uml.property  name="id"
+	 */
 	@Id
 	@Column(name = "beacon_id")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_beacon_id")
@@ -47,22 +63,42 @@ public class Beacon implements Serializable {
 		return id;
 	}
 
+	/**
+	 * @param  id
+	 * @uml.property  name="id"
+	 */
 	public void setId(Long id) {
 		this.id = id;
 	}
 
+	/**
+	 * @return
+	 * @uml.property  name="name"
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * @param  name
+	 * @uml.property  name="name"
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
+	/**
+	 * @return
+	 * @uml.property  name="mac"
+	 */
 	public String getMac() {
 		return mac;
 	}
 
+	/**
+	 * @param  mac
+	 * @uml.property  name="mac"
+	 */
 	public void setMac(String mac) {
 		this.mac = mac;
 	}

@@ -13,10 +13,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import beaconManagement.tcc.domain.BeaconEvent;
 import beaconManagement.tcc.service.BeaconEventService;
 
+/**
+ * @author  Wagner
+ */
 @Controller
 @RequestMapping(value = "event")
 public class BeaconEventController {
 
+	/**
+	 * @uml.property  name="beaconEventService"
+	 * @uml.associationEnd  readOnly="true"
+	 */
 	@Autowired
 	private BeaconEventService beaconEventService;
 

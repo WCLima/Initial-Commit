@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="1916,2841" id="beaconManagement.tcc.service.impl" metadata="uml2-1.0" initialized="true" scrolledX="915" scrolledY="431" tag="10" key="32303037303533312D313020426561636F6E4D616E6167656D656E74">
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.11/@sourceConnections.3" name="BeaconDAO" location="448,2497" size="159,185" id="beaconManagement.tcc.dao/BeaconDAO">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="81,108">
+      <children xsi:type="editmodel:MethodEditModel" name="delete" id="beaconManagement.tcc.dao/BeaconDAO#delete(LbeaconManagement.tcc.domain.Beacon;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="edit" id="beaconManagement.tcc.dao/BeaconDAO#edit(LbeaconManagement.tcc.domain.Beacon;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findById" id="beaconManagement.tcc.dao/BeaconDAO#findById(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByMac" id="beaconManagement.tcc.dao/BeaconDAO#findByMac(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="insert" id="beaconManagement.tcc.dao/BeaconDAO#insert(LbeaconManagement.tcc.domain.Beacon;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="list" id="beaconManagement.tcc.dao/BeaconDAO#list()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.dao/BeaconDAO-Soyatec::Import->beaconManagement.tcc.domain/Beacon" source="//@children.0" target="//@children.1" targetEnd="//@children.0/@sourceConnections.0/@children.2" label="//@children.0/@sourceConnections.0/@children.0" sourceEnd="//@children.0/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,150" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="175,33"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.11/@sourceConnections.2 //@children.10/@sourceConnections.0 //@children.0/@sourceConnections.0" name="Beacon" location="50,2614" size="175,207" id="beaconManagement.tcc.domain/Beacon">
+    <children xsi:type="editmodel:CompartmentEditModel" size="79,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="id" id="beaconManagement.tcc.domain/Beacon#id"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mac" id="beaconManagement.tcc.domain/Beacon#mac"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="name" id="beaconManagement.tcc.domain/Beacon#name"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="79,90">
+      <children xsi:type="editmodel:MethodEditModel" name="Beacon" id="beaconManagement.tcc.domain/Beacon#Beacon(Ljava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="Beacon" id="beaconManagement.tcc.domain/Beacon#Beacon()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="equals" id="beaconManagement.tcc.domain/Beacon#equals(Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="hashCode" id="beaconManagement.tcc.domain/Beacon#hashCode()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="beaconManagement.tcc.domain/Beacon#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.14/@sourceConnections.1 //@children.3/@sourceConnections.0 //@children.15/@sourceConnections.0 //@children.9/@sourceConnections.1 //@children.6/@sourceConnections.0 //@children.8/@sourceConnections.0 //@children.7/@sourceConnections.0" name="BeaconDetector" location="1172,604" size="175,189" id="beaconManagement.tcc.domain/BeaconDetector">
+    <children xsi:type="editmodel:CompartmentEditModel" size="90,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="id" id="beaconManagement.tcc.domain/BeaconDetector#id"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="location" id="beaconManagement.tcc.domain/BeaconDetector#location"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="mac" id="beaconManagement.tcc.domain/BeaconDetector#mac"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="108,72">
+      <children xsi:type="editmodel:MethodEditModel" name="BeaconDetector" id="beaconManagement.tcc.domain/BeaconDetector#BeaconDetector(Ljava.lang.String;Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="equals" id="beaconManagement.tcc.domain/BeaconDetector#equals(Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="hashCode" id="beaconManagement.tcc.domain/BeaconDetector#hashCode()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="beaconManagement.tcc.domain/BeaconDetector#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.14/@sourceConnections.2" name="BeaconDetectorDAO" location="1267,50" size="171,185" id="beaconManagement.tcc.dao/BeaconDetectorDAO">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="81,108">
+      <children xsi:type="editmodel:MethodEditModel" name="delete" id="beaconManagement.tcc.dao/BeaconDetectorDAO#delete(LbeaconManagement.tcc.domain.BeaconDetector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="edit" id="beaconManagement.tcc.dao/BeaconDetectorDAO#edit(LbeaconManagement.tcc.domain.BeaconDetector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findById" id="beaconManagement.tcc.dao/BeaconDetectorDAO#findById(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByMac" id="beaconManagement.tcc.dao/BeaconDetectorDAO#findByMac(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="insert" id="beaconManagement.tcc.dao/BeaconDetectorDAO#insert(LbeaconManagement.tcc.domain.BeaconDetector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="list" id="beaconManagement.tcc.dao/BeaconDetectorDAO#list()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.dao/BeaconDetectorDAO-Soyatec::Import->beaconManagement.tcc.domain/BeaconDetector" source="//@children.3" target="//@children.2" targetEnd="//@children.3/@sourceConnections.0/@children.2" label="//@children.3/@sourceConnections.0/@children.0" sourceEnd="//@children.3/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="39,185" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="134,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.13/@sourceConnections.2 //@children.5/@sourceConnections.0 //@children.12/@sourceConnections.0 //@children.9/@sourceConnections.4 //@children.6/@sourceConnections.1 //@children.8/@sourceConnections.1 //@children.7/@sourceConnections.1" name="BeaconEvent" location="560,1406" size="175,225" id="beaconManagement.tcc.domain/BeaconEvent">
+    <children xsi:type="editmodel:CompartmentEditModel" size="115,54">
+      <children xsi:type="editmodel:AttributeEditModel" name="endDateMillis" id="beaconManagement.tcc.domain/BeaconEvent#endDateMillis"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="id" id="beaconManagement.tcc.domain/BeaconEvent#id"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="startDateMillis" id="beaconManagement.tcc.domain/BeaconEvent#startDateMillis"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="110,108">
+      <children xsi:type="editmodel:MethodEditModel" name="BeaconEvent" id="beaconManagement.tcc.domain/BeaconEvent#BeaconEvent(Ljava.lang.Long;Ljava.lang.Long;Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="equals" id="beaconManagement.tcc.domain/BeaconEvent#equals(Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="hashCode" id="beaconManagement.tcc.domain/BeaconEvent#hashCode()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setEndDateMilis" id="beaconManagement.tcc.domain/BeaconEvent#setEndDateMilis(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setStartDateMilis" id="beaconManagement.tcc.domain/BeaconEvent#setStartDateMilis(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="beaconManagement.tcc.domain/BeaconEvent#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.13/@sourceConnections.1" name="BeaconEventDAO" location="457,1958" size="159,203" id="beaconManagement.tcc.dao/BeaconEventDAO">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="128,126">
+      <children xsi:type="editmodel:MethodEditModel" name="delete" id="beaconManagement.tcc.dao/BeaconEventDAO#delete(LbeaconManagement.tcc.domain.BeaconEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="edit" id="beaconManagement.tcc.dao/BeaconEventDAO#edit(LbeaconManagement.tcc.domain.BeaconEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByEndDateMillis" id="beaconManagement.tcc.dao/BeaconEventDAO#findByEndDateMillis(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findById" id="beaconManagement.tcc.dao/BeaconEventDAO#findById(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByStartDateMillis" id="beaconManagement.tcc.dao/BeaconEventDAO#findByStartDateMillis(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="insert" id="beaconManagement.tcc.dao/BeaconEventDAO#insert(LbeaconManagement.tcc.domain.BeaconEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="list" id="beaconManagement.tcc.dao/BeaconEventDAO#list()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.dao/BeaconEventDAO-Soyatec::Import->beaconManagement.tcc.domain/BeaconEvent" source="//@children.5" target="//@children.4" targetEnd="//@children.5/@sourceConnections.0/@children.2" label="//@children.5/@sourceConnections.0/@children.0" sourceEnd="//@children.5/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="130,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="27,225"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.9/@sourceConnections.2" name="CheckInDAO" location="607,808" size="162,221" id="beaconManagement.tcc.dao/CheckInDAO">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="139,144">
+      <children xsi:type="editmodel:MethodEditModel" name="findBeforeDateMillis" id="beaconManagement.tcc.dao/CheckInDAO#findBeforeDateMillis(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByBeaconDetector" id="beaconManagement.tcc.dao/CheckInDAO#findByBeaconDetector(LbeaconManagement.tcc.domain.BeaconDetector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByBeaconEvent" id="beaconManagement.tcc.dao/CheckInDAO#findByBeaconEvent(LbeaconManagement.tcc.domain.BeaconEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByDateMillis" id="beaconManagement.tcc.dao/CheckInDAO#findByDateMillis(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findById" id="beaconManagement.tcc.dao/CheckInDAO#findById(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findFromDateMillis" id="beaconManagement.tcc.dao/CheckInDAO#findFromDateMillis(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="insert" id="beaconManagement.tcc.dao/CheckInDAO#insert(LbeaconManagement.tcc.domain.CheckIn;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="list" id="beaconManagement.tcc.dao/CheckInDAO#list()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.dao/CheckInDAO-Soyatec::Import->beaconManagement.tcc.domain/BeaconDetector" source="//@children.6" target="//@children.2" targetEnd="//@children.6/@sourceConnections.0/@children.2" label="//@children.6/@sourceConnections.0/@children.0" sourceEnd="//@children.6/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="162,79" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,128"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.dao/CheckInDAO-Soyatec::Import->beaconManagement.tcc.domain/BeaconEvent" source="//@children.6" target="//@children.4" targetEnd="//@children.6/@sourceConnections.1/@children.2" label="//@children.6/@sourceConnections.1/@children.0" sourceEnd="//@children.6/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="63,221" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="110,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.dao/CheckInDAO-Soyatec::Import->beaconManagement.tcc.domain/CheckIn" source="//@children.6" target="//@children.7" targetEnd="//@children.6/@sourceConnections.2/@children.2" label="//@children.6/@sourceConnections.2/@children.0" sourceEnd="//@children.6/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="162,169" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,31"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" targetConnections="//@children.9/@sourceConnections.5 //@children.6/@sourceConnections.2 //@children.8/@sourceConnections.2" name="CheckIn" location="1126,1204" size="175,189" id="beaconManagement.tcc.domain/CheckIn">
+    <children xsi:type="editmodel:CompartmentEditModel" size="122,36">
+      <children xsi:type="editmodel:AttributeEditModel" name="checkDateMillis" id="beaconManagement.tcc.domain/CheckIn#checkDateMillis"/>
+      <children xsi:type="editmodel:AttributeEditModel" name="id" id="beaconManagement.tcc.domain/CheckIn#id"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel" size="117,90">
+      <children xsi:type="editmodel:MethodEditModel" name="CheckIn" id="beaconManagement.tcc.domain/CheckIn#CheckIn(Ljava.lang.Long;Ljava.lang.Long;LbeaconManagement.tcc.domain.BeaconEvent;LbeaconManagement.tcc.domain.BeaconDetector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="equals" id="beaconManagement.tcc.domain/CheckIn#equals(Ljava.lang.Object;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="hashCode" id="beaconManagement.tcc.domain/CheckIn#hashCode()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="setCheckDateMilis" id="beaconManagement.tcc.domain/CheckIn#setCheckDateMilis(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="toString" id="beaconManagement.tcc.domain/CheckIn#toString()"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.domain/CheckIn->beaconManagement.tcc.domain/BeaconDetector*beaconManagement.tcc.domain/CheckIn-Soyatec::Import->beaconManagement.tcc.domain/BeaconDetector" source="//@children.7" target="//@children.2" targetEnd="//@children.7/@sourceConnections.0/@children.2" label="//@children.7/@sourceConnections.0/@children.0" sourceEnd="//@children.7/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="110,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="64,189"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.domain/CheckIn->beaconManagement.tcc.domain/BeaconEvent*beaconManagement.tcc.domain/CheckIn-Soyatec::Import->beaconManagement.tcc.domain/BeaconEvent" source="//@children.7" target="//@children.4" targetEnd="//@children.7/@sourceConnections.1/@children.2" label="//@children.7/@sourceConnections.1/@children.0" sourceEnd="//@children.7/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,128" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="175,78"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.9/@sourceConnections.0 //@children.9/@sourceConnections.3" name="CheckInService" location="867,1006" size="197,203" id="beaconManagement.tcc.service/CheckInService">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="174,126">
+      <children xsi:type="editmodel:MethodEditModel" name="getCheckIn" id="beaconManagement.tcc.service/CheckInService#getCheckIn()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCheckInBeforeCalendar" id="beaconManagement.tcc.service/CheckInService#getCheckInBeforeCalendar(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCheckInByBeaconDetector" id="beaconManagement.tcc.service/CheckInService#getCheckInByBeaconDetector(LbeaconManagement.tcc.domain.BeaconDetector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCheckInByBeaconEvent" id="beaconManagement.tcc.service/CheckInService#getCheckInByBeaconEvent(LbeaconManagement.tcc.domain.BeaconEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCheckInByCalendar" id="beaconManagement.tcc.service/CheckInService#getCheckInByCalendar(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCheckInFromCalendar" id="beaconManagement.tcc.service/CheckInService#getCheckInFromCalendar(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="insertCheckIn" id="beaconManagement.tcc.service/CheckInService#insertCheckIn(LbeaconManagement.tcc.domain.CheckIn;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.service/CheckInService-Soyatec::Import->beaconManagement.tcc.domain/BeaconDetector" source="//@children.8" target="//@children.2" targetEnd="//@children.8/@sourceConnections.0/@children.2" label="//@children.8/@sourceConnections.0/@children.0" sourceEnd="//@children.8/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="171,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="19,189"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.service/CheckInService-Soyatec::Import->beaconManagement.tcc.domain/BeaconEvent" source="//@children.8" target="//@children.4" targetEnd="//@children.8/@sourceConnections.1/@children.2" label="//@children.8/@sourceConnections.1/@children.0" sourceEnd="//@children.8/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="19,203" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="174,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.service/CheckInService-Soyatec::Import->beaconManagement.tcc.domain/CheckIn" source="//@children.8" target="//@children.7" targetEnd="//@children.8/@sourceConnections.2/@children.2" label="//@children.8/@sourceConnections.2/@children.0" sourceEnd="//@children.8/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="197,200" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,2"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="CheckInServiceImpl" location="867,1259" size="197,175" id="beaconManagement.tcc.service.impl/CheckInServiceImpl">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="174,126">
+      <children xsi:type="editmodel:MethodEditModel" name="getCheckIn" id="beaconManagement.tcc.service.impl/CheckInServiceImpl#getCheckIn()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCheckInBeforeCalendar" id="beaconManagement.tcc.service.impl/CheckInServiceImpl#getCheckInBeforeCalendar(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCheckInByBeaconDetector" id="beaconManagement.tcc.service.impl/CheckInServiceImpl#getCheckInByBeaconDetector(LbeaconManagement.tcc.domain.BeaconDetector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCheckInByBeaconEvent" id="beaconManagement.tcc.service.impl/CheckInServiceImpl#getCheckInByBeaconEvent(LbeaconManagement.tcc.domain.BeaconEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCheckInByCalendar" id="beaconManagement.tcc.service.impl/CheckInServiceImpl#getCheckInByCalendar(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getCheckInFromCalendar" id="beaconManagement.tcc.service.impl/CheckInServiceImpl#getCheckInFromCalendar(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="insertCheckIn" id="beaconManagement.tcc.service.impl/CheckInServiceImpl#insertCheckIn(LbeaconManagement.tcc.domain.CheckIn;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="beaconManagement.tcc.service/CheckInService&lt;-beaconManagement.tcc.service.impl/CheckInServiceImpl" source="//@children.9" target="//@children.8" targetEnd="//@children.9/@sourceConnections.0/@children.1" sourceEnd="//@children.9/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="98,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="98,203"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.service.impl/CheckInServiceImpl-Soyatec::Import->beaconManagement.tcc.domain/BeaconDetector" source="//@children.9" target="//@children.2" targetEnd="//@children.9/@sourceConnections.1/@children.2" label="//@children.9/@sourceConnections.1/@children.0" sourceEnd="//@children.9/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="137,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="44,189"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.service.impl/CheckInServiceImpl->beaconManagement.tcc.dao/CheckInDAO*beaconManagement.tcc.service.impl/CheckInServiceImpl-Soyatec::Import->beaconManagement.tcc.dao/CheckInDAO" source="//@children.9" target="//@children.6" targetEnd="//@children.9/@sourceConnections.2/@children.2" label="//@children.9/@sourceConnections.2/@children.0" sourceEnd="//@children.9/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="42,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="153,221"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.service.impl/CheckInServiceImpl-Soyatec::Implement->beaconManagement.tcc.service/CheckInService" source="//@children.9" target="//@children.8" targetEnd="//@children.9/@sourceConnections.3/@children.2" label="//@children.9/@sourceConnections.3/@children.0" sourceEnd="//@children.9/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Implement»" size="59,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="78,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="78,203"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.service.impl/CheckInServiceImpl-Soyatec::Import->beaconManagement.tcc.domain/BeaconEvent" source="//@children.9" target="//@children.4" targetEnd="//@children.9/@sourceConnections.4/@children.2" label="//@children.9/@sourceConnections.4/@children.0" sourceEnd="//@children.9/@sourceConnections.4/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,161" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="175,14"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.service.impl/CheckInServiceImpl-Soyatec::Import->beaconManagement.tcc.domain/CheckIn" source="//@children.9" target="//@children.7" targetEnd="//@children.9/@sourceConnections.5/@children.2" label="//@children.9/@sourceConnections.5/@children.0" sourceEnd="//@children.9/@sourceConnections.5/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="197,66" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,121"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.11/@sourceConnections.0 //@children.11/@sourceConnections.1" name="BeaconService" location="148,2211" size="177,167" id="beaconManagement.tcc.service/BeaconService">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="115,90">
+      <children xsi:type="editmodel:MethodEditModel" name="deleteBeacon" id="beaconManagement.tcc.service/BeaconService#deleteBeacon(LbeaconManagement.tcc.domain.Beacon;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="editBeacon" id="beaconManagement.tcc.service/BeaconService#editBeacon(LbeaconManagement.tcc.domain.Beacon;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBeaconByMac" id="beaconManagement.tcc.service/BeaconService#getBeaconByMac(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBeacons" id="beaconManagement.tcc.service/BeaconService#getBeacons()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="insertBeacon" id="beaconManagement.tcc.service/BeaconService#insertBeacon(LbeaconManagement.tcc.domain.Beacon;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.service/BeaconService-Soyatec::Import->beaconManagement.tcc.domain/Beacon" source="//@children.10" target="//@children.1" targetEnd="//@children.10/@sourceConnections.0/@children.2" label="//@children.10/@sourceConnections.0/@children.0" sourceEnd="//@children.10/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="38,167" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="136,0"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="BeaconServiceImpl" location="153,2428" size="166,139" id="beaconManagement.tcc.service.impl/BeaconServiceImpl">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="115,90">
+      <children xsi:type="editmodel:MethodEditModel" name="deleteBeacon" id="beaconManagement.tcc.service.impl/BeaconServiceImpl#deleteBeacon(LbeaconManagement.tcc.domain.Beacon;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="editBeacon" id="beaconManagement.tcc.service.impl/BeaconServiceImpl#editBeacon(LbeaconManagement.tcc.domain.Beacon;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBeaconByMac" id="beaconManagement.tcc.service.impl/BeaconServiceImpl#getBeaconByMac(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBeacons" id="beaconManagement.tcc.service.impl/BeaconServiceImpl#getBeacons()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="insertBeacon" id="beaconManagement.tcc.service.impl/BeaconServiceImpl#insertBeacon(LbeaconManagement.tcc.domain.Beacon;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="beaconManagement.tcc.service/BeaconService&lt;-beaconManagement.tcc.service.impl/BeaconServiceImpl" source="//@children.11" target="//@children.10" targetEnd="//@children.11/@sourceConnections.0/@children.1" sourceEnd="//@children.11/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="83,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="88,167"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.service.impl/BeaconServiceImpl-Soyatec::Implement->beaconManagement.tcc.service/BeaconService" source="//@children.11" target="//@children.10" targetEnd="//@children.11/@sourceConnections.1/@children.2" label="//@children.11/@sourceConnections.1/@children.0" sourceEnd="//@children.11/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Implement»" size="59,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="63,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="68,167"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.service.impl/BeaconServiceImpl-Soyatec::Import->beaconManagement.tcc.domain/Beacon" source="//@children.11" target="//@children.1" targetEnd="//@children.11/@sourceConnections.2/@children.2" label="//@children.11/@sourceConnections.2/@children.0" sourceEnd="//@children.11/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="35,139" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="138,0"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.service.impl/BeaconServiceImpl->beaconManagement.tcc.dao/BeaconDAO*beaconManagement.tcc.service.impl/BeaconServiceImpl-Soyatec::Import->beaconManagement.tcc.dao/BeaconDAO" source="//@children.11" target="//@children.0" targetEnd="//@children.11/@sourceConnections.3/@children.2" label="//@children.11/@sourceConnections.3/@children.0" sourceEnd="//@children.11/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="166,104" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,35"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.13/@sourceConnections.0 //@children.13/@sourceConnections.3" name="BeaconEventService" location="52,1645" size="196,185" id="beaconManagement.tcc.service/BeaconEventService">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="173,108">
+      <children xsi:type="editmodel:MethodEditModel" name="deleteBeaconEvent" id="beaconManagement.tcc.service/BeaconEventService#deleteBeaconEvent(LbeaconManagement.tcc.domain.BeaconEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="editBeaconEvent" id="beaconManagement.tcc.service/BeaconEventService#editBeaconEvent(LbeaconManagement.tcc.domain.BeaconEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBeaconEvents" id="beaconManagement.tcc.service/BeaconEventService#getBeaconEvents()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBeaconEventsByEndDate" id="beaconManagement.tcc.service/BeaconEventService#getBeaconEventsByEndDate(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBeaconEventsByStartDate" id="beaconManagement.tcc.service/BeaconEventService#getBeaconEventsByStartDate(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="insertBeaconEvent" id="beaconManagement.tcc.service/BeaconEventService#insertBeaconEvent(LbeaconManagement.tcc.domain.BeaconEvent;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.service/BeaconEventService-Soyatec::Import->beaconManagement.tcc.domain/BeaconEvent" source="//@children.12" target="//@children.4" targetEnd="//@children.12/@sourceConnections.0/@children.2" label="//@children.12/@sourceConnections.0/@children.0" sourceEnd="//@children.12/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="196,49" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,150"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="BeaconEventServiceImpl" location="50,1880" size="201,157" id="beaconManagement.tcc.service.impl/BeaconEventServiceImpl">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="173,108">
+      <children xsi:type="editmodel:MethodEditModel" name="deleteBeaconEvent" id="beaconManagement.tcc.service.impl/BeaconEventServiceImpl#deleteBeaconEvent(LbeaconManagement.tcc.domain.BeaconEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="editBeaconEvent" id="beaconManagement.tcc.service.impl/BeaconEventServiceImpl#editBeaconEvent(LbeaconManagement.tcc.domain.BeaconEvent;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBeaconEvents" id="beaconManagement.tcc.service.impl/BeaconEventServiceImpl#getBeaconEvents()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBeaconEventsByEndDate" id="beaconManagement.tcc.service.impl/BeaconEventServiceImpl#getBeaconEventsByEndDate(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBeaconEventsByStartDate" id="beaconManagement.tcc.service.impl/BeaconEventServiceImpl#getBeaconEventsByStartDate(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="insertBeaconEvent" id="beaconManagement.tcc.service.impl/BeaconEventServiceImpl#insertBeaconEvent(LbeaconManagement.tcc.domain.BeaconEvent;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="beaconManagement.tcc.service/BeaconEventService&lt;-beaconManagement.tcc.service.impl/BeaconEventServiceImpl" source="//@children.13" target="//@children.12" targetEnd="//@children.13/@sourceConnections.0/@children.1" sourceEnd="//@children.13/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="100,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="98,185"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.service.impl/BeaconEventServiceImpl->beaconManagement.tcc.dao/BeaconEventDAO*beaconManagement.tcc.service.impl/BeaconEventServiceImpl-Soyatec::Import->beaconManagement.tcc.dao/BeaconEventDAO" source="//@children.13" target="//@children.5" targetEnd="//@children.13/@sourceConnections.1/@children.2" label="//@children.13/@sourceConnections.1/@children.0" sourceEnd="//@children.13/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="201,117" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,39"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.service.impl/BeaconEventServiceImpl-Soyatec::Import->beaconManagement.tcc.domain/BeaconEvent" source="//@children.13" target="//@children.4" targetEnd="//@children.13/@sourceConnections.2/@children.2" label="//@children.13/@sourceConnections.2/@children.0" sourceEnd="//@children.13/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="188,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,189"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.service.impl/BeaconEventServiceImpl-Soyatec::Implement->beaconManagement.tcc.service/BeaconEventService" source="//@children.13" target="//@children.12" targetEnd="//@children.13/@sourceConnections.3/@children.2" label="//@children.13/@sourceConnections.3/@children.0" sourceEnd="//@children.13/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Implement»" size="59,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="80,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="78,185"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:ClassEditModel" name="BeaconDetectorServiceImpl" location="1677,576" size="219,139" id="beaconManagement.tcc.service.impl/BeaconDetectorServiceImpl">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="156,90">
+      <children xsi:type="editmodel:MethodEditModel" name="deleteBeaconDetector" id="beaconManagement.tcc.service.impl/BeaconDetectorServiceImpl#deleteBeaconDetector(LbeaconManagement.tcc.domain.BeaconDetector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="editBeaconDetector" id="beaconManagement.tcc.service.impl/BeaconDetectorServiceImpl#editBeaconDetector(LbeaconManagement.tcc.domain.BeaconDetector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAllBeaconDetector" id="beaconManagement.tcc.service.impl/BeaconDetectorServiceImpl#getAllBeaconDetector()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBeaconDetectorByMac" id="beaconManagement.tcc.service.impl/BeaconDetectorServiceImpl#getBeaconDetectorByMac(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="insertBeaconDetector" id="beaconManagement.tcc.service.impl/BeaconDetectorServiceImpl#insertBeaconDetector(LbeaconManagement.tcc.domain.BeaconDetector;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="beaconManagement.tcc.service/BeaconDetectorService&lt;-beaconManagement.tcc.service.impl/BeaconDetectorServiceImpl" source="//@children.14" target="//@children.15" targetEnd="//@children.14/@sourceConnections.0/@children.1" sourceEnd="//@children.14/@sourceConnections.0/@children.0" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:AssociationEndEditModel" location="109,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="95,167"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.service.impl/BeaconDetectorServiceImpl-Soyatec::Import->beaconManagement.tcc.domain/BeaconDetector" source="//@children.14" target="//@children.2" targetEnd="//@children.14/@sourceConnections.1/@children.2" label="//@children.14/@sourceConnections.1/@children.0" sourceEnd="//@children.14/@sourceConnections.1/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,83" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="175,55"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.service.impl/BeaconDetectorServiceImpl->beaconManagement.tcc.dao/BeaconDetectorDAO*beaconManagement.tcc.service.impl/BeaconDetectorServiceImpl-Soyatec::Import->beaconManagement.tcc.dao/BeaconDetectorDAO" source="//@children.14" target="//@children.3" targetEnd="//@children.14/@sourceConnections.2/@children.2" label="//@children.14/@sourceConnections.2/@children.0" sourceEnd="//@children.14/@sourceConnections.2/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="49,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="165,185"/>
+    </sourceConnections>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.service.impl/BeaconDetectorServiceImpl-Soyatec::Implement->beaconManagement.tcc.service/BeaconDetectorService" source="//@children.14" target="//@children.15" targetEnd="//@children.14/@sourceConnections.3/@children.2" label="//@children.14/@sourceConnections.3/@children.0" sourceEnd="//@children.14/@sourceConnections.3/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Implement»" size="59,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="129,0" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="115,167"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.14/@sourceConnections.0 //@children.14/@sourceConnections.3" name="BeaconDetectorService" location="1691,359" size="191,167" id="beaconManagement.tcc.service/BeaconDetectorService">
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <children xsi:type="editmodel:CompartmentEditModel" size="156,90">
+      <children xsi:type="editmodel:MethodEditModel" name="deleteBeaconDetector" id="beaconManagement.tcc.service/BeaconDetectorService#deleteBeaconDetector(LbeaconManagement.tcc.domain.BeaconDetector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="editBeaconDetector" id="beaconManagement.tcc.service/BeaconDetectorService#editBeaconDetector(LbeaconManagement.tcc.domain.BeaconDetector;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getAllBeaconDetector" id="beaconManagement.tcc.service/BeaconDetectorService#getAllBeaconDetector()"/>
+      <children xsi:type="editmodel:MethodEditModel" name="getBeaconDetectorByMac" id="beaconManagement.tcc.service/BeaconDetectorService#getBeaconDetectorByMac(Ljava.lang.String;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="insertBeaconDetector" id="beaconManagement.tcc.service/BeaconDetectorService#insertBeaconDetector(LbeaconManagement.tcc.domain.BeaconDetector;)"/>
+    </children>
+    <children xsi:type="editmodel:CompartmentEditModel"/>
+    <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.service/BeaconDetectorService-Soyatec::Import->beaconManagement.tcc.domain/BeaconDetector" source="//@children.15" target="//@children.2" targetEnd="//@children.15/@sourceConnections.0/@children.2" label="//@children.15/@sourceConnections.0/@children.0" sourceEnd="//@children.15/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
+      <children xsi:type="editmodel:WireLabelEditModel" name="«Import»" size="41,14" anchorKind="MiddlePart"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="0,129" attachSource="true"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="175,51"/>
+    </sourceConnections>
+    <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+  </children>
+  <diagramOptions xsi:type="options:ClassDiagramOptions" properties="wireOptions=5;Product=eUML2" autoName="false"/>
+  <boardSetting snapToGeometry="true" gridEnabled="true" gridSpacing="15,15" gridOrigin="0,0" rulerUnit="pixel" gridVisibility="false">
+    <leftRuler/>
+    <topRuler/>
+  </boardSetting>
+  <classDiagramPreferences xsi:type="editmodel:UMLClassDiagramPreference" showPopupBars="true" showConnectionHandles="true" attributeSorter="Natural" methodSorter="Natural" showClassStereotype="true" showPackageStereotype="true" showDependencyStereotype="true" showInterfaceStereotype="true" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
+</editmodel:ClassDiagramEditModel>

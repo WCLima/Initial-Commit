@@ -14,6 +14,9 @@ import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotBlank;
 
+/**
+ * @author  Wagner
+ */
 @Entity
 @Table(name = "checkin", schema = "management")
 public class CheckIn implements Serializable {
@@ -23,13 +26,27 @@ public class CheckIn implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	/**
+	 * @uml.property  name="id"
+	 */
 	private Long id;
 
+	/**
+	 * @uml.property  name="checkDateMillis"
+	 */
 	@NotBlank
 	private Long checkDateMillis;
 
+	/**
+	 * @uml.property  name="beaconEvent"
+	 * @uml.associationEnd  multiplicity="(1 1)"
+	 */
 	private BeaconEvent beaconEvent;
 
+	/**
+	 * @uml.property  name="beaconDetector"
+	 * @uml.associationEnd  multiplicity="(1 1)"
+	 */
 	private BeaconDetector beaconDetector;
 
 	public CheckIn(Long id, Long checkDateMillis, BeaconEvent beaconEvent,
@@ -41,6 +58,10 @@ public class CheckIn implements Serializable {
 		this.beaconDetector = beaconDetector;
 	}
 
+	/**
+	 * @return
+	 * @uml.property  name="id"
+	 */
 	@Id
 	@Column(name = "checkin_id")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_checkin_id")
@@ -49,10 +70,18 @@ public class CheckIn implements Serializable {
 		return id;
 	}
 
+	/**
+	 * @param  id
+	 * @uml.property  name="id"
+	 */
 	public void setId(Long id) {
 		this.id = id;
 	}
 
+	/**
+	 * @return
+	 * @uml.property  name="checkDateMillis"
+	 */
 	public Long getCheckDateMillis() {
 		return checkDateMillis;
 	}
@@ -61,22 +90,38 @@ public class CheckIn implements Serializable {
 		this.checkDateMillis = checkDateMillis;
 	}
 
+	/**
+	 * @return
+	 * @uml.property  name="beaconEvent"
+	 */
 	@ManyToOne
 	@JoinColumn(name = "beaconevent_id")
 	public BeaconEvent getBeaconEvent() {
 		return beaconEvent;
 	}
 
+	/**
+	 * @param  beaconEvent
+	 * @uml.property  name="beaconEvent"
+	 */
 	public void setBeaconEvent(BeaconEvent beaconEvent) {
 		this.beaconEvent = beaconEvent;
 	}
 
+	/**
+	 * @return
+	 * @uml.property  name="beaconDetector"
+	 */
 	@ManyToOne
 	@JoinColumn(name = "beacondetector_id")
 	public BeaconDetector getBeaconDetector() {
 		return beaconDetector;
 	}
 
+	/**
+	 * @param  beaconDetector
+	 * @uml.property  name="beaconDetector"
+	 */
 	public void setBeaconDetector(BeaconDetector beaconDetector) {
 		this.beaconDetector = beaconDetector;
 	}

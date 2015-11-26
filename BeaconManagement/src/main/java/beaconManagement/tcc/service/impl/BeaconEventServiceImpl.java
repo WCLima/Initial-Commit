@@ -12,9 +12,16 @@ import beaconManagement.tcc.dao.BeaconEventDAO;
 import beaconManagement.tcc.domain.BeaconEvent;
 import beaconManagement.tcc.service.BeaconEventService;
 
+/**
+ * @author  Wagner
+ */
 @Service
 public class BeaconEventServiceImpl implements BeaconEventService {
 
+	/**
+	 * @uml.property  name="beaconEventDao"
+	 * @uml.associationEnd  readOnly="true"
+	 */
 	@Autowired
 	private BeaconEventDAO beaconEventDao;
 

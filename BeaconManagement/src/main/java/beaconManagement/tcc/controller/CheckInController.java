@@ -14,10 +14,17 @@ import beaconManagement.tcc.domain.BeaconDetector;
 import beaconManagement.tcc.domain.CheckIn;
 import beaconManagement.tcc.service.CheckInService;
 
+/**
+ * @author  Wagner
+ */
 @Controller
 @RequestMapping(value = "/checkin")
 public class CheckInController {
 
+	/**
+	 * @uml.property  name="checkInService"
+	 * @uml.associationEnd  readOnly="true"
+	 */
 	@Autowired
 	private CheckInService checkInService;
 

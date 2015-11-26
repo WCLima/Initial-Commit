@@ -12,9 +12,16 @@ import beaconManagement.tcc.dao.BeaconDAO;
 import beaconManagement.tcc.domain.Beacon;
 import beaconManagement.tcc.service.BeaconService;
 
+/**
+ * @author  Wagner
+ */
 @Service
 public class BeaconServiceImpl implements BeaconService {
 
+	/**
+	 * @uml.property  name="beaconDao"
+	 * @uml.associationEnd  readOnly="true"
+	 */
 	@Autowired
 	private BeaconDAO beaconDao;
 

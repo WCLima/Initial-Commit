@@ -12,6 +12,9 @@ import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotBlank;
 
+/**
+ * @author  Wagner
+ */
 @Entity
 @Table(name = "beacondetector", schema = "management")
 public class BeaconDetector implements Serializable {
@@ -21,11 +24,20 @@ public class BeaconDetector implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	/**
+	 * @uml.property  name="id"
+	 */
 	private Long id;
 
+	/**
+	 * @uml.property  name="mac"
+	 */
 	@NotBlank
 	private String mac;
 
+	/**
+	 * @uml.property  name="location"
+	 */
 	private String location;
 
 	public BeaconDetector(String mac, String location) {
@@ -34,6 +46,10 @@ public class BeaconDetector implements Serializable {
 		this.location = location;
 	}
 
+	/**
+	 * @return
+	 * @uml.property  name="id"
+	 */
 	@Id
 	@Column(name = "beacondetector_id")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_beacondetector_id")
@@ -42,22 +58,42 @@ public class BeaconDetector implements Serializable {
 		return id;
 	}
 
+	/**
+	 * @param  id
+	 * @uml.property  name="id"
+	 */
 	public void setId(Long id) {
 		this.id = id;
 	}
 
+	/**
+	 * @return
+	 * @uml.property  name="mac"
+	 */
 	public String getMac() {
 		return mac;
 	}
 
+	/**
+	 * @param  mac
+	 * @uml.property  name="mac"
+	 */
 	public void setMac(String mac) {
 		this.mac = mac;
 	}
 
+	/**
+	 * @return
+	 * @uml.property  name="location"
+	 */
 	public String getLocation() {
 		return location;
 	}
 
+	/**
+	 * @param  location
+	 * @uml.property  name="location"
+	 */
 	public void setLocation(String location) {
 		this.location = location;
 	}

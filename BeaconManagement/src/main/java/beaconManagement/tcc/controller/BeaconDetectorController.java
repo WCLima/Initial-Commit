@@ -13,10 +13,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import beaconManagement.tcc.domain.BeaconDetector;
 import beaconManagement.tcc.service.BeaconDetectorService;
 
+/**
+ * @author  Wagner
+ */
 @Controller
 @RequestMapping(value = "/detector")
 public class BeaconDetectorController {
 
+	/**
+	 * @uml.property  name="beaconDetectorService"
+	 * @uml.associationEnd  readOnly="true"
+	 */
 	@Autowired
 	private BeaconDetectorService beaconDetectorService;
 

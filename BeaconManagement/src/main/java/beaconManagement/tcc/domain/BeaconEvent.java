@@ -12,6 +12,9 @@ import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotBlank;
 
+/**
+ * @author  Wagner
+ */
 @Entity
 @Table(name = "beaconevent", schema = "management")
 public class BeaconEvent implements Serializable {
@@ -21,11 +24,20 @@ public class BeaconEvent implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	/**
+	 * @uml.property  name="id"
+	 */
 	private Long id;
 
+	/**
+	 * @uml.property  name="startDateMillis"
+	 */
 	@NotBlank
 	private Long startDateMillis;
 
+	/**
+	 * @uml.property  name="endDateMillis"
+	 */
 	@NotBlank
 	private Long endDateMillis;
 
@@ -36,6 +48,10 @@ public class BeaconEvent implements Serializable {
 		this.endDateMillis = endDateMillis;
 	}
 
+	/**
+	 * @return
+	 * @uml.property  name="id"
+	 */
 	@Id
 	@Column(name = "beaconevent_id")
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_beaconevent_id")
@@ -44,10 +60,18 @@ public class BeaconEvent implements Serializable {
 		return id;
 	}
 
+	/**
+	 * @param  id
+	 * @uml.property  name="id"
+	 */
 	public void setId(Long id) {
 		this.id = id;
 	}
 
+	/**
+	 * @return
+	 * @uml.property  name="startDateMillis"
+	 */
 	public Long getStartDateMillis() {
 		return startDateMillis;
 	}
@@ -56,6 +80,10 @@ public class BeaconEvent implements Serializable {
 		this.startDateMillis = startDateMillis;
 	}
 
+	/**
+	 * @return
+	 * @uml.property  name="endDateMillis"
+	 */
 	public Long getEndDateMillis() {
 		return endDateMillis;
 	}
