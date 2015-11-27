@@ -3,6 +3,7 @@ package beaconManagement.tcc.dao;
 import java.math.BigDecimal;
 import java.util.List;
 
+import beaconManagement.tcc.domain.Beacon;
 import beaconManagement.tcc.domain.BeaconDetector;
 import beaconManagement.tcc.domain.BeaconEvent;
 import beaconManagement.tcc.domain.CheckIn;
@@ -20,6 +21,8 @@ public interface CheckInDAO {
 	List<CheckIn> findFromDateMillis(BigDecimal dateMillis);
 
 	List<CheckIn> findBeforeDateMillis(BigDecimal dateMillis);
+
+	List<CheckIn> findByBeacon(Beacon beacon);
 
 	List<CheckIn> findByBeaconEvent(BeaconEvent beaconEvent);
 

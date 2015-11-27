@@ -49,17 +49,25 @@ public class CheckIn implements Serializable {
 	 */
 	private BeaconDetector beaconDetector;
 
+	/**
+	 * @uml.property name="beacon"
+	 * @uml.associationEnd multiplicity="(1 1)"
+	 */
+	private Beacon beacon;
+
 	public CheckIn() {
 		super();
 	}
 
 	public CheckIn(Long id, BigDecimal checkDateMillis,
-			BeaconEvent beaconEvent, BeaconDetector beaconDetector) {
+			BeaconEvent beaconEvent, BeaconDetector beaconDetector,
+			Beacon beacon) {
 		super();
 		this.id = id;
 		this.checkDateMillis = checkDateMillis;
 		this.beaconEvent = beaconEvent;
 		this.beaconDetector = beaconDetector;
+		this.beacon = beacon;
 	}
 
 	/**
@@ -130,17 +138,35 @@ public class CheckIn implements Serializable {
 		this.beaconDetector = beaconDetector;
 	}
 
+	/**
+	 * @return
+	 * @uml.property name="beacon"
+	 */
+	@ManyToOne
+	@JoinColumn(name = "beacon_id")
+	public BeaconDetector getBeacon() {
+		return beaconDetector;
+	}
+
+	/**
+	 * @param beacon
+	 * @uml.property name="beacon"
+	 */
+	public void setBeacon(Beacon beacon) {
+		this.beacon = beacon;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + ((beacon == null) ? 0 : beacon.hashCode());
 		result = prime * result
 				+ ((beaconDetector == null) ? 0 : beaconDetector.hashCode());
 		result = prime * result
 				+ ((beaconEvent == null) ? 0 : beaconEvent.hashCode());
 		result = prime * result
 				+ ((checkDateMillis == null) ? 0 : checkDateMillis.hashCode());
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
 
@@ -153,6 +179,11 @@ public class CheckIn implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		CheckIn other = (CheckIn) obj;
+		if (beacon == null) {
+			if (other.beacon != null)
+				return false;
+		} else if (!beacon.equals(other.beacon))
+			return false;
 		if (beaconDetector == null) {
 			if (other.beaconDetector != null)
 				return false;
@@ -168,11 +199,6 @@ public class CheckIn implements Serializable {
 				return false;
 		} else if (!checkDateMillis.equals(other.checkDateMillis))
 			return false;
-		if (id == null) {
-			if (other.id != null)
-				return false;
-		} else if (!id.equals(other.id))
-			return false;
 		return true;
 	}
 
@@ -180,7 +206,7 @@ public class CheckIn implements Serializable {
 	public String toString() {
 		return "CheckIn [id=" + id + ", checkDateMillis=" + checkDateMillis
 				+ ", beaconEvent=" + beaconEvent + ", beaconDetector="
-				+ beaconDetector + "]";
+				+ beaconDetector + ", beacon=" + beacon + "]";
 	}
 
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="991,976" id="beaconManagement.tcc.dao" metadata="uml2-1.0" initialized="true" scrolledY="156" tag="10" key="32303037303533312D313020426561636F6E4D616E6167656D656E74">
-  <children xsi:type="editmodel:ClassEditModel" name="CheckInHibernateDAO" location="598,307" size="183,207" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO" runTimeClassModel="findByDateMillis(Ljava.math.BigDecimal;),findBeforeDateMillis(Ljava.math.BigDecimal;),findById(Ljava.lang.Long;),list(),findByBeaconDetector(LbeaconManagement.tcc.domain.BeaconDetector;),insert(LbeaconManagement.tcc.domain.CheckIn;),findByBeaconEvent(LbeaconManagement.tcc.domain.BeaconEvent;),findFromDateMillis(Ljava.math.BigDecimal;)">
+<editmodel:ClassDiagramEditModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:editmodel="editmodel.xmi" xmlns:options="options.xmi" size="991,976" id="beaconManagement.tcc.dao" metadata="uml2-1.0" initialized="true" scrolledY="174" tag="10" key="32303037303533312D313020426561636F6E4D616E6167656D656E74">
+  <children xsi:type="editmodel:ClassEditModel" name="CheckInHibernateDAO" location="598,307" size="183,225" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO" runTimeClassModel="findByDateMillis(Ljava.math.BigDecimal;),findBeforeDateMillis(Ljava.math.BigDecimal;),findById(Ljava.lang.Long;),findByBeacon(LbeaconManagement.tcc.domain.Beacon;),list(),findByBeaconDetector(LbeaconManagement.tcc.domain.BeaconDetector;),insert(LbeaconManagement.tcc.domain.CheckIn;),findByBeaconEvent(LbeaconManagement.tcc.domain.BeaconEvent;),findFromDateMillis(Ljava.math.BigDecimal;)">
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
-    <children xsi:type="editmodel:CompartmentEditModel" size="139,144">
+    <children xsi:type="editmodel:CompartmentEditModel" size="139,162">
       <children xsi:type="editmodel:MethodEditModel" name="findByBeaconDetector" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO#findByBeaconDetector(LbeaconManagement.tcc.domain.BeaconDetector;)"/>
       <children xsi:type="editmodel:MethodEditModel" name="findByBeaconEvent" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO#findByBeaconEvent(LbeaconManagement.tcc.domain.BeaconEvent;)"/>
       <children xsi:type="editmodel:MethodEditModel" name="findById" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO#findById(Ljava.lang.Long;)"/>
@@ -11,22 +11,23 @@
       <children xsi:type="editmodel:MethodEditModel" name="findBeforeDateMillis" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO#findBeforeDateMillis(Ljava.math.BigDecimal;)"/>
       <children xsi:type="editmodel:MethodEditModel" name="findByDateMillis" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO#findByDateMillis(Ljava.math.BigDecimal;)"/>
       <children xsi:type="editmodel:MethodEditModel" name="findFromDateMillis" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO#findFromDateMillis(Ljava.math.BigDecimal;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByBeacon" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO#findByBeacon(LbeaconManagement.tcc.domain.Beacon;)"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <sourceConnections xsi:type="editmodel:DependencyEditModel" autoLocated="true" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO-Soyatec::Implement->beaconManagement.tcc.dao/CheckInDAO" source="//@children.0" target="//@children.1" targetEnd="//@children.0/@sourceConnections.0/@children.2" label="//@children.0/@sourceConnections.0/@children.0" sourceEnd="//@children.0/@sourceConnections.0/@children.1" connectionRouterKind="Manual">
       <children xsi:type="editmodel:WireLabelEditModel" name="«Implement»" size="59,14" anchorKind="MiddlePart"/>
       <children xsi:type="editmodel:AssociationEndEditModel" location="91,0" attachSource="true"/>
-      <children xsi:type="editmodel:AssociationEndEditModel" location="81,207"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="81,225"/>
     </sourceConnections>
     <sourceConnections xsi:type="editmodel:GeneralizationEditModel" autoLocated="true" id="beaconManagement.tcc.dao/CheckInDAO&lt;-beaconManagement.tcc.dao.impl/CheckInHibernateDAO" source="//@children.0" target="//@children.1" targetEnd="//@children.0/@sourceConnections.1/@children.1" sourceEnd="//@children.0/@sourceConnections.1/@children.0" connectionRouterKind="Manual">
       <children xsi:type="editmodel:AssociationEndEditModel" location="71,0" attachSource="true"/>
-      <children xsi:type="editmodel:AssociationEndEditModel" location="61,207"/>
+      <children xsi:type="editmodel:AssociationEndEditModel" location="61,225"/>
     </sourceConnections>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>
   </children>
-  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.0/@sourceConnections.0 //@children.0/@sourceConnections.1" name="CheckInDAO" location="608,50" size="162,207" id="beaconManagement.tcc.dao/CheckInDAO" runTimeClassModel="findByDateMillis(Ljava.math.BigDecimal;),findBeforeDateMillis(Ljava.math.BigDecimal;),findById(Ljava.lang.Long;),list(),findByBeaconDetector(LbeaconManagement.tcc.domain.BeaconDetector;),insert(LbeaconManagement.tcc.domain.CheckIn;),findByBeaconEvent(LbeaconManagement.tcc.domain.BeaconEvent;),findFromDateMillis(Ljava.math.BigDecimal;)">
+  <children xsi:type="editmodel:InterfaceEditModel" targetConnections="//@children.0/@sourceConnections.0 //@children.0/@sourceConnections.1" name="CheckInDAO" location="608,50" size="162,225" id="beaconManagement.tcc.dao/CheckInDAO" runTimeClassModel="findByDateMillis(Ljava.math.BigDecimal;),findBeforeDateMillis(Ljava.math.BigDecimal;),findById(Ljava.lang.Long;),findByBeacon(LbeaconManagement.tcc.domain.Beacon;),list(),findByBeaconDetector(LbeaconManagement.tcc.domain.BeaconDetector;),insert(LbeaconManagement.tcc.domain.CheckIn;),findByBeaconEvent(LbeaconManagement.tcc.domain.BeaconEvent;),findFromDateMillis(Ljava.math.BigDecimal;)">
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
-    <children xsi:type="editmodel:CompartmentEditModel" size="139,144">
+    <children xsi:type="editmodel:CompartmentEditModel" size="139,162">
       <children xsi:type="editmodel:MethodEditModel" name="findByBeaconDetector" id="beaconManagement.tcc.dao/CheckInDAO#findByBeaconDetector(LbeaconManagement.tcc.domain.BeaconDetector;)"/>
       <children xsi:type="editmodel:MethodEditModel" name="findByBeaconEvent" id="beaconManagement.tcc.dao/CheckInDAO#findByBeaconEvent(LbeaconManagement.tcc.domain.BeaconEvent;)"/>
       <children xsi:type="editmodel:MethodEditModel" name="findById" id="beaconManagement.tcc.dao/CheckInDAO#findById(Ljava.lang.Long;)"/>
@@ -35,6 +36,7 @@
       <children xsi:type="editmodel:MethodEditModel" name="findFromDateMillis" id="beaconManagement.tcc.dao/CheckInDAO#findFromDateMillis(Ljava.math.BigDecimal;)"/>
       <children xsi:type="editmodel:MethodEditModel" name="findByDateMillis" id="beaconManagement.tcc.dao/CheckInDAO#findByDateMillis(Ljava.math.BigDecimal;)"/>
       <children xsi:type="editmodel:MethodEditModel" name="findBeforeDateMillis" id="beaconManagement.tcc.dao/CheckInDAO#findBeforeDateMillis(Ljava.math.BigDecimal;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByBeacon" id="beaconManagement.tcc.dao/CheckInDAO#findByBeacon(LbeaconManagement.tcc.domain.Beacon;)"/>
     </children>
     <children xsi:type="editmodel:CompartmentEditModel" size="0,0"/>
     <classifierPreferences xsi:type="editmodel:UMLClassDiagramClassifierPreference" showStereotype="true" attributeSorter="Natural" methodSorter="Natural" innerClassSorter="Natural" showPublicAttributes="true" showPackageAttributes="true" showStaticAttributes="true" showPublicMethods="true" showPackageMethods="true" showStaticMethods="true" showPublicInnerClasses="true" showPackageInnerClasses="true" showStaticInnerClasses="true" packageIndication="3" showAttributeProperty="true"/>

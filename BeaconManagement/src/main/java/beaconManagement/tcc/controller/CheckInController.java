@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import beaconManagement.tcc.domain.Beacon;
 import beaconManagement.tcc.domain.BeaconDetector;
+import beaconManagement.tcc.domain.BeaconEvent;
 import beaconManagement.tcc.domain.CheckIn;
 import beaconManagement.tcc.service.CheckInService;
 
@@ -35,11 +37,23 @@ public class CheckInController {
 		return checkInService.getCheckIn();
 	}
 
+	@RequestMapping(value = "/list_checkins_by_beacon", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseBody
+	public List<CheckIn> getCheckInByBeacon(@RequestBody Beacon beacon) {
+		return checkInService.getCheckInByBeacon(beacon);
+	}
+
 	@RequestMapping(value = "/list_checkins_by_detector", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public List<CheckIn> getCheckInByBeaconDetector(
 			@RequestBody BeaconDetector detector) {
 		return checkInService.getCheckInByBeaconDetector(detector);
+	}
+
+	@RequestMapping(value = "/list_checkins_by_event", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+	@ResponseBody
+	public List<CheckIn> getCheckInByBeaconEvent(@RequestBody BeaconEvent event) {
+		return checkInService.getCheckInByBeaconEvent(event);
 	}
 
 	@RequestMapping(value = "/list_checkins_by_date", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)

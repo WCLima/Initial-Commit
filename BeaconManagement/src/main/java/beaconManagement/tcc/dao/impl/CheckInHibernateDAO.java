@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import beaconManagement.tcc.dao.CheckInDAO;
+import beaconManagement.tcc.domain.Beacon;
 import beaconManagement.tcc.domain.BeaconDetector;
 import beaconManagement.tcc.domain.BeaconEvent;
 import beaconManagement.tcc.domain.CheckIn;
@@ -157,6 +158,27 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 			list = query.list();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find checkin: " + e);
+		}
+		return list;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * beaconManagement.tcc.dao.CheckInDAO#findByBeacon(beaconManagement.tcc
+	 * .domain.Beacon)
+	 */
+	@SuppressWarnings("unchecked")
+	public List<CheckIn> findByBeacon(Beacon beacon) {
+		List<CheckIn> list = null;
+		try {
+			Query query = getCurrentSession().createQuery(
+					"from CheckIn c where c.beacon_id = :idBeacon");
+			query.setParameter("idBeacon", beacon);
+			list = query.list();
+		} catch (HibernateException e) {
+			LOGGER.error("Cannot find event: " + e);
 		}
 		return list;
 	}
