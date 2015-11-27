@@ -3,7 +3,6 @@
  */
 package beaconManagement.tcc.dao.impl;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -31,7 +30,7 @@ public class BeaconDetectorHibernateDAO extends CommonDAOImpl implements
 	 */
 	@SuppressWarnings("unchecked")
 	public List<BeaconDetector> list() {
-		List<BeaconDetector> list = new ArrayList<BeaconDetector>();
+		List<BeaconDetector> list = null;
 		try {
 			list = getCurrentSession().createQuery("from BeaconDetector")
 					.list();
@@ -67,7 +66,7 @@ public class BeaconDetectorHibernateDAO extends CommonDAOImpl implements
 	 * beaconManagement.tcc.dao.BeaconDetectorDAO#findByMac(java.lang.String)
 	 */
 	public BeaconDetector findByMac(String mac) {
-		BeaconDetector item = new BeaconDetector("", "");
+		BeaconDetector item = null;
 		try {
 			Query query = getCurrentSession().createQuery(
 					"from BeaconDetector b where b.mac= :macDetector");

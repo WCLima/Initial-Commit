@@ -1,5 +1,6 @@
 package beaconManagement.tcc.controller;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,15 +16,15 @@ import beaconManagement.tcc.domain.CheckIn;
 import beaconManagement.tcc.service.CheckInService;
 
 /**
- * @author  Wagner
+ * @author Wagner
  */
 @Controller
 @RequestMapping(value = "/checkin")
 public class CheckInController {
 
 	/**
-	 * @uml.property  name="checkInService"
-	 * @uml.associationEnd  readOnly="true"
+	 * @uml.property name="checkInService"
+	 * @uml.associationEnd readOnly="true"
 	 */
 	@Autowired
 	private CheckInService checkInService;
@@ -43,19 +44,20 @@ public class CheckInController {
 
 	@RequestMapping(value = "/list_checkins_by_date", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	public List<CheckIn> getCheckInByCalendar(@RequestBody Long calendar) {
+	public List<CheckIn> getCheckInByCalendar(@RequestBody BigDecimal calendar) {
 		return checkInService.getCheckInByCalendar(calendar);
 	}
 
 	@RequestMapping(value = "/list_checkins_from_date", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	public List<CheckIn> getCheckInFromCalendar(@RequestBody Long calendar) {
+	public List<CheckIn> getCheckInFromCalendar(@RequestBody BigDecimal calendar) {
 		return checkInService.getCheckInFromCalendar(calendar);
 	}
 
 	@RequestMapping(value = "/list_checkins_before_date", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	public List<CheckIn> getCheckInBeforeCalendar(@RequestBody Long calendar) {
+	public List<CheckIn> getCheckInBeforeCalendar(
+			@RequestBody BigDecimal calendar) {
 		return checkInService.getCheckInBeforeCalendar(calendar);
 	}
 

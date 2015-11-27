@@ -6,7 +6,7 @@
       <children xsi:type="editmodel:MethodEditModel" name="findBeforeDateMillis" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO#findBeforeDateMillis(Ljava.lang.Long;)"/>
       <children xsi:type="editmodel:MethodEditModel" name="findByBeaconDetector" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO#findByBeaconDetector(LbeaconManagement.tcc.domain.BeaconDetector;)"/>
       <children xsi:type="editmodel:MethodEditModel" name="findByBeaconEvent" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO#findByBeaconEvent(LbeaconManagement.tcc.domain.BeaconEvent;)"/>
-      <children xsi:type="editmodel:MethodEditModel" name="findByDateMillis" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO#findByDateMillis(Ljava.lang.Long;)"/>
+      <children xsi:type="editmodel:MethodEditModel" name="findByDateMillis" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO#findByDateMillis(LB;)"/>
       <children xsi:type="editmodel:MethodEditModel" name="findById" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO#findById(Ljava.lang.Long;)"/>
       <children xsi:type="editmodel:MethodEditModel" name="findFromDateMillis" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO#findFromDateMillis(Ljava.lang.Long;)"/>
       <children xsi:type="editmodel:MethodEditModel" name="insert" id="beaconManagement.tcc.dao.impl/CheckInHibernateDAO#insert(LbeaconManagement.tcc.domain.CheckIn;)"/>

@@ -3,6 +3,7 @@
  */
 package beaconManagement.tcc.service.impl;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,21 +14,21 @@ import beaconManagement.tcc.domain.BeaconEvent;
 import beaconManagement.tcc.service.BeaconEventService;
 
 /**
- * @author  Wagner
+ * @author Wagner
  */
 @Service
 public class BeaconEventServiceImpl implements BeaconEventService {
 
 	/**
-	 * @uml.property  name="beaconEventDao"
-	 * @uml.associationEnd  readOnly="true"
+	 * @uml.property name="beaconEventDao"
+	 * @uml.associationEnd readOnly="true"
 	 */
 	@Autowired
 	private BeaconEventDAO beaconEventDao;
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see beaconManagement.tcc.service.BeaconEventService#insertBeaconEvent(
 	 * beaconManagement.tcc.domain.BeaconEvent)
 	 */
@@ -37,7 +38,7 @@ public class BeaconEventServiceImpl implements BeaconEventService {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see beaconManagement.tcc.service.BeaconEventService#saveBeaconEvent(
 	 * beaconManagement.tcc.domain.BeaconEvent)
 	 */
@@ -47,7 +48,7 @@ public class BeaconEventServiceImpl implements BeaconEventService {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see beaconManagement.tcc.service.BeaconEventService#editBeaconEvent(
 	 * beaconManagement.tcc.domain.BeaconEvent)
 	 */
@@ -57,7 +58,7 @@ public class BeaconEventServiceImpl implements BeaconEventService {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see beaconManagement.tcc.service.BeaconEventService#getBeaconEvents()
 	 */
 	public List<BeaconEvent> getBeaconEvents() {
@@ -66,23 +67,23 @@ public class BeaconEventServiceImpl implements BeaconEventService {
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * beaconManagement.tcc.service.BeaconEventService#getBeaconEventsByStartdate
 	 * (java.util.Calendar)
 	 */
-	public List<BeaconEvent> getBeaconEventsByStartDate(Long dateMillis) {
+	public List<BeaconEvent> getBeaconEventsByStartDate(BigDecimal dateMillis) {
 		return beaconEventDao.findByStartDateMillis(dateMillis);
 	}
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * beaconManagement.tcc.service.BeaconEventService#getBeaconEventsByEnddate
 	 * (java.util.Calendar)
 	 */
-	public List<BeaconEvent> getBeaconEventsByEndDate(Long dateMillis) {
+	public List<BeaconEvent> getBeaconEventsByEndDate(BigDecimal dateMillis) {
 		return beaconEventDao.findByEndDateMillis(dateMillis);
 	}
 

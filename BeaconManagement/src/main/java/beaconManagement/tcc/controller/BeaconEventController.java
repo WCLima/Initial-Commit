@@ -1,5 +1,6 @@
 package beaconManagement.tcc.controller;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,15 +15,15 @@ import beaconManagement.tcc.domain.BeaconEvent;
 import beaconManagement.tcc.service.BeaconEventService;
 
 /**
- * @author  Wagner
+ * @author Wagner
  */
 @Controller
 @RequestMapping(value = "event")
 public class BeaconEventController {
 
 	/**
-	 * @uml.property  name="beaconEventService"
-	 * @uml.associationEnd  readOnly="true"
+	 * @uml.property name="beaconEventService"
+	 * @uml.associationEnd readOnly="true"
 	 */
 	@Autowired
 	private BeaconEventService beaconEventService;
@@ -35,13 +36,15 @@ public class BeaconEventController {
 
 	@RequestMapping(value = "/list_event_start_date", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	public List<BeaconEvent> getBeaconEventsStartDate(@RequestBody Long calendar) {
+	public List<BeaconEvent> getBeaconEventsStartDate(
+			@RequestBody BigDecimal calendar) {
 		return beaconEventService.getBeaconEventsByStartDate(calendar);
 	}
 
 	@RequestMapping(value = "/list_event_end_date", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	public List<BeaconEvent> getBeaconEventsEndDate(@RequestBody Long calendar) {
+	public List<BeaconEvent> getBeaconEventsEndDate(
+			@RequestBody BigDecimal calendar) {
 		return beaconEventService.getBeaconEventsByEndDate(calendar);
 	}
 

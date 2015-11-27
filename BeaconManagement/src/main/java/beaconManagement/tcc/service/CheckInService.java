@@ -1,5 +1,6 @@
 package beaconManagement.tcc.service;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import beaconManagement.tcc.domain.BeaconDetector;
@@ -12,11 +13,11 @@ public interface CheckInService {
 
 	List<CheckIn> getCheckIn();
 
-	List<CheckIn> getCheckInByCalendar(Long dateMillis);
+	List<CheckIn> getCheckInByCalendar(BigDecimal dateMillis);
 
-	List<CheckIn> getCheckInBeforeCalendar(Long dateMillis);
+	List<CheckIn> getCheckInBeforeCalendar(BigDecimal dateMillis);
 
-	List<CheckIn> getCheckInFromCalendar(Long dateMillis);
+	List<CheckIn> getCheckInFromCalendar(BigDecimal dateMillis);
 
 	List<CheckIn> getCheckInByBeaconEvent(BeaconEvent event);
 

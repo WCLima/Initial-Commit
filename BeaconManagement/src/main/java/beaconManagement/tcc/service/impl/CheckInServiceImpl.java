@@ -3,6 +3,7 @@
  */
 package beaconManagement.tcc.service.impl;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,14 +16,14 @@ import beaconManagement.tcc.domain.CheckIn;
 import beaconManagement.tcc.service.CheckInService;
 
 /**
- * @author  Wagner
+ * @author Wagner
  */
 @Service
 public class CheckInServiceImpl implements CheckInService {
 
 	/**
-	 * @uml.property  name="checkInDao"
-	 * @uml.associationEnd  readOnly="true"
+	 * @uml.property name="checkInDao"
+	 * @uml.associationEnd readOnly="true"
 	 */
 	@Autowired
 	private CheckInDAO checkInDao;
@@ -33,7 +34,7 @@ public class CheckInServiceImpl implements CheckInService {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see beaconManagement.tcc.service.CheckInService#getCheckIn()
 	 */
 	public List<CheckIn> getCheckIn() {
@@ -42,18 +43,18 @@ public class CheckInServiceImpl implements CheckInService {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#getCheckInByCalendar(java
 	 * .util.Calendar)
 	 */
-	public List<CheckIn> getCheckInByCalendar(Long dateMillis) {
+	public List<CheckIn> getCheckInByCalendar(BigDecimal dateMillis) {
 		return checkInDao.findByDateMillis(dateMillis);
 	}
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#getCheckInByStatus(boolean)
 	 */
@@ -63,29 +64,29 @@ public class CheckInServiceImpl implements CheckInService {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#getCheckInBeforeCalendar(
 	 * java.util.Calendar)
 	 */
-	public List<CheckIn> getCheckInBeforeCalendar(Long dateMillis) {
+	public List<CheckIn> getCheckInBeforeCalendar(BigDecimal dateMillis) {
 		return checkInDao.findBeforeDateMillis(dateMillis);
 	}
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#getCheckInFromCalendar(java
 	 * .util.Calendar)
 	 */
-	public List<CheckIn> getCheckInFromCalendar(Long dateMillis) {
+	public List<CheckIn> getCheckInFromCalendar(BigDecimal dateMillis) {
 		return checkInDao.findFromDateMillis(dateMillis);
 	}
 
 	/*
 	 * (non-Javadoc)
-	 * 
+	 *
 	 * @see
 	 * beaconManagement.tcc.service.CheckInService#getCheckInByBeaconDetector
 	 * (beaconManagement.tcc.domain.BeaconDetector)

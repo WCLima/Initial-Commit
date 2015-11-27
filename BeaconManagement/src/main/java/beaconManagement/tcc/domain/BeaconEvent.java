@@ -1,6 +1,7 @@
 package beaconManagement.tcc.domain;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -33,15 +34,20 @@ public class BeaconEvent implements Serializable {
 	 * @uml.property name="startDateMillis"
 	 */
 	@NotBlank
-	private Long startDateMillis;
+	private BigDecimal startDateMillis;
 
 	/**
 	 * @uml.property name="endDateMillis"
 	 */
 	@NotBlank
-	private Long endDateMillis;
+	private BigDecimal endDateMillis;
 
-	public BeaconEvent(Long id, Long startDateMillis, Long endDateMillis) {
+	public BeaconEvent() {
+		super();
+	}
+
+	public BeaconEvent(Long id, BigDecimal startDateMillis,
+			BigDecimal endDateMillis) {
 		super();
 		this.id = id;
 		this.startDateMillis = startDateMillis;
@@ -72,11 +78,11 @@ public class BeaconEvent implements Serializable {
 	 * @return
 	 * @uml.property name="startDateMillis"
 	 */
-	public Long getStartDateMillis() {
+	public BigDecimal getStartDateMillis() {
 		return startDateMillis;
 	}
 
-	public void setStartDateMillis(Long startDateMillis) {
+	public void setStartDateMillis(BigDecimal startDateMillis) {
 		this.startDateMillis = startDateMillis;
 	}
 
@@ -84,11 +90,11 @@ public class BeaconEvent implements Serializable {
 	 * @return
 	 * @uml.property name="endDateMillis"
 	 */
-	public Long getEndDateMillis() {
+	public BigDecimal getEndDateMillis() {
 		return endDateMillis;
 	}
 
-	public void setEndDateMillis(Long endDateMillis) {
+	public void setEndDateMillis(BigDecimal endDateMillis) {
 		this.endDateMillis = endDateMillis;
 	}
 

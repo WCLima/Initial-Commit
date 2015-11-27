@@ -3,6 +3,7 @@
  */
 package beaconManagement.tcc.dao.impl;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -65,7 +66,7 @@ public class BeaconEventHibernateDAO extends CommonDAOImpl implements
 	 * .Calendar)
 	 */
 	@SuppressWarnings("unchecked")
-	public List<BeaconEvent> findByStartDateMillis(Long startDateMillis) {
+	public List<BeaconEvent> findByStartDateMillis(BigDecimal startDateMillis) {
 		List<BeaconEvent> list = null;
 		try {
 			Query query = getCurrentSession().createQuery(
@@ -86,7 +87,7 @@ public class BeaconEventHibernateDAO extends CommonDAOImpl implements
 	 * )
 	 */
 	@SuppressWarnings("unchecked")
-	public List<BeaconEvent> findByEndDateMillis(Long endDateMillis) {
+	public List<BeaconEvent> findByEndDateMillis(BigDecimal endDateMillis) {
 		List<BeaconEvent> list = null;
 		try {
 			Query query = getCurrentSession().createQuery(

@@ -3,6 +3,7 @@
  */
 package beaconManagement.tcc.dao.impl;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.apache.log4j.Logger;
@@ -65,7 +66,7 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 	 * beaconManagement.tcc.dao.CheckInDAO#findByCalendar(java.util.Calendar)
 	 */
 	@SuppressWarnings("unchecked")
-	public List<CheckIn> findByDateMillis(Long dateMillis) {
+	public List<CheckIn> findByDateMillis(BigDecimal dateMillis) {
 		List<CheckIn> list = null;
 		try {
 			Query query = getCurrentSession().createQuery(
@@ -126,7 +127,7 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 	 * beaconManagement.tcc.dao.CheckInDAO#findFromCalendar(java.util.Calendar)
 	 */
 	@SuppressWarnings("unchecked")
-	public List<CheckIn> findFromDateMillis(Long dateMillis) {
+	public List<CheckIn> findFromDateMillis(BigDecimal dateMillis) {
 		List<CheckIn> list = null;
 		try {
 			Query query = getCurrentSession().createQuery(
@@ -147,7 +148,7 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 	 * )
 	 */
 	@SuppressWarnings("unchecked")
-	public List<CheckIn> findBeforeDateMillis(Long dateMillis) {
+	public List<CheckIn> findBeforeDateMillis(BigDecimal dateMillis) {
 		List<CheckIn> list = null;
 		try {
 			Query query = getCurrentSession().createQuery(

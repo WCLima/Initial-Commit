@@ -1,5 +1,6 @@
 package beaconManagement.tcc.dao;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import beaconManagement.tcc.domain.BeaconDetector;
@@ -14,11 +15,11 @@ public interface CheckInDAO {
 
 	CheckIn findById(Long id);
 
-	List<CheckIn> findByDateMillis(Long dateMillis);
+	List<CheckIn> findByDateMillis(BigDecimal dateMillis);
 
-	List<CheckIn> findFromDateMillis(Long dateMillis);
+	List<CheckIn> findFromDateMillis(BigDecimal dateMillis);
 
-	List<CheckIn> findBeforeDateMillis(Long dateMillis);
+	List<CheckIn> findBeforeDateMillis(BigDecimal dateMillis);
 
 	List<CheckIn> findByBeaconEvent(BeaconEvent beaconEvent);
 

@@ -1,5 +1,6 @@
 package beaconManagement.tcc.dao;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import beaconManagement.tcc.domain.BeaconEvent;
@@ -16,8 +17,8 @@ public interface BeaconEventDAO {
 
 	BeaconEvent findById(Long id);
 
-	List<BeaconEvent> findByStartDateMillis(Long startDateMillis);
+	List<BeaconEvent> findByStartDateMillis(BigDecimal startDateMillis);
 
-	List<BeaconEvent> findByEndDateMillis(Long endDateMillis);
+	List<BeaconEvent> findByEndDateMillis(BigDecimal endDateMillis);
 
 }

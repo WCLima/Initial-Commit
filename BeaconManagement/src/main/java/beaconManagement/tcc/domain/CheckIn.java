@@ -12,8 +12,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import org.hibernate.validator.constraints.NotBlank;
-
 /**
  * @author Wagner
  */
@@ -34,7 +32,6 @@ public class CheckIn implements Serializable {
 	/**
 	 * @uml.property name="checkDateMillis"
 	 */
-	@NotBlank
 	private Long checkDateMillis;
 
 	/**
@@ -48,6 +45,10 @@ public class CheckIn implements Serializable {
 	 * @uml.associationEnd multiplicity="(1 1)"
 	 */
 	private BeaconDetector beaconDetector;
+
+	public CheckIn() {
+		super();
+	}
 
 	public CheckIn(Long id, Long checkDateMillis, BeaconEvent beaconEvent,
 			BeaconDetector beaconDetector) {
