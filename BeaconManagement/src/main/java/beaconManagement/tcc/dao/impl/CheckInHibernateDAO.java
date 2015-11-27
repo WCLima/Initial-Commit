@@ -28,7 +28,7 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see beaconManagement.tcc.dao.CheckInDAO#list()
 	 */
 	@SuppressWarnings("unchecked")
@@ -44,7 +44,7 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see beaconManagement.tcc.dao.CheckInDAO#findById(java.lang.Long)
 	 */
 	public CheckIn findById(Long id) {
@@ -62,7 +62,7 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.dao.CheckInDAO#findByCalendar(java.util.Calendar)
 	 */
@@ -71,7 +71,7 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 		List<CheckIn> list = null;
 		try {
 			Query query = getCurrentSession().createQuery(
-					"from CheckIn c where c.checkdatemilis= :checkCalendar");
+					"from CheckIn c where c.checkDateMillis= :checkCalendar");
 			query.setParameter("checkCalendar", dateMillis);
 			list = query.list();
 		} catch (HibernateException e) {
@@ -82,7 +82,7 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see beaconManagement.tcc.dao.CheckInDAO#findByStatus(boolean)
 	 */
 	@SuppressWarnings("unchecked")
@@ -90,7 +90,7 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 		List<CheckIn> list = null;
 		try {
 			Query query = getCurrentSession().createQuery(
-					"from CheckIn c where c.beaconevent = :event");
+					"from CheckIn c where c.beaconEvent = :event");
 			query.setParameter("event", event);
 			list = query.list();
 		} catch (HibernateException e) {
@@ -101,7 +101,7 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.dao.CheckInDAO#findByBeaconDetector(beaconManagement
 	 * .tcc.domain.BeaconDetector)
@@ -111,7 +111,7 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 		List<CheckIn> list = null;
 		try {
 			Query query = getCurrentSession().createQuery(
-					"from CheckIn c where c.beacondetector= :beaconDetector");
+					"from CheckIn c where c.beaconDetector= :beaconDetector");
 			query.setParameter("beaconDetector", detector);
 			list = query.list();
 		} catch (HibernateException e) {
@@ -122,7 +122,7 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see
 	 * beaconManagement.tcc.dao.CheckInDAO#findFromCalendar(java.util.Calendar)
 	 */
@@ -130,29 +130,9 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 	public List<CheckIn> findFromDateMillis(BigDecimal dateMillis) {
 		List<CheckIn> list = null;
 		try {
-			Query query = getCurrentSession().createQuery(
-					"from CheckIn c where c.checkdatemilis > :checkInCalendar");
-			query.setParameter("checkInCalendar", dateMillis);
-			list = query.list();
-		} catch (HibernateException e) {
-			LOGGER.error("Cannot find checkin: " + e);
-		}
-		return list;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 *
-	 * @see
-	 * beaconManagement.tcc.dao.CheckInDAO#findBeforeCalendar(java.util.Calendar
-	 * )
-	 */
-	@SuppressWarnings("unchecked")
-	public List<CheckIn> findBeforeDateMillis(BigDecimal dateMillis) {
-		List<CheckIn> list = null;
-		try {
-			Query query = getCurrentSession().createQuery(
-					"from CheckIn c where c.checkdatemilis < :checkInCalendar");
+			Query query = getCurrentSession()
+					.createQuery(
+							"from CheckIn c where c.checkDateMillis > :checkInCalendar");
 			query.setParameter("checkInCalendar", dateMillis);
 			list = query.list();
 		} catch (HibernateException e) {
@@ -164,6 +144,28 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 	/*
 	 * (non-Javadoc)
 	 * 
+	 * @see
+	 * beaconManagement.tcc.dao.CheckInDAO#findBeforeCalendar(java.util.Calendar
+	 * )
+	 */
+	@SuppressWarnings("unchecked")
+	public List<CheckIn> findBeforeDateMillis(BigDecimal dateMillis) {
+		List<CheckIn> list = null;
+		try {
+			Query query = getCurrentSession()
+					.createQuery(
+							"from CheckIn c where c.checkDateMillis < :checkInCalendar");
+			query.setParameter("checkInCalendar", dateMillis);
+			list = query.list();
+		} catch (HibernateException e) {
+			LOGGER.error("Cannot find checkin: " + e);
+		}
+		return list;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 *
 	 * @see
 	 * beaconManagement.tcc.dao.CheckInDAO#findByBeacon(beaconManagement.tcc
 	 * .domain.Beacon)
@@ -184,7 +186,7 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 
 	/*
 	 * (non-Javadoc)
-	 *
+	 * 
 	 * @see beaconManagement.tcc.dao.CommonDAO#insert(java.lang.Object)
 	 */
 	public boolean insert(CheckIn item) {
