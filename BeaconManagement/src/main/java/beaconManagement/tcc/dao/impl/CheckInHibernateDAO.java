@@ -90,8 +90,8 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 		List<CheckIn> list = null;
 		try {
 			Query query = getCurrentSession().createQuery(
-					"from CheckIn c where c.beaconevent_id = :idEvent");
-			query.setParameter("idEvent", event);
+					"from CheckIn c where c.beaconevent = :event");
+			query.setParameter("event", event);
 			list = query.list();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find event: " + e);
@@ -110,9 +110,8 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 	public List<CheckIn> findByBeaconDetector(BeaconDetector detector) {
 		List<CheckIn> list = null;
 		try {
-			Query query = getCurrentSession()
-					.createQuery(
-							"from CheckIn c where c.beacondetector_id= :beaconDetector");
+			Query query = getCurrentSession().createQuery(
+					"from CheckIn c where c.beacondetector= :beaconDetector");
 			query.setParameter("beaconDetector", detector);
 			list = query.list();
 		} catch (HibernateException e) {
@@ -174,8 +173,8 @@ public class CheckInHibernateDAO extends CommonDAOImpl implements CheckInDAO {
 		List<CheckIn> list = null;
 		try {
 			Query query = getCurrentSession().createQuery(
-					"from CheckIn c where c.beacon_id = :idBeacon");
-			query.setParameter("idBeacon", beacon);
+					"from CheckIn c where c.beacon = :beacon");
+			query.setParameter("beacon", beacon);
 			list = query.list();
 		} catch (HibernateException e) {
 			LOGGER.error("Cannot find event: " + e);

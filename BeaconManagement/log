@@ -2403,3 +2403,524 @@
 09:38:04,332  INFO DispatcherServlet:507 - FrameworkServlet 'dispatcherServlet': initialization completed in 62 ms
 09:39:03,648  INFO XmlWebApplicationContext:951 - Closing WebApplicationContext for namespace 'dispatcherServlet-servlet': startup date [Fri Nov 27 09:38:04 BRST 2015]; parent: Root WebApplicationContext
 09:39:03,650  INFO XmlWebApplicationContext:951 - Closing Root WebApplicationContext: startup date [Fri Nov 27 09:38:00 BRST 2015]; root of context hierarchy
+09:41:23,513  INFO ContextLoader:307 - Root WebApplicationContext: initialization started
+09:41:23,721  INFO XmlWebApplicationContext:573 - Refreshing Root WebApplicationContext: startup date [Fri Nov 27 09:41:23 BRST 2015]; root of context hierarchy
+09:41:23,819  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring/application-config.xml]
+09:41:25,061  INFO DriverManagerDataSource:133 - Loaded JDBC driver: org.postgresql.Driver
+09:41:25,265 DEBUG BasicTypeRegistry:146 - Adding type registration boolean -> org.hibernate.type.BooleanType@64e490ed
+09:41:25,265 DEBUG BasicTypeRegistry:146 - Adding type registration boolean -> org.hibernate.type.BooleanType@64e490ed
+09:41:25,266 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@64e490ed
+09:41:25,269 DEBUG BasicTypeRegistry:146 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@68312436
+09:41:25,272 DEBUG BasicTypeRegistry:146 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@569d3987
+09:41:25,274 DEBUG BasicTypeRegistry:146 - Adding type registration yes_no -> org.hibernate.type.YesNoType@637f5af5
+09:41:25,278 DEBUG BasicTypeRegistry:146 - Adding type registration byte -> org.hibernate.type.ByteType@64bac623
+09:41:25,278 DEBUG BasicTypeRegistry:146 - Adding type registration byte -> org.hibernate.type.ByteType@64bac623
+09:41:25,278 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@64bac623
+09:41:25,281 DEBUG BasicTypeRegistry:146 - Adding type registration character -> org.hibernate.type.CharacterType@5eda341e
+09:41:25,281 DEBUG BasicTypeRegistry:146 - Adding type registration char -> org.hibernate.type.CharacterType@5eda341e
+09:41:25,282 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@5eda341e
+09:41:25,286 DEBUG BasicTypeRegistry:146 - Adding type registration short -> org.hibernate.type.ShortType@2e85050c
+09:41:25,287 DEBUG BasicTypeRegistry:146 - Adding type registration short -> org.hibernate.type.ShortType@2e85050c
+09:41:25,287 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@2e85050c
+09:41:25,290 DEBUG BasicTypeRegistry:146 - Adding type registration integer -> org.hibernate.type.IntegerType@4b466066
+09:41:25,291 DEBUG BasicTypeRegistry:146 - Adding type registration int -> org.hibernate.type.IntegerType@4b466066
+09:41:25,291 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@4b466066
+09:41:25,299 DEBUG BasicTypeRegistry:146 - Adding type registration long -> org.hibernate.type.LongType@70a02012
+09:41:25,299 DEBUG BasicTypeRegistry:146 - Adding type registration long -> org.hibernate.type.LongType@70a02012
+09:41:25,299 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@70a02012
+09:41:25,304 DEBUG BasicTypeRegistry:146 - Adding type registration float -> org.hibernate.type.FloatType@4add8ff
+09:41:25,305 DEBUG BasicTypeRegistry:146 - Adding type registration float -> org.hibernate.type.FloatType@4add8ff
+09:41:25,305 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@4add8ff
+09:41:25,309 DEBUG BasicTypeRegistry:146 - Adding type registration double -> org.hibernate.type.DoubleType@5ac61190
+09:41:25,311 DEBUG BasicTypeRegistry:146 - Adding type registration double -> org.hibernate.type.DoubleType@5ac61190
+09:41:25,311 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@5ac61190
+09:41:25,316 DEBUG BasicTypeRegistry:146 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@14c66013
+09:41:25,316 DEBUG BasicTypeRegistry:146 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@14c66013
+09:41:25,319 DEBUG BasicTypeRegistry:146 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@75246436
+09:41:25,319 DEBUG BasicTypeRegistry:146 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@75246436
+09:41:25,322 DEBUG BasicTypeRegistry:146 - Adding type registration string -> org.hibernate.type.StringType@646b109f
+09:41:25,322 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.String -> org.hibernate.type.StringType@646b109f
+09:41:25,325 DEBUG BasicTypeRegistry:146 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@35de1d8b
+09:41:25,328 DEBUG BasicTypeRegistry:146 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@5c21f529
+09:41:25,331 DEBUG BasicTypeRegistry:146 - Adding type registration url -> org.hibernate.type.UrlType@29ca8cfd
+09:41:25,331 DEBUG BasicTypeRegistry:146 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@29ca8cfd
+09:41:25,337 DEBUG BasicTypeRegistry:146 - Adding type registration date -> org.hibernate.type.DateType@eee54e8
+09:41:25,338 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@eee54e8
+09:41:25,342 DEBUG BasicTypeRegistry:146 - Adding type registration time -> org.hibernate.type.TimeType@db75bc6
+09:41:25,343 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@db75bc6
+09:41:25,347 DEBUG BasicTypeRegistry:146 - Adding type registration timestamp -> org.hibernate.type.TimestampType@23f2342b
+09:41:25,348 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@23f2342b
+09:41:25,348 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@23f2342b
+09:41:25,351 DEBUG BasicTypeRegistry:146 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@7d4ac44f
+09:41:25,354 DEBUG BasicTypeRegistry:146 - Adding type registration calendar -> org.hibernate.type.CalendarType@710a042b
+09:41:25,354 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@710a042b
+09:41:25,355 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@710a042b
+09:41:25,356 DEBUG BasicTypeRegistry:146 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@5806fcf0
+09:41:25,359 DEBUG BasicTypeRegistry:146 - Adding type registration locale -> org.hibernate.type.LocaleType@21f6590c
+09:41:25,359 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@21f6590c
+09:41:25,362 DEBUG BasicTypeRegistry:146 - Adding type registration currency -> org.hibernate.type.CurrencyType@678108c0
+09:41:25,362 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@678108c0
+09:41:25,365 DEBUG BasicTypeRegistry:146 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@775f892
+09:41:25,365 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@775f892
+09:41:25,367 DEBUG BasicTypeRegistry:146 - Adding type registration class -> org.hibernate.type.ClassType@51d1e100
+09:41:25,368 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@51d1e100
+09:41:25,372 DEBUG BasicTypeRegistry:146 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@503dde72
+09:41:25,373 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@503dde72
+09:41:25,374 DEBUG BasicTypeRegistry:146 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@20d8cba0
+09:41:25,378 DEBUG BasicTypeRegistry:146 - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@516bff4
+09:41:25,381 DEBUG BasicTypeRegistry:146 - Adding type registration binary -> org.hibernate.type.BinaryType@15e780cc
+09:41:25,381 DEBUG BasicTypeRegistry:146 - Adding type registration byte[] -> org.hibernate.type.BinaryType@15e780cc
+09:41:25,382 DEBUG BasicTypeRegistry:146 - Adding type registration [B -> org.hibernate.type.BinaryType@15e780cc
+09:41:25,385 DEBUG BasicTypeRegistry:146 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@149f0c7f
+09:41:25,385 DEBUG BasicTypeRegistry:146 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@149f0c7f
+09:41:25,386 DEBUG BasicTypeRegistry:146 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@149f0c7f
+09:41:25,388 DEBUG BasicTypeRegistry:146 - Adding type registration image -> org.hibernate.type.ImageType@4ebc8a30
+09:41:25,391 DEBUG BasicTypeRegistry:146 - Adding type registration characters -> org.hibernate.type.CharArrayType@31c564d0
+09:41:25,391 DEBUG BasicTypeRegistry:146 - Adding type registration char[] -> org.hibernate.type.CharArrayType@31c564d0
+09:41:25,392 DEBUG BasicTypeRegistry:146 - Adding type registration [C -> org.hibernate.type.CharArrayType@31c564d0
+09:41:25,395 DEBUG BasicTypeRegistry:146 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@7582ff1b
+09:41:25,395 DEBUG BasicTypeRegistry:146 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@7582ff1b
+09:41:25,396 DEBUG BasicTypeRegistry:146 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@7582ff1b
+09:41:25,399 DEBUG BasicTypeRegistry:146 - Adding type registration text -> org.hibernate.type.TextType@1ceccd04
+09:41:25,401 DEBUG BasicTypeRegistry:146 - Adding type registration ntext -> org.hibernate.type.NTextType@1e253fc1
+09:41:25,417 DEBUG BasicTypeRegistry:146 - Adding type registration blob -> org.hibernate.type.BlobType@7892f032
+09:41:25,417 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@7892f032
+09:41:25,419 DEBUG BasicTypeRegistry:146 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@7c482fb
+09:41:25,431 DEBUG BasicTypeRegistry:146 - Adding type registration clob -> org.hibernate.type.ClobType@1d145687
+09:41:25,431 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@1d145687
+09:41:25,441 DEBUG BasicTypeRegistry:146 - Adding type registration nclob -> org.hibernate.type.NClobType@18bafec8
+09:41:25,442 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@18bafec8
+09:41:25,443 DEBUG BasicTypeRegistry:146 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@7e29da70
+09:41:25,445 DEBUG BasicTypeRegistry:146 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@233d3abb
+09:41:25,453 DEBUG BasicTypeRegistry:146 - Adding type registration serializable -> org.hibernate.type.SerializableType@6843555a
+09:41:25,462 DEBUG BasicTypeRegistry:146 - Adding type registration object -> org.hibernate.type.ObjectType@45ab582e
+09:41:25,462 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@45ab582e
+09:41:25,464 DEBUG BasicTypeRegistry:146 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@c637255
+09:41:25,464 DEBUG BasicTypeRegistry:146 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@131621df
+09:41:25,464 DEBUG BasicTypeRegistry:146 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@5fedf9ee
+09:41:25,464 DEBUG BasicTypeRegistry:146 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@14aeab20
+09:41:25,465 DEBUG BasicTypeRegistry:146 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@3c8923a
+09:41:25,465 DEBUG BasicTypeRegistry:146 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@21f25345
+09:41:25,465 DEBUG BasicTypeRegistry:146 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@1160fc1c
+09:41:25,466 DEBUG BasicTypeRegistry:146 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@7076b2bb
+09:41:25,512  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+09:41:25,529  INFO Version:54 - HHH000412: Hibernate Core {4.3.1.Final}
+09:41:25,533  INFO Environment:239 - HHH000206: hibernate.properties not found
+09:41:25,537  INFO Environment:346 - HHH000021: Bytecode provider name : javassist
+09:41:26,132  INFO Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+09:41:26,155  INFO LobCreatorBuilder:123 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+09:41:26,474  INFO TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+09:41:26,486  INFO ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+09:41:26,525 TRACE TypeFactory:72 - Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@eb1e86d
+09:41:26,570  INFO Version:27 - HV000001: Hibernate Validator 4.3.1.Final
+09:41:27,287  INFO SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+09:41:27,325  INFO SchemaUpdate:193 - HHH000102: Fetching database metadata
+09:41:27,369  INFO SchemaUpdate:205 - HHH000396: Updating schema
+09:41:27,413  INFO TableMetadata:66 - HHH000261: Table found: management.beacon
+09:41:27,413  INFO TableMetadata:67 - HHH000037: Columns: [beacon_id, name, mac]
+09:41:27,414  INFO TableMetadata:69 - HHH000108: Foreign keys: []
+09:41:27,414  INFO TableMetadata:70 - HHH000126: Indexes: [beacon_pkey]
+09:41:27,438  INFO TableMetadata:66 - HHH000261: Table found: management.beacondetector
+09:41:27,438  INFO TableMetadata:67 - HHH000037: Columns: [beacondetector_id, location, mac]
+09:41:27,439  INFO TableMetadata:69 - HHH000108: Foreign keys: []
+09:41:27,439  INFO TableMetadata:70 - HHH000126: Indexes: [beacondetector_pkey]
+09:41:27,471  INFO TableMetadata:66 - HHH000261: Table found: management.beaconevent
+09:41:27,472  INFO TableMetadata:67 - HHH000037: Columns: [beaconevent_id, enddatemillis, startdatemillis]
+09:41:27,472  INFO TableMetadata:69 - HHH000108: Foreign keys: []
+09:41:27,472  INFO TableMetadata:70 - HHH000126: Indexes: [beaconevent_pkey]
+09:41:27,500  INFO TableMetadata:66 - HHH000261: Table found: management.checkin
+09:41:27,500  INFO TableMetadata:67 - HHH000037: Columns: []
+09:41:27,500  INFO TableMetadata:69 - HHH000108: Foreign keys: []
+09:41:27,501  INFO TableMetadata:70 - HHH000126: Indexes: []
+09:41:27,515  INFO SchemaUpdate:242 - HHH000232: Schema update complete
+09:41:27,736  INFO HibernateTransactionManager:360 - Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@6164e09c] of Hibernate SessionFactory for HibernateTransactionManager
+09:41:27,942  INFO RequestMappingHandlerMapping:531 - Mapped "{[/beacon/insert_beacon],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconController.insertBeaconEvent(beaconManagement.tcc.domain.Beacon)
+09:41:27,944  INFO RequestMappingHandlerMapping:531 - Mapped "{[/beacon/delete_beacon],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconController.deleteBeaconEvent(beaconManagement.tcc.domain.Beacon)
+09:41:27,945  INFO RequestMappingHandlerMapping:531 - Mapped "{[/beacon/list_beacons],methods=[GET],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.Beacon> beaconManagement.tcc.controller.BeaconController.getBeacons()
+09:41:27,945  INFO RequestMappingHandlerMapping:531 - Mapped "{[/beacon/edit_beacon],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconController.editBeaconEvent(beaconManagement.tcc.domain.Beacon)
+09:41:27,946  INFO RequestMappingHandlerMapping:531 - Mapped "{[/beacon/find_beacon_by_mac],methods=[POST],produces=[application/json]}" onto public beaconManagement.tcc.domain.Beacon beaconManagement.tcc.controller.BeaconController.findBeaconByMAC(java.lang.String)
+09:41:27,950  INFO RequestMappingHandlerMapping:531 - Mapped "{[/detector/insert_detector],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconDetectorController.insertBeaconEvent(beaconManagement.tcc.domain.BeaconDetector)
+09:41:27,951  INFO RequestMappingHandlerMapping:531 - Mapped "{[/detector/delete_detector],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconDetectorController.deleteBeaconEvent(beaconManagement.tcc.domain.BeaconDetector)
+09:41:27,951  INFO RequestMappingHandlerMapping:531 - Mapped "{[/detector/list_detectors],methods=[GET],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.BeaconDetector> beaconManagement.tcc.controller.BeaconDetectorController.getBeaconsDetectors()
+09:41:27,952  INFO RequestMappingHandlerMapping:531 - Mapped "{[/detector/find_detector_by_mac],methods=[POST],produces=[application/json]}" onto public beaconManagement.tcc.domain.BeaconDetector beaconManagement.tcc.controller.BeaconDetectorController.getBeaconDetectorByMAC(java.lang.String)
+09:41:27,952  INFO RequestMappingHandlerMapping:531 - Mapped "{[/detector/edit_detector],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconDetectorController.editBeaconEvent(beaconManagement.tcc.domain.BeaconDetector)
+09:41:27,955  INFO RequestMappingHandlerMapping:531 - Mapped "{[/event/insert_event],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconEventController.insertBeaconEvent(beaconManagement.tcc.domain.BeaconEvent)
+09:41:27,956  INFO RequestMappingHandlerMapping:531 - Mapped "{[/event/delete_event],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconEventController.deleteBeaconEvent(beaconManagement.tcc.domain.BeaconEvent)
+09:41:27,956  INFO RequestMappingHandlerMapping:531 - Mapped "{[/event/list_event_end_date],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.BeaconEvent> beaconManagement.tcc.controller.BeaconEventController.getBeaconEventsEndDate(java.math.BigDecimal)
+09:41:27,957  INFO RequestMappingHandlerMapping:531 - Mapped "{[/event/list_event_start_date],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.BeaconEvent> beaconManagement.tcc.controller.BeaconEventController.getBeaconEventsStartDate(java.math.BigDecimal)
+09:41:27,957  INFO RequestMappingHandlerMapping:531 - Mapped "{[/event/edit_event],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconEventController.editBeaconEvent(beaconManagement.tcc.domain.BeaconEvent)
+09:41:27,958  INFO RequestMappingHandlerMapping:531 - Mapped "{[/event/list_event],methods=[GET],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.BeaconEvent> beaconManagement.tcc.controller.BeaconEventController.getBeaconEvents()
+09:41:27,962  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/list_checkins_before_date],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.CheckIn> beaconManagement.tcc.controller.CheckInController.getCheckInBeforeCalendar(java.math.BigDecimal)
+09:41:27,962  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/list_checkins_by_detector],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.CheckIn> beaconManagement.tcc.controller.CheckInController.getCheckInByBeaconDetector(beaconManagement.tcc.domain.BeaconDetector)
+09:41:27,962  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/list_checkins_from_date],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.CheckIn> beaconManagement.tcc.controller.CheckInController.getCheckInFromCalendar(java.math.BigDecimal)
+09:41:27,963  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/list_checkins_by_event],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.CheckIn> beaconManagement.tcc.controller.CheckInController.getCheckInByBeaconEvent(beaconManagement.tcc.domain.BeaconEvent)
+09:41:27,963  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/list_checkins_by_date],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.CheckIn> beaconManagement.tcc.controller.CheckInController.getCheckInByCalendar(java.math.BigDecimal)
+09:41:27,964  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/list_checkins_by_beacon],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.CheckIn> beaconManagement.tcc.controller.CheckInController.getCheckInByBeacon(beaconManagement.tcc.domain.Beacon)
+09:41:27,964  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/list_checkins],methods=[GET],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.CheckIn> beaconManagement.tcc.controller.CheckInController.getCheckIn()
+09:41:27,964  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/insert_checkin],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.CheckInController.insertCheckIn(beaconManagement.tcc.domain.CheckIn)
+09:41:28,765  INFO RequestMappingHandlerAdapter:532 - Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Nov 27 09:41:23 BRST 2015]; root of context hierarchy
+09:41:28,860  INFO RequestMappingHandlerAdapter:532 - Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Nov 27 09:41:23 BRST 2015]; root of context hierarchy
+09:41:28,969  INFO ContextLoader:347 - Root WebApplicationContext: initialization completed in 5452 ms
+09:41:29,006  INFO DispatcherServlet:488 - FrameworkServlet 'dispatcherServlet': initialization started
+09:41:29,012  INFO XmlWebApplicationContext:573 - Refreshing WebApplicationContext for namespace 'dispatcherServlet-servlet': startup date [Fri Nov 27 09:41:29 BRST 2015]; parent: Root WebApplicationContext
+09:41:29,015  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/web/mvc-conf.xml]
+09:41:29,076  INFO DispatcherServlet:507 - FrameworkServlet 'dispatcherServlet': initialization completed in 70 ms
+10:01:47,284 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [1]
+10:01:47,286 TRACE BasicBinder:81 - binding parameter [2] as [BIGINT] - [1]
+10:01:47,287 TRACE BasicBinder:81 - binding parameter [3] as [BIGINT] - [1]
+10:01:47,289 TRACE BasicBinder:81 - binding parameter [4] as [NUMERIC] - [1451084000000]
+10:01:47,290 TRACE BasicBinder:81 - binding parameter [5] as [BIGINT] - [1]
+10:03:04,006 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [2]
+10:03:04,007 TRACE BasicBinder:81 - binding parameter [2] as [BIGINT] - [1]
+10:03:04,007 TRACE BasicBinder:81 - binding parameter [3] as [BIGINT] - [1]
+10:03:04,007 TRACE BasicBinder:81 - binding parameter [4] as [NUMERIC] - [1451083000000]
+10:03:04,008 TRACE BasicBinder:81 - binding parameter [5] as [BIGINT] - [2]
+10:03:27,763 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [3]
+10:03:27,764 TRACE BasicBinder:81 - binding parameter [2] as [BIGINT] - [1]
+10:03:27,764 TRACE BasicBinder:81 - binding parameter [3] as [BIGINT] - [1]
+10:03:27,764 TRACE BasicBinder:81 - binding parameter [4] as [NUMERIC] - [1451085000000]
+10:03:27,765 TRACE BasicBinder:81 - binding parameter [5] as [BIGINT] - [3]
+10:09:50,290 ERROR CheckInHibernateDAO:181 - Cannot find event: org.hibernate.QueryException: could not resolve property: beacon_id of: beaconManagement.tcc.domain.CheckIn [from beaconManagement.tcc.domain.CheckIn c where c.beacon_id = :idBeacon]
+10:12:28,470  INFO XmlWebApplicationContext:951 - Closing WebApplicationContext for namespace 'dispatcherServlet-servlet': startup date [Fri Nov 27 09:41:29 BRST 2015]; parent: Root WebApplicationContext
+10:12:28,472  INFO XmlWebApplicationContext:951 - Closing Root WebApplicationContext: startup date [Fri Nov 27 09:41:23 BRST 2015]; root of context hierarchy
+10:12:35,754  INFO ContextLoader:307 - Root WebApplicationContext: initialization started
+10:12:35,976  INFO XmlWebApplicationContext:573 - Refreshing Root WebApplicationContext: startup date [Fri Nov 27 10:12:35 BRST 2015]; root of context hierarchy
+10:12:36,076  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring/application-config.xml]
+10:12:36,931  INFO DriverManagerDataSource:133 - Loaded JDBC driver: org.postgresql.Driver
+10:12:37,121 DEBUG BasicTypeRegistry:146 - Adding type registration boolean -> org.hibernate.type.BooleanType@67bd38be
+10:12:37,122 DEBUG BasicTypeRegistry:146 - Adding type registration boolean -> org.hibernate.type.BooleanType@67bd38be
+10:12:37,122 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@67bd38be
+10:12:37,124 DEBUG BasicTypeRegistry:146 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@594bc2b3
+10:12:37,126 DEBUG BasicTypeRegistry:146 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@3dc0d332
+10:12:37,127 DEBUG BasicTypeRegistry:146 - Adding type registration yes_no -> org.hibernate.type.YesNoType@5de471ea
+10:12:37,131 DEBUG BasicTypeRegistry:146 - Adding type registration byte -> org.hibernate.type.ByteType@34fab84d
+10:12:37,131 DEBUG BasicTypeRegistry:146 - Adding type registration byte -> org.hibernate.type.ByteType@34fab84d
+10:12:37,132 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@34fab84d
+10:12:37,134 DEBUG BasicTypeRegistry:146 - Adding type registration character -> org.hibernate.type.CharacterType@1e600da9
+10:12:37,134 DEBUG BasicTypeRegistry:146 - Adding type registration char -> org.hibernate.type.CharacterType@1e600da9
+10:12:37,135 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@1e600da9
+10:12:37,138 DEBUG BasicTypeRegistry:146 - Adding type registration short -> org.hibernate.type.ShortType@1cf111d5
+10:12:37,139 DEBUG BasicTypeRegistry:146 - Adding type registration short -> org.hibernate.type.ShortType@1cf111d5
+10:12:37,139 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@1cf111d5
+10:12:37,140 DEBUG BasicTypeRegistry:146 - Adding type registration integer -> org.hibernate.type.IntegerType@18e76c41
+10:12:37,141 DEBUG BasicTypeRegistry:146 - Adding type registration int -> org.hibernate.type.IntegerType@18e76c41
+10:12:37,141 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@18e76c41
+10:12:37,144 DEBUG BasicTypeRegistry:146 - Adding type registration long -> org.hibernate.type.LongType@3c22273a
+10:12:37,144 DEBUG BasicTypeRegistry:146 - Adding type registration long -> org.hibernate.type.LongType@3c22273a
+10:12:37,144 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@3c22273a
+10:12:37,148 DEBUG BasicTypeRegistry:146 - Adding type registration float -> org.hibernate.type.FloatType@10c08f87
+10:12:37,148 DEBUG BasicTypeRegistry:146 - Adding type registration float -> org.hibernate.type.FloatType@10c08f87
+10:12:37,149 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@10c08f87
+10:12:37,152 DEBUG BasicTypeRegistry:146 - Adding type registration double -> org.hibernate.type.DoubleType@2fcf654d
+10:12:37,152 DEBUG BasicTypeRegistry:146 - Adding type registration double -> org.hibernate.type.DoubleType@2fcf654d
+10:12:37,153 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@2fcf654d
+10:12:37,158 DEBUG BasicTypeRegistry:146 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@77a54cb6
+10:12:37,158 DEBUG BasicTypeRegistry:146 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@77a54cb6
+10:12:37,161 DEBUG BasicTypeRegistry:146 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@5bee6b00
+10:12:37,161 DEBUG BasicTypeRegistry:146 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@5bee6b00
+10:12:37,162 DEBUG BasicTypeRegistry:146 - Adding type registration string -> org.hibernate.type.StringType@5bd450a5
+10:12:37,162 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.String -> org.hibernate.type.StringType@5bd450a5
+10:12:37,164 DEBUG BasicTypeRegistry:146 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@7bccd4dd
+10:12:37,165 DEBUG BasicTypeRegistry:146 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@39b87897
+10:12:37,167 DEBUG BasicTypeRegistry:146 - Adding type registration url -> org.hibernate.type.UrlType@7021cc6
+10:12:37,167 DEBUG BasicTypeRegistry:146 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@7021cc6
+10:12:37,171 DEBUG BasicTypeRegistry:146 - Adding type registration date -> org.hibernate.type.DateType@50e4209
+10:12:37,171 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@50e4209
+10:12:37,175 DEBUG BasicTypeRegistry:146 - Adding type registration time -> org.hibernate.type.TimeType@1ce9180c
+10:12:37,175 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@1ce9180c
+10:12:37,178 DEBUG BasicTypeRegistry:146 - Adding type registration timestamp -> org.hibernate.type.TimestampType@2a928251
+10:12:37,178 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@2a928251
+10:12:37,178 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@2a928251
+10:12:37,179 DEBUG BasicTypeRegistry:146 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@22f8d80b
+10:12:37,182 DEBUG BasicTypeRegistry:146 - Adding type registration calendar -> org.hibernate.type.CalendarType@3366b395
+10:12:37,182 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@3366b395
+10:12:37,182 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@3366b395
+10:12:37,183 DEBUG BasicTypeRegistry:146 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@14a7fcb4
+10:12:37,186 DEBUG BasicTypeRegistry:146 - Adding type registration locale -> org.hibernate.type.LocaleType@3f755551
+10:12:37,186 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@3f755551
+10:12:37,188 DEBUG BasicTypeRegistry:146 - Adding type registration currency -> org.hibernate.type.CurrencyType@7aa615ba
+10:12:37,188 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@7aa615ba
+10:12:37,189 DEBUG BasicTypeRegistry:146 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@77f866c7
+10:12:37,189 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@77f866c7
+10:12:37,193 DEBUG BasicTypeRegistry:146 - Adding type registration class -> org.hibernate.type.ClassType@74ef9d13
+10:12:37,193 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@74ef9d13
+10:12:37,195 DEBUG BasicTypeRegistry:146 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@16f5fe37
+10:12:37,196 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@16f5fe37
+10:12:37,197 DEBUG BasicTypeRegistry:146 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@4ca0f1bf
+10:12:37,198 DEBUG BasicTypeRegistry:146 - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@7cdb8b3c
+10:12:37,200 DEBUG BasicTypeRegistry:146 - Adding type registration binary -> org.hibernate.type.BinaryType@3d029da0
+10:12:37,200 DEBUG BasicTypeRegistry:146 - Adding type registration byte[] -> org.hibernate.type.BinaryType@3d029da0
+10:12:37,200 DEBUG BasicTypeRegistry:146 - Adding type registration [B -> org.hibernate.type.BinaryType@3d029da0
+10:12:37,202 DEBUG BasicTypeRegistry:146 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@6b386259
+10:12:37,202 DEBUG BasicTypeRegistry:146 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@6b386259
+10:12:37,202 DEBUG BasicTypeRegistry:146 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@6b386259
+10:12:37,204 DEBUG BasicTypeRegistry:146 - Adding type registration image -> org.hibernate.type.ImageType@49763f8a
+10:12:37,205 DEBUG BasicTypeRegistry:146 - Adding type registration characters -> org.hibernate.type.CharArrayType@786e9b18
+10:12:37,206 DEBUG BasicTypeRegistry:146 - Adding type registration char[] -> org.hibernate.type.CharArrayType@786e9b18
+10:12:37,206 DEBUG BasicTypeRegistry:146 - Adding type registration [C -> org.hibernate.type.CharArrayType@786e9b18
+10:12:37,207 DEBUG BasicTypeRegistry:146 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@5236b358
+10:12:37,208 DEBUG BasicTypeRegistry:146 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@5236b358
+10:12:37,208 DEBUG BasicTypeRegistry:146 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@5236b358
+10:12:37,209 DEBUG BasicTypeRegistry:146 - Adding type registration text -> org.hibernate.type.TextType@4368bb44
+10:12:37,210 DEBUG BasicTypeRegistry:146 - Adding type registration ntext -> org.hibernate.type.NTextType@624dac7f
+10:12:37,219 DEBUG BasicTypeRegistry:146 - Adding type registration blob -> org.hibernate.type.BlobType@5636939e
+10:12:37,219 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@5636939e
+10:12:37,220 DEBUG BasicTypeRegistry:146 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@7616ee2e
+10:12:37,229 DEBUG BasicTypeRegistry:146 - Adding type registration clob -> org.hibernate.type.ClobType@3beeb501
+10:12:37,229 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@3beeb501
+10:12:37,235 DEBUG BasicTypeRegistry:146 - Adding type registration nclob -> org.hibernate.type.NClobType@42d41b07
+10:12:37,235 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@42d41b07
+10:12:37,236 DEBUG BasicTypeRegistry:146 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@65d4c075
+10:12:37,238 DEBUG BasicTypeRegistry:146 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@151e104
+10:12:37,239 DEBUG BasicTypeRegistry:146 - Adding type registration serializable -> org.hibernate.type.SerializableType@1ff3f92a
+10:12:37,288 DEBUG BasicTypeRegistry:146 - Adding type registration object -> org.hibernate.type.ObjectType@65393493
+10:12:37,288 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@65393493
+10:12:37,291 DEBUG BasicTypeRegistry:146 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@174236b3
+10:12:37,292 DEBUG BasicTypeRegistry:146 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@3bf30564
+10:12:37,292 DEBUG BasicTypeRegistry:146 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@691c3f4e
+10:12:37,292 DEBUG BasicTypeRegistry:146 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@1704c2e3
+10:12:37,293 DEBUG BasicTypeRegistry:146 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@11f5991e
+10:12:37,293 DEBUG BasicTypeRegistry:146 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@328e6661
+10:12:37,293 DEBUG BasicTypeRegistry:146 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@3a60d931
+10:12:37,294 DEBUG BasicTypeRegistry:146 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@b420744
+10:12:37,349  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+10:12:37,362  INFO Version:54 - HHH000412: Hibernate Core {4.3.1.Final}
+10:12:37,365  INFO Environment:239 - HHH000206: hibernate.properties not found
+10:12:37,368  INFO Environment:346 - HHH000021: Bytecode provider name : javassist
+10:12:37,954  INFO Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+10:12:38,221  INFO LobCreatorBuilder:123 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+10:12:38,512  INFO TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+10:12:38,537  INFO ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+10:12:38,574 TRACE TypeFactory:72 - Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@50529da5
+10:12:38,642  INFO Version:27 - HV000001: Hibernate Validator 4.3.1.Final
+10:12:39,779  INFO SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+10:12:39,779  INFO SchemaUpdate:193 - HHH000102: Fetching database metadata
+10:12:39,837  INFO SchemaUpdate:205 - HHH000396: Updating schema
+10:12:39,909  INFO TableMetadata:66 - HHH000261: Table found: management.beacon
+10:12:39,909  INFO TableMetadata:67 - HHH000037: Columns: [beacon_id, name, mac]
+10:12:39,909  INFO TableMetadata:69 - HHH000108: Foreign keys: []
+10:12:39,910  INFO TableMetadata:70 - HHH000126: Indexes: [beacon_pkey]
+10:12:39,942  INFO TableMetadata:66 - HHH000261: Table found: management.beacondetector
+10:12:39,942  INFO TableMetadata:67 - HHH000037: Columns: [beacondetector_id, location, mac]
+10:12:39,943  INFO TableMetadata:69 - HHH000108: Foreign keys: []
+10:12:39,943  INFO TableMetadata:70 - HHH000126: Indexes: [beacondetector_pkey]
+10:12:39,974  INFO TableMetadata:66 - HHH000261: Table found: management.beaconevent
+10:12:39,975  INFO TableMetadata:67 - HHH000037: Columns: [beaconevent_id, enddatemillis, startdatemillis]
+10:12:39,975  INFO TableMetadata:69 - HHH000108: Foreign keys: []
+10:12:39,975  INFO TableMetadata:70 - HHH000126: Indexes: [beaconevent_pkey]
+10:12:40,106  INFO TableMetadata:66 - HHH000261: Table found: management.checkin
+10:12:40,107  INFO TableMetadata:67 - HHH000037: Columns: [beacon_id, beacondetector_id, checkin_id, checkdatemillis, beaconevent_id]
+10:12:40,107  INFO TableMetadata:69 - HHH000108: Foreign keys: [fk_2eqfkwladqqk4jqvsefbjd6ep, fk_5cws3n43ihe39v36pskmcwe20, fk_gwclh84j8oofdwtct3ptdsao4]
+10:12:40,108  INFO TableMetadata:70 - HHH000126: Indexes: [checkin_pkey]
+10:12:40,111  INFO SchemaUpdate:242 - HHH000232: Schema update complete
+10:12:40,526  INFO HibernateTransactionManager:360 - Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@75f407d8] of Hibernate SessionFactory for HibernateTransactionManager
+10:12:40,669  INFO RequestMappingHandlerMapping:531 - Mapped "{[/beacon/insert_beacon],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconController.insertBeaconEvent(beaconManagement.tcc.domain.Beacon)
+10:12:40,671  INFO RequestMappingHandlerMapping:531 - Mapped "{[/beacon/delete_beacon],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconController.deleteBeaconEvent(beaconManagement.tcc.domain.Beacon)
+10:12:40,671  INFO RequestMappingHandlerMapping:531 - Mapped "{[/beacon/list_beacons],methods=[GET],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.Beacon> beaconManagement.tcc.controller.BeaconController.getBeacons()
+10:12:40,671  INFO RequestMappingHandlerMapping:531 - Mapped "{[/beacon/edit_beacon],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconController.editBeaconEvent(beaconManagement.tcc.domain.Beacon)
+10:12:40,672  INFO RequestMappingHandlerMapping:531 - Mapped "{[/beacon/find_beacon_by_mac],methods=[POST],produces=[application/json]}" onto public beaconManagement.tcc.domain.Beacon beaconManagement.tcc.controller.BeaconController.findBeaconByMAC(java.lang.String)
+10:12:40,675  INFO RequestMappingHandlerMapping:531 - Mapped "{[/detector/insert_detector],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconDetectorController.insertBeaconEvent(beaconManagement.tcc.domain.BeaconDetector)
+10:12:40,676  INFO RequestMappingHandlerMapping:531 - Mapped "{[/detector/delete_detector],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconDetectorController.deleteBeaconEvent(beaconManagement.tcc.domain.BeaconDetector)
+10:12:40,676  INFO RequestMappingHandlerMapping:531 - Mapped "{[/detector/list_detectors],methods=[GET],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.BeaconDetector> beaconManagement.tcc.controller.BeaconDetectorController.getBeaconsDetectors()
+10:12:40,676  INFO RequestMappingHandlerMapping:531 - Mapped "{[/detector/find_detector_by_mac],methods=[POST],produces=[application/json]}" onto public beaconManagement.tcc.domain.BeaconDetector beaconManagement.tcc.controller.BeaconDetectorController.getBeaconDetectorByMAC(java.lang.String)
+10:12:40,677  INFO RequestMappingHandlerMapping:531 - Mapped "{[/detector/edit_detector],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconDetectorController.editBeaconEvent(beaconManagement.tcc.domain.BeaconDetector)
+10:12:40,679  INFO RequestMappingHandlerMapping:531 - Mapped "{[/event/insert_event],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconEventController.insertBeaconEvent(beaconManagement.tcc.domain.BeaconEvent)
+10:12:40,680  INFO RequestMappingHandlerMapping:531 - Mapped "{[/event/delete_event],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconEventController.deleteBeaconEvent(beaconManagement.tcc.domain.BeaconEvent)
+10:12:40,680  INFO RequestMappingHandlerMapping:531 - Mapped "{[/event/list_event_end_date],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.BeaconEvent> beaconManagement.tcc.controller.BeaconEventController.getBeaconEventsEndDate(java.math.BigDecimal)
+10:12:40,681  INFO RequestMappingHandlerMapping:531 - Mapped "{[/event/list_event_start_date],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.BeaconEvent> beaconManagement.tcc.controller.BeaconEventController.getBeaconEventsStartDate(java.math.BigDecimal)
+10:12:40,682  INFO RequestMappingHandlerMapping:531 - Mapped "{[/event/edit_event],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconEventController.editBeaconEvent(beaconManagement.tcc.domain.BeaconEvent)
+10:12:40,682  INFO RequestMappingHandlerMapping:531 - Mapped "{[/event/list_event],methods=[GET],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.BeaconEvent> beaconManagement.tcc.controller.BeaconEventController.getBeaconEvents()
+10:12:40,685  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/list_checkins_before_date],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.CheckIn> beaconManagement.tcc.controller.CheckInController.getCheckInBeforeCalendar(java.math.BigDecimal)
+10:12:40,685  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/list_checkins_by_detector],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.CheckIn> beaconManagement.tcc.controller.CheckInController.getCheckInByBeaconDetector(beaconManagement.tcc.domain.BeaconDetector)
+10:12:40,685  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/list_checkins_from_date],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.CheckIn> beaconManagement.tcc.controller.CheckInController.getCheckInFromCalendar(java.math.BigDecimal)
+10:12:40,686  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/list_checkins_by_event],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.CheckIn> beaconManagement.tcc.controller.CheckInController.getCheckInByBeaconEvent(beaconManagement.tcc.domain.BeaconEvent)
+10:12:40,686  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/list_checkins_by_date],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.CheckIn> beaconManagement.tcc.controller.CheckInController.getCheckInByCalendar(java.math.BigDecimal)
+10:12:40,687  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/list_checkins_by_beacon],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.CheckIn> beaconManagement.tcc.controller.CheckInController.getCheckInByBeacon(beaconManagement.tcc.domain.Beacon)
+10:12:40,687  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/list_checkins],methods=[GET],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.CheckIn> beaconManagement.tcc.controller.CheckInController.getCheckIn()
+10:12:40,687  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/insert_checkin],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.CheckInController.insertCheckIn(beaconManagement.tcc.domain.CheckIn)
+10:12:41,343  INFO RequestMappingHandlerAdapter:532 - Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Nov 27 10:12:35 BRST 2015]; root of context hierarchy
+10:12:41,426  INFO RequestMappingHandlerAdapter:532 - Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Nov 27 10:12:35 BRST 2015]; root of context hierarchy
+10:12:41,560  INFO ContextLoader:347 - Root WebApplicationContext: initialization completed in 5802 ms
+10:12:41,587  INFO DispatcherServlet:488 - FrameworkServlet 'dispatcherServlet': initialization started
+10:12:41,595  INFO XmlWebApplicationContext:573 - Refreshing WebApplicationContext for namespace 'dispatcherServlet-servlet': startup date [Fri Nov 27 10:12:41 BRST 2015]; parent: Root WebApplicationContext
+10:12:41,598  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/web/mvc-conf.xml]
+10:12:41,684  INFO DispatcherServlet:507 - FrameworkServlet 'dispatcherServlet': initialization completed in 96 ms
+10:12:50,202 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [3]
+10:12:50,211 TRACE BasicExtractor:78 - extracted value ([checkin_1_3_] : [BIGINT]) - [3]
+10:12:50,216 TRACE BasicExtractor:78 - extracted value ([beacon_i3_3_] : [BIGINT]) - [3]
+10:12:50,216 TRACE BasicExtractor:78 - extracted value ([beaconde4_3_] : [BIGINT]) - [1]
+10:12:50,217 TRACE BasicExtractor:78 - extracted value ([beaconev5_3_] : [BIGINT]) - [1]
+10:12:50,218 TRACE BasicExtractor:78 - extracted value ([checkDat2_3_] : [NUMERIC]) - [1451085000000.00]
+10:12:50,226 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [3]
+10:12:50,232 TRACE BasicExtractor:78 - extracted value ([mac2_0_0_] : [VARCHAR]) - [AA-AA-AA-AA-AA-CC]
+10:12:50,232 TRACE BasicExtractor:78 - extracted value ([name3_0_0_] : [VARCHAR]) - [BEACON_C]
+10:12:50,235 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [1]
+10:12:50,236 TRACE BasicExtractor:78 - extracted value ([location2_1_0_] : [VARCHAR]) - [South_1A]
+10:12:50,237 TRACE BasicExtractor:78 - extracted value ([mac3_1_0_] : [VARCHAR]) - [DD-AA-AA-AA-AA-DD]
+10:12:50,237 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [1]
+10:12:50,238 TRACE BasicExtractor:78 - extracted value ([endDateM2_2_0_] : [NUMERIC]) - [1451088000000.00]
+10:12:50,239 TRACE BasicExtractor:78 - extracted value ([startDat3_2_0_] : [NUMERIC]) - [1451080800000.00]
+10:43:08,297  INFO XmlWebApplicationContext:951 - Closing WebApplicationContext for namespace 'dispatcherServlet-servlet': startup date [Fri Nov 27 10:12:41 BRST 2015]; parent: Root WebApplicationContext
+10:43:08,306  INFO XmlWebApplicationContext:951 - Closing Root WebApplicationContext: startup date [Fri Nov 27 10:12:35 BRST 2015]; root of context hierarchy
+10:43:13,468  INFO ContextLoader:307 - Root WebApplicationContext: initialization started
+10:43:13,591  INFO XmlWebApplicationContext:573 - Refreshing Root WebApplicationContext: startup date [Fri Nov 27 10:43:13 BRST 2015]; root of context hierarchy
+10:43:13,644  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring/application-config.xml]
+10:43:14,351  INFO DriverManagerDataSource:133 - Loaded JDBC driver: org.postgresql.Driver
+10:43:14,562 DEBUG BasicTypeRegistry:146 - Adding type registration boolean -> org.hibernate.type.BooleanType@469ea92e
+10:43:14,562 DEBUG BasicTypeRegistry:146 - Adding type registration boolean -> org.hibernate.type.BooleanType@469ea92e
+10:43:14,563 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@469ea92e
+10:43:14,566 DEBUG BasicTypeRegistry:146 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@2515513
+10:43:14,569 DEBUG BasicTypeRegistry:146 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@2673e560
+10:43:14,570 DEBUG BasicTypeRegistry:146 - Adding type registration yes_no -> org.hibernate.type.YesNoType@1c067f37
+10:43:14,574 DEBUG BasicTypeRegistry:146 - Adding type registration byte -> org.hibernate.type.ByteType@c0e93ec
+10:43:14,574 DEBUG BasicTypeRegistry:146 - Adding type registration byte -> org.hibernate.type.ByteType@c0e93ec
+10:43:14,575 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@c0e93ec
+10:43:14,577 DEBUG BasicTypeRegistry:146 - Adding type registration character -> org.hibernate.type.CharacterType@1e72d935
+10:43:14,577 DEBUG BasicTypeRegistry:146 - Adding type registration char -> org.hibernate.type.CharacterType@1e72d935
+10:43:14,578 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@1e72d935
+10:43:14,581 DEBUG BasicTypeRegistry:146 - Adding type registration short -> org.hibernate.type.ShortType@4612b8ba
+10:43:14,581 DEBUG BasicTypeRegistry:146 - Adding type registration short -> org.hibernate.type.ShortType@4612b8ba
+10:43:14,581 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@4612b8ba
+10:43:14,583 DEBUG BasicTypeRegistry:146 - Adding type registration integer -> org.hibernate.type.IntegerType@5dcbaa9
+10:43:14,583 DEBUG BasicTypeRegistry:146 - Adding type registration int -> org.hibernate.type.IntegerType@5dcbaa9
+10:43:14,583 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@5dcbaa9
+10:43:14,587 DEBUG BasicTypeRegistry:146 - Adding type registration long -> org.hibernate.type.LongType@668c611f
+10:43:14,587 DEBUG BasicTypeRegistry:146 - Adding type registration long -> org.hibernate.type.LongType@668c611f
+10:43:14,587 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@668c611f
+10:43:14,590 DEBUG BasicTypeRegistry:146 - Adding type registration float -> org.hibernate.type.FloatType@32708d61
+10:43:14,590 DEBUG BasicTypeRegistry:146 - Adding type registration float -> org.hibernate.type.FloatType@32708d61
+10:43:14,590 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@32708d61
+10:43:14,593 DEBUG BasicTypeRegistry:146 - Adding type registration double -> org.hibernate.type.DoubleType@32c2e5a9
+10:43:14,594 DEBUG BasicTypeRegistry:146 - Adding type registration double -> org.hibernate.type.DoubleType@32c2e5a9
+10:43:14,594 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@32c2e5a9
+10:43:14,597 DEBUG BasicTypeRegistry:146 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@41a7744
+10:43:14,597 DEBUG BasicTypeRegistry:146 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@41a7744
+10:43:14,600 DEBUG BasicTypeRegistry:146 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@52941371
+10:43:14,600 DEBUG BasicTypeRegistry:146 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@52941371
+10:43:14,601 DEBUG BasicTypeRegistry:146 - Adding type registration string -> org.hibernate.type.StringType@7b51340c
+10:43:14,602 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.String -> org.hibernate.type.StringType@7b51340c
+10:43:14,603 DEBUG BasicTypeRegistry:146 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@7caccdbc
+10:43:14,604 DEBUG BasicTypeRegistry:146 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@5c62a4e7
+10:43:14,606 DEBUG BasicTypeRegistry:146 - Adding type registration url -> org.hibernate.type.UrlType@2c9cf465
+10:43:14,606 DEBUG BasicTypeRegistry:146 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@2c9cf465
+10:43:14,610 DEBUG BasicTypeRegistry:146 - Adding type registration date -> org.hibernate.type.DateType@8d70e61
+10:43:14,610 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@8d70e61
+10:43:14,613 DEBUG BasicTypeRegistry:146 - Adding type registration time -> org.hibernate.type.TimeType@27a9b689
+10:43:14,613 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@27a9b689
+10:43:14,615 DEBUG BasicTypeRegistry:146 - Adding type registration timestamp -> org.hibernate.type.TimestampType@7fc877f4
+10:43:14,615 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@7fc877f4
+10:43:14,615 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@7fc877f4
+10:43:14,617 DEBUG BasicTypeRegistry:146 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@1830ef16
+10:43:14,619 DEBUG BasicTypeRegistry:146 - Adding type registration calendar -> org.hibernate.type.CalendarType@2bc24eb6
+10:43:14,619 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@2bc24eb6
+10:43:14,619 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@2bc24eb6
+10:43:14,620 DEBUG BasicTypeRegistry:146 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@5fef2b2
+10:43:14,623 DEBUG BasicTypeRegistry:146 - Adding type registration locale -> org.hibernate.type.LocaleType@17bba099
+10:43:14,623 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@17bba099
+10:43:14,624 DEBUG BasicTypeRegistry:146 - Adding type registration currency -> org.hibernate.type.CurrencyType@4ff3b326
+10:43:14,625 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@4ff3b326
+10:43:14,626 DEBUG BasicTypeRegistry:146 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@3b20b615
+10:43:14,626 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@3b20b615
+10:43:14,628 DEBUG BasicTypeRegistry:146 - Adding type registration class -> org.hibernate.type.ClassType@4017b5a3
+10:43:14,628 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@4017b5a3
+10:43:14,631 DEBUG BasicTypeRegistry:146 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@7e1416c5
+10:43:14,631 DEBUG BasicTypeRegistry:146 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@7e1416c5
+10:43:14,632 DEBUG BasicTypeRegistry:146 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@22863936
+10:43:14,634 DEBUG BasicTypeRegistry:146 - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@463ba229
+10:43:14,635 DEBUG BasicTypeRegistry:146 - Adding type registration binary -> org.hibernate.type.BinaryType@3e76008d
+10:43:14,636 DEBUG BasicTypeRegistry:146 - Adding type registration byte[] -> org.hibernate.type.BinaryType@3e76008d
+10:43:14,636 DEBUG BasicTypeRegistry:146 - Adding type registration [B -> org.hibernate.type.BinaryType@3e76008d
+10:43:14,637 DEBUG BasicTypeRegistry:146 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@153d302a
+10:43:14,638 DEBUG BasicTypeRegistry:146 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@153d302a
+10:43:14,638 DEBUG BasicTypeRegistry:146 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@153d302a
+10:43:14,639 DEBUG BasicTypeRegistry:146 - Adding type registration image -> org.hibernate.type.ImageType@419d28e4
+10:43:14,640 DEBUG BasicTypeRegistry:146 - Adding type registration characters -> org.hibernate.type.CharArrayType@58a5831b
+10:43:14,641 DEBUG BasicTypeRegistry:146 - Adding type registration char[] -> org.hibernate.type.CharArrayType@58a5831b
+10:43:14,641 DEBUG BasicTypeRegistry:146 - Adding type registration [C -> org.hibernate.type.CharArrayType@58a5831b
+10:43:14,643 DEBUG BasicTypeRegistry:146 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@2162b72b
+10:43:14,643 DEBUG BasicTypeRegistry:146 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@2162b72b
+10:43:14,643 DEBUG BasicTypeRegistry:146 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@2162b72b
+10:43:14,644 DEBUG BasicTypeRegistry:146 - Adding type registration text -> org.hibernate.type.TextType@6c6d7391
+10:43:14,646 DEBUG BasicTypeRegistry:146 - Adding type registration ntext -> org.hibernate.type.NTextType@1a1f2c61
+10:43:14,655 DEBUG BasicTypeRegistry:146 - Adding type registration blob -> org.hibernate.type.BlobType@47398f61
+10:43:14,655 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@47398f61
+10:43:14,656 DEBUG BasicTypeRegistry:146 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@158152e1
+10:43:14,663 DEBUG BasicTypeRegistry:146 - Adding type registration clob -> org.hibernate.type.ClobType@56d3d694
+10:43:14,663 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@56d3d694
+10:43:14,670 DEBUG BasicTypeRegistry:146 - Adding type registration nclob -> org.hibernate.type.NClobType@6d5af1e4
+10:43:14,671 DEBUG BasicTypeRegistry:146 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@6d5af1e4
+10:43:14,672 DEBUG BasicTypeRegistry:146 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@77866748
+10:43:14,672 DEBUG BasicTypeRegistry:146 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@1020ae6f
+10:43:14,674 DEBUG BasicTypeRegistry:146 - Adding type registration serializable -> org.hibernate.type.SerializableType@3adb021c
+10:43:14,700 DEBUG BasicTypeRegistry:146 - Adding type registration object -> org.hibernate.type.ObjectType@5d8acc69
+10:43:14,700 DEBUG BasicTypeRegistry:146 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@5d8acc69
+10:43:14,701 DEBUG BasicTypeRegistry:146 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@27824981
+10:43:14,701 DEBUG BasicTypeRegistry:146 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@2c60209c
+10:43:14,701 DEBUG BasicTypeRegistry:146 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@2bfc822c
+10:43:14,702 DEBUG BasicTypeRegistry:146 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@514f1efd
+10:43:14,702 DEBUG BasicTypeRegistry:146 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@64b49b14
+10:43:14,702 DEBUG BasicTypeRegistry:146 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@49fd33de
+10:43:14,702 DEBUG BasicTypeRegistry:146 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@65f352f
+10:43:14,702 DEBUG BasicTypeRegistry:146 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@2fce7bef
+10:43:14,741  INFO Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.4.Final}
+10:43:14,752  INFO Version:54 - HHH000412: Hibernate Core {4.3.1.Final}
+10:43:14,755  INFO Environment:239 - HHH000206: hibernate.properties not found
+10:43:14,757  INFO Environment:346 - HHH000021: Bytecode provider name : javassist
+10:43:15,532  INFO Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+10:43:15,559  INFO LobCreatorBuilder:123 - HHH000424: Disabling contextual LOB creation as createClob() method threw error : java.lang.reflect.InvocationTargetException
+10:43:15,810  INFO TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+10:43:15,819  INFO ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+10:43:15,870 TRACE TypeFactory:72 - Scoping types to session factory org.hibernate.internal.SessionFactoryImpl@69b7a32d
+10:43:15,935  INFO Version:27 - HV000001: Hibernate Validator 4.3.1.Final
+10:43:16,636  INFO SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+10:43:16,637  INFO SchemaUpdate:193 - HHH000102: Fetching database metadata
+10:43:16,675  INFO SchemaUpdate:205 - HHH000396: Updating schema
+10:43:16,966  INFO TableMetadata:66 - HHH000261: Table found: management.beacon
+10:43:16,967  INFO TableMetadata:67 - HHH000037: Columns: [beacon_id, name, mac]
+10:43:16,967  INFO TableMetadata:69 - HHH000108: Foreign keys: []
+10:43:16,967  INFO TableMetadata:70 - HHH000126: Indexes: [beacon_pkey]
+10:43:16,989  INFO TableMetadata:66 - HHH000261: Table found: management.beacondetector
+10:43:16,989  INFO TableMetadata:67 - HHH000037: Columns: [beacondetector_id, location, mac]
+10:43:16,989  INFO TableMetadata:69 - HHH000108: Foreign keys: []
+10:43:16,990  INFO TableMetadata:70 - HHH000126: Indexes: [beacondetector_pkey]
+10:43:17,011  INFO TableMetadata:66 - HHH000261: Table found: management.beaconevent
+10:43:17,011  INFO TableMetadata:67 - HHH000037: Columns: [beaconevent_id, enddatemillis, startdatemillis]
+10:43:17,012  INFO TableMetadata:69 - HHH000108: Foreign keys: []
+10:43:17,012  INFO TableMetadata:70 - HHH000126: Indexes: [beaconevent_pkey]
+10:43:17,041  INFO TableMetadata:66 - HHH000261: Table found: management.checkin
+10:43:17,041  INFO TableMetadata:67 - HHH000037: Columns: [beacon_id, beacondetector_id, checkin_id, checkdatemillis, beaconevent_id]
+10:43:17,042  INFO TableMetadata:69 - HHH000108: Foreign keys: [fk_2eqfkwladqqk4jqvsefbjd6ep, fk_5cws3n43ihe39v36pskmcwe20, fk_gwclh84j8oofdwtct3ptdsao4]
+10:43:17,042  INFO TableMetadata:70 - HHH000126: Indexes: [checkin_pkey]
+10:43:17,042  INFO SchemaUpdate:242 - HHH000232: Schema update complete
+10:43:17,190  INFO HibernateTransactionManager:360 - Using DataSource [org.springframework.jdbc.datasource.DriverManagerDataSource@27c338b0] of Hibernate SessionFactory for HibernateTransactionManager
+10:43:17,387  INFO RequestMappingHandlerMapping:531 - Mapped "{[/beacon/insert_beacon],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconController.insertBeaconEvent(beaconManagement.tcc.domain.Beacon)
+10:43:17,389  INFO RequestMappingHandlerMapping:531 - Mapped "{[/beacon/delete_beacon],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconController.deleteBeaconEvent(beaconManagement.tcc.domain.Beacon)
+10:43:17,389  INFO RequestMappingHandlerMapping:531 - Mapped "{[/beacon/list_beacons],methods=[GET],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.Beacon> beaconManagement.tcc.controller.BeaconController.getBeacons()
+10:43:17,389  INFO RequestMappingHandlerMapping:531 - Mapped "{[/beacon/edit_beacon],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconController.editBeaconEvent(beaconManagement.tcc.domain.Beacon)
+10:43:17,390  INFO RequestMappingHandlerMapping:531 - Mapped "{[/beacon/find_beacon_by_mac],methods=[POST],produces=[application/json]}" onto public beaconManagement.tcc.domain.Beacon beaconManagement.tcc.controller.BeaconController.findBeaconByMAC(java.lang.String)
+10:43:17,394  INFO RequestMappingHandlerMapping:531 - Mapped "{[/detector/insert_detector],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconDetectorController.insertBeaconEvent(beaconManagement.tcc.domain.BeaconDetector)
+10:43:17,395  INFO RequestMappingHandlerMapping:531 - Mapped "{[/detector/delete_detector],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconDetectorController.deleteBeaconEvent(beaconManagement.tcc.domain.BeaconDetector)
+10:43:17,395  INFO RequestMappingHandlerMapping:531 - Mapped "{[/detector/list_detectors],methods=[GET],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.BeaconDetector> beaconManagement.tcc.controller.BeaconDetectorController.getBeaconsDetectors()
+10:43:17,395  INFO RequestMappingHandlerMapping:531 - Mapped "{[/detector/find_detector_by_mac],methods=[POST],produces=[application/json]}" onto public beaconManagement.tcc.domain.BeaconDetector beaconManagement.tcc.controller.BeaconDetectorController.getBeaconDetectorByMAC(java.lang.String)
+10:43:17,395  INFO RequestMappingHandlerMapping:531 - Mapped "{[/detector/edit_detector],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconDetectorController.editBeaconEvent(beaconManagement.tcc.domain.BeaconDetector)
+10:43:17,398  INFO RequestMappingHandlerMapping:531 - Mapped "{[/event/insert_event],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconEventController.insertBeaconEvent(beaconManagement.tcc.domain.BeaconEvent)
+10:43:17,398  INFO RequestMappingHandlerMapping:531 - Mapped "{[/event/delete_event],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconEventController.deleteBeaconEvent(beaconManagement.tcc.domain.BeaconEvent)
+10:43:17,398  INFO RequestMappingHandlerMapping:531 - Mapped "{[/event/list_event_end_date],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.BeaconEvent> beaconManagement.tcc.controller.BeaconEventController.getBeaconEventsEndDate(java.math.BigDecimal)
+10:43:17,399  INFO RequestMappingHandlerMapping:531 - Mapped "{[/event/list_event_start_date],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.BeaconEvent> beaconManagement.tcc.controller.BeaconEventController.getBeaconEventsStartDate(java.math.BigDecimal)
+10:43:17,399  INFO RequestMappingHandlerMapping:531 - Mapped "{[/event/edit_event],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.BeaconEventController.editBeaconEvent(beaconManagement.tcc.domain.BeaconEvent)
+10:43:17,399  INFO RequestMappingHandlerMapping:531 - Mapped "{[/event/list_event],methods=[GET],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.BeaconEvent> beaconManagement.tcc.controller.BeaconEventController.getBeaconEvents()
+10:43:17,401  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/list_checkins_before_date],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.CheckIn> beaconManagement.tcc.controller.CheckInController.getCheckInBeforeCalendar(java.math.BigDecimal)
+10:43:17,402  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/list_checkins_by_detector],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.CheckIn> beaconManagement.tcc.controller.CheckInController.getCheckInByBeaconDetector(beaconManagement.tcc.domain.BeaconDetector)
+10:43:17,402  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/list_checkins_from_date],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.CheckIn> beaconManagement.tcc.controller.CheckInController.getCheckInFromCalendar(java.math.BigDecimal)
+10:43:17,402  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/list_checkins_by_event],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.CheckIn> beaconManagement.tcc.controller.CheckInController.getCheckInByBeaconEvent(beaconManagement.tcc.domain.BeaconEvent)
+10:43:17,402  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/list_checkins_by_date],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.CheckIn> beaconManagement.tcc.controller.CheckInController.getCheckInByCalendar(java.math.BigDecimal)
+10:43:17,403  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/list_checkins_by_beacon],methods=[POST],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.CheckIn> beaconManagement.tcc.controller.CheckInController.getCheckInByBeacon(beaconManagement.tcc.domain.Beacon)
+10:43:17,403  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/list_checkins],methods=[GET],produces=[application/json]}" onto public java.util.List<beaconManagement.tcc.domain.CheckIn> beaconManagement.tcc.controller.CheckInController.getCheckIn()
+10:43:17,403  INFO RequestMappingHandlerMapping:531 - Mapped "{[/checkin/insert_checkin],methods=[POST]}" onto public boolean beaconManagement.tcc.controller.CheckInController.insertCheckIn(beaconManagement.tcc.domain.CheckIn)
+10:43:17,950  INFO RequestMappingHandlerAdapter:532 - Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Nov 27 10:43:13 BRST 2015]; root of context hierarchy
+10:43:18,037  INFO RequestMappingHandlerAdapter:532 - Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Fri Nov 27 10:43:13 BRST 2015]; root of context hierarchy
+10:43:18,148  INFO ContextLoader:347 - Root WebApplicationContext: initialization completed in 4678 ms
+10:43:18,175  INFO DispatcherServlet:488 - FrameworkServlet 'dispatcherServlet': initialization started
+10:43:18,181  INFO XmlWebApplicationContext:573 - Refreshing WebApplicationContext for namespace 'dispatcherServlet-servlet': startup date [Fri Nov 27 10:43:18 BRST 2015]; parent: Root WebApplicationContext
+10:43:18,183  INFO XmlBeanDefinitionReader:317 - Loading XML bean definitions from ServletContext resource [/WEB-INF/web/mvc-conf.xml]
+10:43:18,225  INFO DispatcherServlet:507 - FrameworkServlet 'dispatcherServlet': initialization completed in 50 ms
