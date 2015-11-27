@@ -10,8 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-
-import org.hibernate.validator.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 /**
  * @author Wagner
@@ -33,13 +32,13 @@ public class BeaconEvent implements Serializable {
 	/**
 	 * @uml.property name="startDateMillis"
 	 */
-	@NotBlank
+	@NotNull
 	private BigDecimal startDateMillis;
 
 	/**
 	 * @uml.property name="endDateMillis"
 	 */
-	@NotBlank
+	@NotNull
 	private BigDecimal endDateMillis;
 
 	public BeaconEvent() {
