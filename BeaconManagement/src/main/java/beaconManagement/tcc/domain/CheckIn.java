@@ -1,6 +1,7 @@
 package beaconManagement.tcc.domain;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -34,7 +35,7 @@ public class CheckIn implements Serializable {
 	 * @uml.property name="checkDateMillis"
 	 */
 	@NotNull
-	private Long checkDateMillis;
+	private BigDecimal checkDateMillis;
 
 	/**
 	 * @uml.property name="beaconEvent"
@@ -52,8 +53,8 @@ public class CheckIn implements Serializable {
 		super();
 	}
 
-	public CheckIn(Long id, Long checkDateMillis, BeaconEvent beaconEvent,
-			BeaconDetector beaconDetector) {
+	public CheckIn(Long id, BigDecimal checkDateMillis,
+			BeaconEvent beaconEvent, BeaconDetector beaconDetector) {
 		super();
 		this.id = id;
 		this.checkDateMillis = checkDateMillis;
@@ -85,11 +86,11 @@ public class CheckIn implements Serializable {
 	 * @return
 	 * @uml.property name="checkDateMillis"
 	 */
-	public Long getCheckDateMillis() {
+	public BigDecimal getCheckDateMillis() {
 		return checkDateMillis;
 	}
 
-	public void setCheckDateMillis(Long checkDateMillis) {
+	public void setCheckDateMillis(BigDecimal checkDateMillis) {
 		this.checkDateMillis = checkDateMillis;
 	}
 
