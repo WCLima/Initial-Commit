@@ -144,8 +144,8 @@ public class CheckIn implements Serializable {
 	 */
 	@ManyToOne
 	@JoinColumn(name = "beacon_id")
-	public BeaconDetector getBeacon() {
-		return beaconDetector;
+	public Beacon getBeacon() {
+		return beacon;
 	}
 
 	/**
